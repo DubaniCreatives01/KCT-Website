@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Best Practices -->
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{relativePath}}assets/images/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{relativePath}}assets/images/cropped-favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="{{relativePath}}assets/images/cropped-favicon-180x180.png">
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Central Stylesheet Framework -->
+  <link rel="stylesheet" href="{{relativePath}}assets/css/variables.css?v=1.2">
+  <link rel="stylesheet" href="{{relativePath}}assets/css/base.css?v=1.2">
+  <link rel="stylesheet" href="{{relativePath}}assets/css/header.css?v=1.2">
+  <link rel="stylesheet" href="{{relativePath}}assets/css/footer.css?v=1.2">
+  <link rel="stylesheet" href="{{relativePath}}assets/css/components.css?v=1.2">
+  
+  <!-- Custom page style injections if any -->
+  {{pageStyles}}
+</head>
+<body>

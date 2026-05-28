@@ -1,0 +1,320 @@
+/* ==========================================================================
+   FOOTER STYLES - TOWN HALL STATIC REBUILD
+   ========================================================================== */
+
+/* 1. Newsletter Subscription Bar */
+.newsletter-bar {
+  background-color: #003c61;
+  color: var(--color-alternate);
+  padding: 50px 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  margin-top: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.newsletter-info h3 {
+  color: var(--color-alternate);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.newsletter-info p {
+  margin-bottom: 0;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.newsletter-form input[type="email"] {
+  flex-grow: 1;
+  padding: 18px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: var(--color-alternate);
+  font-family: var(--font-body);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form input[type="email"]:focus {
+  border-color: var(--color-alternate);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-form button {
+  background-color: var(--color-tertiary);
+  color: var(--color-alternate);
+  border: none;
+  font-family: var(--font-headings);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--color-alternate);
+  color: var(--color-tertiary);
+}
+
+/* 2. Main Footer Widgets Area */
+.site-footer {
+  background-color: var(--color-dark-bg);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 80px 0 40px 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+
+.site-footer-widgets {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-widget h4 {
+  color: var(--color-alternate);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-widget h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-tertiary);
+}
+
+.footer-widget p {
+  line-height: 1.7em;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 45px;
+  width: auto;
+}
+
+/* Social Media Networks Icon list */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  color: var(--color-alternate);
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.social-icon-link:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-alternate);
+  transform: translateY(-3px);
+}
+
+/* Vertical widget navigation list */
+.widget-links {
+  list-style: none;
+}
+
+.widget-links li {
+  margin-bottom: 12px;
+}
+
+.widget-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.widget-links a:hover {
+  color: var(--color-tertiary);
+  transform: translateX(4px);
+}
+
+/* Contacts details list */
+.widget-contact-list {
+  list-style: none;
+}
+
+.widget-contact-list li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  line-height: 1.5em;
+}
+
+.widget-contact-list i {
+  color: var(--color-tertiary);
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* Operating hours list widget */
+.widget-hours {
+  list-style: none;
+}
+
+.widget-hours li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.widget-hours li span:first-child {
+  color: var(--color-alternate);
+  font-weight: 500;
+}
+
+/* 3. Subfooter Copyright Bar */
+.subfooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 30px;
+}
+
+.subfooter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.subfooter-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.subfooter-links a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s;
+}
+
+.subfooter-links a:hover {
+  color: var(--color-tertiary);
+}
+
+/* Floating Back-To-Top dynamic button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-tertiary);
+  color: var(--color-alternate);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s var(--transition-curve);
+  z-index: 999;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   RESPONSIVE FOOTER STYLES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .site-footer-widgets {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .newsletter-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer-widgets {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .subfooter-inner {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .subfooter-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    border-radius: 10px;
+    background: none;
+  }
+  
+  .newsletter-form button {
+    padding: 15px 0;
+  }
+}
