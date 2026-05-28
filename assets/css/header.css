@@ -1,0 +1,453 @@
+/* ==========================================================================
+   MODERN GLASSMORPHISM FLOATING HEADER STYLES - SENIOR DESIGNER REBUILD
+   ========================================================================== */
+
+/* 1. Solid Header Layout */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Header container padding adjustment */
+.site-header .container {
+  max-width: var(--container-width);
+}
+
+/* Header top utility bar */
+.header-top {
+  background-color: #00253d; /* Very dark slate blue/black */
+  color: rgba(255, 255, 255, 0.9);
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-top-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Full-width Main Navigation Bar exactly as design */
+.header-main {
+  background-color: #003c61; /* Solid brand Slate Blue */
+  padding: 15px 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid var(--color-primary); /* Golden-orange accent underline */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 2. Solid Sticky Transition */
+.site-header.is-sticky {
+  position: fixed;
+  top: 0;
+  padding: 0;
+}
+
+.site-header.is-sticky .header-top {
+  display: none !important; /* Hide topbar on scroll to save space */
+}
+
+.site-header.is-sticky .header-main {
+  background-color: rgba(0, 60, 97, 0.98); /* Solid slate blue slightly translucent on scroll */
+  padding: 10px 0;
+  border-radius: 0;
+  border-bottom: 3px solid var(--color-primary);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transform: none;
+}
+
+.header-main-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 3. Logo and Branding */
+.logo {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.logo img {
+  height: 45px; /* Proportional logo in solid header */
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* 4. Modern Pill-Shaped Navigation Links */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 8px; /* Tighter gap for capsule items */
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  font-family: var(--font-headings);
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 8px 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Remove default underline line from variables */
+.nav-link::after {
+  display: none !important;
+}
+
+/* Clean Hover highlights matching screenshot */
+.nav-link:hover,
+.nav-item:hover > .nav-link {
+  color: var(--color-primary) !important; /* Gold on hover */
+  background: none;
+}
+
+/* Active Page custom marker */
+.nav-item.active .nav-link {
+  color: var(--color-primary) !important; /* Gold text */
+  background: none !important;
+}
+
+/* Dropdown downarrow icon transitions */
+.dropdown-arrow {
+  font-size: 8px;
+  opacity: 0.7;
+  transition: transform 0.3s;
+  margin-top: 2px;
+}
+
+.nav-item:hover > .nav-link .dropdown-arrow {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* 5. Glassmorphism Dropdowns (Hierarchical list) */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  background: rgba(0, 60, 97, 0.95); /* Deep Blue Glass */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  min-width: 250px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 15px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 100;
+}
+
+.nav-item:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 12px 25px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.dropdown-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-tertiary);
+  padding-left: 30px;
+}
+
+/* Multi-level level 3 drop panels */
+.sub-dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 5px);
+  background: rgba(0, 60, 97, 0.95);
+  backdrop-filter: blur(15px);
+  min-width: 240px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 15px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(15px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dropdown-item:hover > .sub-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* 6. Modern Glass Mega Menu Grid */
+.mega-menu-parent {
+  position: static;
+}
+
+.mega-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  width: 100%;
+  background: rgba(0, 60, 97, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 35px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+
+.mega-menu-parent:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu-column h5 {
+  font-size: 15px;
+  color: var(--color-tertiary);
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mega-menu-list {
+  list-style: none;
+}
+
+.mega-menu-list li {
+  margin-bottom: 10px;
+}
+
+.mega-menu-list a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.mega-menu-list a:hover {
+  color: var(--color-tertiary);
+  padding-left: 6px;
+}
+
+/* 7. Action Area (Right Header Buttons) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-search-trigger {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-alternate);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-search-trigger:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-tertiary);
+  transform: scale(1.05);
+}
+
+.header-cta-btn {
+  background-color: var(--color-tertiary); /* Vibrant Cyan */
+  color: var(--color-alternate) !important;
+  font-family: var(--font-headings);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(21, 183, 222, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header-cta-btn:hover {
+  background-color: var(--color-alternate);
+  color: var(--color-tertiary) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Hamburger mobile button styling inside dark capsule */
+.hamburger-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-alternate);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1002;
+  position: relative;
+}
+
+.hamburger-line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-alternate);
+  margin: 4px auto;
+  transition: all 0.3s ease;
+}
+
+.hamburger-toggle.is-active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.hamburger-toggle.is-active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-toggle.is-active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* ==========================================================================
+   MOBILE GLASS CAPSULE NAVIGATION OVERRIDES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 15px 0;
+  }
+  
+  .header-main {
+    padding: 8px 20px;
+    border-radius: 50px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 20px;
+    right: -100%;
+    width: 300px;
+    height: calc(100vh - 40px);
+    background: rgba(0, 60, 97, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 30px 40px 30px;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-y: auto;
+    z-index: 1001;
+    gap: 8px;
+  }
+
+  .nav-menu.is-active {
+    right: 20px;
+  }
+
+  .nav-link {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0;
+    padding: 12px 10px;
+  }
+  
+  .nav-link:hover, .nav-item:hover > .nav-link {
+    background: none;
+    color: var(--color-tertiary) !important;
+  }
+
+  .dropdown-menu, .sub-dropdown-menu, .mega-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: none;
+    border: none;
+    padding: 5px 0 5px 15px;
+    display: none;
+    min-width: 100%;
+  }
+
+  .dropdown-menu.is-open, .sub-dropdown-menu.is-open, .mega-menu.is-open {
+    display: block;
+  }
+
+  .mega-menu {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .hamburger-toggle {
+    display: block;
+  }
+
+  .header-cta-btn {
+    display: none !important;
+  }
+}
