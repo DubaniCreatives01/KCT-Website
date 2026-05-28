@@ -44,21 +44,34 @@
   gap: 15px;
 }
 
-/* Full-width Main Navigation Bar exactly as design */
+/* Premium Floating Glassmorphism Capsule Main Navigation Bar */
 .header-main {
-  background-color: #003c61; /* Solid brand Slate Blue */
-  padding: 15px 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 3px solid var(--color-primary); /* Golden-orange accent underline */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 60, 97, 0.85); /* Premium glass slate blue */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 35px;
+  max-width: 1280px;
+  width: 92%;
+  margin: 15px auto 0 auto; /* Centered with a sleek floating top margin */
+  border-radius: 100px; /* High pill capsule shape */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Sleek glass outline */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 2. Solid Sticky Transition */
+/* Ensure container inside floating header fills capsule perfectly */
+.header-main .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* 2. Floating Sticky Transition */
 .site-header.is-sticky {
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   padding: 0;
 }
 
@@ -67,11 +80,16 @@
 }
 
 .site-header.is-sticky .header-main {
-  background-color: rgba(0, 60, 97, 0.98); /* Solid slate blue slightly translucent on scroll */
-  padding: 10px 0;
-  border-radius: 0;
-  border-bottom: 3px solid var(--color-primary);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 48, 77, 0.95); /* Deep glass slate blue on scroll for readability */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 10px 35px;
+  max-width: 1220px; /* Squeezes slightly on scroll for responsive micro-interaction! */
+  width: 92%;
+  margin: 10px auto 0 auto; /* Floats down slightly from top of scroll area */
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   transform: none;
 }
 
