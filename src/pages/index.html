@@ -1,0 +1,622 @@
+<!--
+title: Khayelitsha Community Trust (KCT) - Home
+description: Official portal for Khayelitsha Community Trust (KCT). Empowering the Khayelitsha community through social and economic development.
+-->
+
+<!-- 1. DRONE/Mall BACKGROUND HERO BANNER -->
+<section class="hero-slider-container" id="homepage-hero-banner">
+  <!-- Fading background slides of 1.jpg, 2.jpg, 3.jpg -->
+  <div class="hero-bg-slides">
+    <div class="hero-bg-slide active" style="background-image: url('{{relativePath}}assets/images/1.jpg');"></div>
+    <div class="hero-bg-slide" style="background-image: url('{{relativePath}}assets/images/2.jpg');"></div>
+    <div class="hero-bg-slide" style="background-image: url('{{relativePath}}assets/images/3.jpg');"></div>
+  </div>
+
+  <!-- African Side Pattern Overlays -->
+  <div class="hero-pattern-side left-pattern"></div>
+  <div class="hero-pattern-side right-pattern"></div>
+
+  <!-- Slate blue translucent overlay to darken the backdrop, leaving the green landscape slightly visible -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 60, 97, 0.75), rgba(0, 37, 61, 0.6)); z-index: 1;"></div>
+  
+  <div class="container hero-container-flex">
+    <div class="hero-content-wrapper">
+      <h2 style="font-family: var(--font-headings); font-size: 28px; font-weight: 500; color: white; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); text-transform: none; letter-spacing: 0;">Welcome to the</h2>
+      <h1 style="font-family: var(--font-headings); font-size: 64px; font-weight: 700; color: white; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.4); line-height: 1.1em; letter-spacing: -1px;">Khayelitsha Community</h1>
+      <h1 style="font-family: var(--font-headings); font-size: 64px; font-weight: 700; color: white; margin-bottom: 35px; text-shadow: 0 4px 10px rgba(0,0,0,0.4); line-height: 1.1em; letter-spacing: -1px;">Trust Official Portal</h1>
+      
+      <!-- Action buttons side-by-side matching screenshot -->
+      <div style="display: flex; gap: 20px; justify-content: center;">
+        <a href="{{relativePath}}kct-team/index.html" class="btn btn-outline" style="border: 2px solid white; color: white; padding: 12px 30px; border-radius: 4px; font-weight: 700; font-size: 13px; text-transform: uppercase; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--color-tertiary)'; this.style.color='var(--color-tertiary)';" onmouseout="this.style.borderColor='white'; this.style.color='white';">Explore Committees ↗</a>
+        <a href="{{relativePath}}about-us/index.html" class="btn btn-primary" style="background-color: white; color: #003c61; border: none; padding: 12px 30px; border-radius: 4px; font-weight: 700; font-size: 13px; text-transform: uppercase; text-decoration: none; transition: transform 0.3s, background-color 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#e6e6e6';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='white';">Discover Our Work</a>
+      </div>
+    </div>
+
+    <!-- Three-Column Alerts Box at Hero Bottom matching screenshot design exactly -->
+    <div class="hero-alerts-box reveal-on-scroll reveal-scale">
+      <!-- Column 1: Weather -->
+      <div class="hero-alerts-column">
+        <span style="font-size: 13px; font-weight: 700; color: var(--color-tertiary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Today's Weather:</span>
+        <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 8px;">
+          <span id="hero-weather-temp" style="font-size: 32px; font-weight: 700; color: white;">19°C</span>
+          <div style="display: flex; flex-direction: column;">
+            <span id="hero-weather-desc" style="font-size: 14px; font-weight: 600; color: white; display: flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-cloud-sun" style="color: var(--color-tertiary);"></i> scattered clouds
+            </span>
+          </div>
+        </div>
+        <span style="font-size: 12px; opacity: 0.8; color: white;">Enjoy your day in Khayelitsha!</span>
+      </div>
+
+      <!-- Column 2: Notice -->
+      <div class="hero-alerts-column">
+        <span style="font-size: 13px; font-weight: 700; color: var(--color-tertiary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Notice:</span>
+        <p style="font-size: 13px; line-height: 1.5em; margin-bottom: 0; color: white; opacity: 0.95;">
+          Tenders & RFQs – New bids and quotations for KCT Mall preventative maintenance have been published. Submissions close weekly.
+        </p>
+      </div>
+
+      <!-- Column 3: Active Alert -->
+      <div class="hero-alerts-column">
+        <span style="font-size: 13px; font-weight: 700; color: var(--color-tertiary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Development Alert:</span>
+        <p style="font-size: 13px; line-height: 1.5em; margin-bottom: 0; color: white; opacity: 0.95;">
+          Housing Phase 1 BNG support roles finalising. Preventive structural upgrades and mall covering phases active at KCT Mall.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. OVERLAPPING SERVICE CARDS GRID -->
+<section class="hero-overlap-wrapper" id="quick-overlap-services" style="margin-top: -100px; position: relative; z-index: 10;">
+  <div class="container">
+    <div class="hero-overlap-grid">
+      <!-- Card 1 -->
+      <div class="hero-overlap-flip-card reveal-on-scroll reveal-scale reveal-delay-1">
+        <div class="hero-overlap-flip-card-inner">
+          <div class="hero-overlap-flip-card-front">
+            <div class="hero-overlap-flip-card-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <h3>KCT Trust</h3>
+            <p style="font-size: 14px; color: white; opacity: 0.85; margin: 15px 0 0 0; line-height: 1.50em; text-align: center; max-width: 260px;">Developing social and economic assets under Cape Town LAA.</p>
+          </div>
+          <div class="hero-overlap-flip-card-back">
+            <h3>KCT Trust</h3>
+            <p>Developing social and economic assets under the Cape Town Land Availability Agreement.</p>
+            <ul class="hero-overlap-card-list">
+              <li><i class="fa-solid fa-square-check"></i> Land Availability rate benefits</li>
+              <li><i class="fa-solid fa-square-check"></i> Integrated development plans</li>
+              <li><i class="fa-solid fa-square-check"></i> Sustainable asset portfolios</li>
+            </ul>
+            <a href="{{relativePath}}about-us/index.html" class="hero-overlap-flip-card-link">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="hero-overlap-flip-card reveal-on-scroll reveal-scale reveal-delay-2">
+        <div class="hero-overlap-flip-card-inner">
+          <div class="hero-overlap-flip-card-front">
+            <div class="hero-overlap-flip-card-icon"><i class="fa-solid fa-people-group"></i></div>
+            <h3>KCT Team</h3>
+            <p style="font-size: 14px; color: white; opacity: 0.85; margin: 15px 0 0 0; line-height: 1.50em; text-align: center; max-width: 260px;">Sound governance directed by elected and non-executive trustees.</p>
+          </div>
+          <div class="hero-overlap-flip-card-back">
+            <h3>KCT Team</h3>
+            <p>Sound governance directed by elected and non-executive trustees complying with King IV.</p>
+            <ul class="hero-overlap-card-list">
+              <li><i class="fa-solid fa-square-check"></i> 6 specialized board committees</li>
+              <li><i class="fa-solid fa-square-check"></i> Community representation via KDF</li>
+              <li><i class="fa-solid fa-square-check"></i> Professional executive management</li>
+            </ul>
+            <a href="{{relativePath}}kct-team/index.html" class="hero-overlap-flip-card-link">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="hero-overlap-flip-card reveal-on-scroll reveal-scale reveal-delay-3">
+        <div class="hero-overlap-flip-card-inner">
+          <div class="hero-overlap-flip-card-front">
+            <div class="hero-overlap-flip-card-icon"><i class="fa-solid fa-store"></i></div>
+            <h3>KCT Mall</h3>
+            <p style="font-size: 14px; color: white; opacity: 0.85; margin: 15px 0 0 0; line-height: 1.50em; text-align: center; max-width: 260px;">The commercial hub of Khayelitsha, managed for local economic growth.</p>
+          </div>
+          <div class="hero-overlap-flip-card-back">
+            <h3>KCT Mall</h3>
+            <p>The commercial hub of Khayelitsha, internally managed for sustainable local economic growth.</p>
+            <ul class="hero-overlap-card-list">
+              <li><i class="fa-solid fa-square-check"></i> 100% occupied with diverse mix</li>
+              <li><i class="fa-solid fa-square-check"></i> Empowering 65+ local service providers</li>
+              <li><i class="fa-solid fa-square-check"></i> 9% average annual growth (22/23)</li>
+            </ul>
+            <a href="{{relativePath}}kct-mall/index.html" class="hero-overlap-flip-card-link">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. KCT ADDRESS MESSAGE SECTION (Left Text - Right Twin Photos) -->
+<section class="section" id="mayor-address-overview" style="background-color: var(--color-background); padding: 100px 0 60px;">
+  <div class="container">
+    <div class="mayor-box" style="grid-template-columns: 1.3fr 1.7fr; gap: 60px; align-items: flex-start; display: grid;">
+      <!-- Left text -->
+      <div class="mayor-address-text reveal-on-scroll reveal-left">
+        <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Message from KCT</span>
+        <h2 style="font-size: 38px; line-height: 1.25em; margin-bottom: 20px; color: var(--color-secondary); font-family: var(--font-headings);">
+          Developing <span style="color: var(--color-primary);">commercial, residential</span>, and community infrastructure to uplift the lives of residents.
+        </h2>
+        <p style="font-size:16px; line-height:1.7em; margin-bottom:20px; color: var(--color-text);">KCT was founded by the City of Cape Town in 2003. These developments help generate economic opportunities and uplift the lives of residents. The Trust, previously a municipal entity, now trades as a non-profit organisation with public benefit status.</p>
+        <p style="font-size:16px; line-height:1.7em; margin-bottom:30px; color: var(--color-text);">A Land Availability Agreement (LAA) entered into between the City of Cape Town and KCT allows KCT to assist with the KBD development and hold equity in associated developments, the returns of which are used in other community projects.</p>
+        <a href="{{relativePath}}about-us/index.html" class="btn btn-outline" style="border: 2px solid var(--color-secondary); color: var(--color-secondary); padding: 12px 30px; border-radius: 50px; font-weight: 700; text-transform: uppercase; display: inline-block;">Read Our History</a>
+      </div>
+      
+      <!-- Right side: Twin Landscape Photos -->
+      <div class="mayor-twin-photos reveal-on-scroll reveal-right" style="display: flex; gap: 20px; width: 100%;">
+        <div class="mayor-img-left" style="width: 50%; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.03)';" onmouseout="this.style.transform='scale(1)';">
+          <img src="{{relativePath}}assets/images/Board-1024x682.jpg" alt="KCT Board Group Meeting" style="width: 100%; display: block; object-fit: cover; height: 350px;">
+        </div>
+        <div class="mayor-img-right" style="width: 50%; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.03)';" onmouseout="this.style.transform='scale(1)';">
+          <img src="{{relativePath}}assets/images/A39A8807-1024x683.jpg" alt="KCT Mall Landscape" style="width: 100%; display: block; object-fit: cover; height: 350px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. RADIAL GRADIENT GOVERNANCE SECTION (Outlined cards) -->
+<section class="section spruce-gradient african-pattern-dark" id="spruce-departments-overview" style="background: var(--color-gradient-spruce-brown); padding: 100px 0; color: white;">
+  <div class="container">
+    <div class="section-header text-center" style="margin-bottom: 60px;">
+      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Corporate Governance</span>
+      <h2 style="font-family: var(--font-headings); font-size: 40px; margin-top: 5px; color: white !important;">Board Committees</h2>
+      <p style="max-width: 600px; margin: 15px auto 0; opacity: 0.8; font-size: 16px; line-height: 1.6em;">The following committees assist the Board in discharging its collective responsibility for corporate governance and King IV compliance.</p>
+    </div>
+
+    <div class="dept-grid-outlined" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+      <!-- Card 1 -->
+      <div class="committee-flip-card reveal-on-scroll reveal-scale reveal-delay-1">
+        <div class="committee-flip-card-inner">
+          <div class="committee-flip-card-front">
+            <div class="committee-flip-card-icon"><i class="fa-solid fa-wallet"></i></div>
+            <h4>Finance Committee</h4>
+          </div>
+          <div class="committee-flip-card-back">
+            <h4>Finance Committee</h4>
+            <p>Ensures the competence and integrity of the Khayelitsha Community Trust Group's financial management processes.</p>
+            <a href="{{relativePath}}kct-team/index.html#committee-finance" class="committee-charter-btn">Committee Charter →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="committee-flip-card reveal-on-scroll reveal-scale reveal-delay-2">
+        <div class="committee-flip-card-inner">
+          <div class="committee-flip-card-front">
+            <div class="committee-flip-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Audit & Risk Management</h4>
+          </div>
+          <div class="committee-flip-card-back">
+            <h4>Audit & Risk</h4>
+            <p>Provides a forum for business risk and control, and monitors external and internal auditors' work schedules.</p>
+            <a href="{{relativePath}}kct-team/index.html#committee-audit" class="committee-charter-btn">Committee Charter →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="committee-flip-card reveal-on-scroll reveal-scale reveal-delay-3">
+        <div class="committee-flip-card-inner">
+          <div class="committee-flip-card-front">
+            <div class="committee-flip-card-icon"><i class="fa-solid fa-building"></i></div>
+            <h4>Development Committee</h4>
+          </div>
+          <div class="committee-flip-card-back">
+            <h4>Development</h4>
+            <p>Assists the Board in due diligence of development plans, site specifications, and enabling operations.</p>
+            <a href="{{relativePath}}kct-team/index.html#committee-development" class="committee-charter-btn">Committee Charter →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="committee-flip-card reveal-on-scroll reveal-scale reveal-delay-4">
+        <div class="committee-flip-card-inner">
+          <div class="committee-flip-card-front">
+            <div class="committee-flip-card-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h4>Procurement and Bidding</h4>
+          </div>
+          <div class="committee-flip-card-back">
+            <h4>Procurement & Bid</h4>
+            <p>Ensures all procurement is conducted in a fair and ethical manner complying with Supply Chain Management.</p>
+            <a href="{{relativePath}}kct-team/index.html#committee-procurement" class="committee-charter-btn">Committee Charter →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="committee-flip-card reveal-on-scroll reveal-scale reveal-delay-5">
+        <div class="committee-flip-card-inner">
+          <div class="committee-flip-card-front">
+            <div class="committee-flip-card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <h4>Marketing & PR</h4>
+          </div>
+          <div class="committee-flip-card-back">
+            <h4>Marketing & PR</h4>
+            <p>Develops strategic engagement plans to generate community awareness of Trust initiatives and projects.</p>
+            <a href="{{relativePath}}kct-team/index.html#committee-marketing" class="committee-charter-btn">Committee Charter →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="committee-flip-card reveal-on-scroll reveal-scale reveal-delay-6">
+        <div class="committee-flip-card-inner">
+          <div class="committee-flip-card-front">
+            <div class="committee-flip-card-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <h4>Human Resources</h4>
+          </div>
+          <div class="committee-flip-card-back">
+            <h4>Human Resources</h4>
+            <p>Assists the Board in fulfilling human resources obligations, performance evaluations, and succession matters.</p>
+            <a href="{{relativePath}}kct-team/index.html#committee-hr" class="committee-charter-btn">Committee Charter →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center reveal-on-scroll" style="margin-top: 50px;">
+      <a href="{{relativePath}}kct-team/index.html" class="btn btn-primary" style="background-color: var(--color-primary); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: 700; text-transform: uppercase;">Meet Executive Management</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TWO-TIER PROJECT LISTINGS (Left Text - Right Stacks) -->
+<section class="section" id="active-projects-tiers" style="background-color: var(--color-background); padding: 100px 0;">
+  <div class="container">
+    
+    <!-- Tier 1: Primary Spatial Framework -->
+    <div class="projects-tier-row" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center;">
+      <div class="projects-tier-text-col reveal-on-scroll reveal-left">
+        <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Primary Framework</span>
+        <h3 style="font-size: 32px; font-family: var(--font-headings); color: var(--color-secondary); margin-bottom: 20px;">Developing KBD spatial structures</h3>
+        <p style="font-size:15px; line-height:1.60em; color:var(--color-text);">We expand residential, commercial, and communal facilities under approved frameworks to generate local employment and sustainable equity.</p>
+        <a href="{{relativePath}}our-projects/index.html" class="btn btn-outline" style="border: 2px solid var(--color-secondary); color: var(--color-secondary); padding: 12px 30px; border-radius: 50px; font-weight: 700; text-transform: uppercase; margin-top:20px; display: inline-block;">View Projects</a>
+      </div>
+      
+      <div class="projects-vertical-stack reveal-on-scroll reveal-right" style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- Card 1 -->
+        <div class="project-card-landscape" onclick="window.location.href='{{relativePath}}our-projects/index.html#phase-1'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
+          <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
+            <img src="{{relativePath}}assets/images/A39A8903-1024x683.jpg" alt="Phase 1 Housing Plans" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-card-landscape-content">
+            <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">Phase 1 Housing Development</h4>
+            <p style="font-size: 14px; color: var(--color-text); margin-bottom: 0; line-height: 1.4em;">BNG units on a 6ha piece of land in partnership with the City of Cape Town.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="project-card-landscape" onclick="window.location.href='{{relativePath}}our-projects/index.html#phase-2'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
+          <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
+            <img src="{{relativePath}}assets/images/ACTING-CEO-683x1024.jpg" alt="Phase 2 Housing Plans" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-card-landscape-content">
+            <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">Phase 2 Housing Development</h4>
+            <p style="font-size: 14px; color: var(--color-text); margin-bottom: 0; line-height: 1.4em;">FLISP rental housing units partnership built on a 4ha piece of land.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="project-card-landscape" onclick="window.location.href='{{relativePath}}our-projects/index.html#phase-3'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
+          <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
+            <img src="{{relativePath}}assets/images/GH4-1024x683.jpg" alt="Phase 3 Housing Plans" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-card-landscape-content">
+            <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">Phase 3 Housing Development</h4>
+            <p style="font-size: 14px; color: var(--color-text); margin-bottom: 0; line-height: 1.4em;">Mixed typology housing units partnership built on a 12ha piece of land.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spacer -->
+    <div style="height: 80px;"></div>
+
+    <!-- Tier 2: Retail Spatial Framework -->
+    <div class="projects-tier-row" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center;">
+      <div class="projects-tier-text-col reveal-on-scroll reveal-left">
+        <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Commercial Framework</span>
+        <h3 style="font-size: 32px; font-family: var(--font-headings); color: var(--color-secondary); margin-bottom: 20px;">Empowering local entrepreneurs</h3>
+        <p style="font-size:15px; line-height:1.60em; color:var(--color-text);">We implement practical preventative maintenance systems to grow cash flows, delivering quality earnings that sustain local Khayelitsha entrepreneurs.</p>
+        <a href="{{relativePath}}kct-mall/index.html" class="btn btn-outline" style="border: 2px solid var(--color-secondary); color: var(--color-secondary); padding: 12px 30px; border-radius: 50px; font-weight: 700; text-transform: uppercase; margin-top:20px; display: inline-block;">KCT Mall Unit</a>
+      </div>
+      
+      <div class="projects-vertical-stack reveal-on-scroll reveal-right" style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- Card 1 -->
+        <div class="project-card-landscape" onclick="window.location.href='{{relativePath}}kct-mall/index.html'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
+          <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
+            <img src="{{relativePath}}assets/images/A39A8807-1024x683.jpg" alt="KCT Mall Facelift" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-card-landscape-content">
+            <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">KCT Mall Upgrade & Facelift</h4>
+            <p style="font-size: 14px; color: var(--color-text); margin-bottom: 0; line-height: 1.4em;">Phased retail upgrade and covering of the mall by KBD Retail and KManco.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="project-card-landscape" onclick="window.location.href='{{relativePath}}kct-mall/index.html#pmu-overview'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
+          <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
+            <img src="{{relativePath}}assets/images/A39A59-1024x683.jpg" alt="Local service providers" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-card-landscape-content">
+            <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">Local Economic Empowerment</h4>
+            <p style="font-size: 14px; color: var(--color-text); margin-bottom: 0; line-height: 1.4em;">R12.3 million expense empowering 65+ local service providers from databases.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 6. BRIGHT GOLD HORIZONTAL ALERT MARQUEE BANNER -->
+<section class="notice-marquee-bar" id="civic-alerts-marquee" style="background-color: var(--color-primary); color: #ffffff !important; padding: 20px 0; overflow: hidden; white-space: nowrap; font-weight: 700; font-size: 16px;">
+  <div class="notice-marquee-bar-inner" style="display: inline-block; animation: marquee 30s linear infinite;">
+    <div class="notice-marquee-content" style="display: inline-block; color: #ffffff !important;">
+      📢 ANNOUNCEMENT: ALL KCT TENDERS, REQUEST FOR QUOTATIONS (RFQS), AND COMPLIANCE DOCUMENTS ARE REGULARLY POSTED ON OUR MEDIA NEWS DESK. CONTRACTORS CAN VIEW DETAILS AND DOWNLOAD SUBMISSION GUIDELINES ONLINE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      📢 ANNOUNCEMENT: ALL KCT TENDERS, REQUEST FOR QUOTATIONS (RFQS), AND COMPLIANCE DOCUMENTS ARE REGULARLY POSTED ON OUR MEDIA NEWS DESK. CONTRACTORS CAN VIEW DETAILS AND DOWNLOAD SUBMISSION GUIDELINES ONLINE.
+    </div>
+  </div>
+</section>
+<style>
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+</style>
+
+<!-- 7. GiveWP DONATION PLEDGE SECTION (Empowerment Sponsoring) -->
+<section class="donation-pledge-section african-pattern-dark" style="background-image: linear-gradient(rgba(0, 60, 97, 0.9), rgba(0, 37, 61, 0.9)), url('{{relativePath}}assets/images/header-back-scaled.jpg'); background-size: cover; background-position: center; padding: 100px 0; color: white;" id="municipal-donation-pledge">
+  <div class="container">
+    <div class="donation-wrapper" style="display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 60px; align-items: center;">
+      <!-- Left side text -->
+      <div class="donation-text-col reveal-on-scroll reveal-left">
+        <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Local Sponsoring</span>
+        <h2 style="font-family: var(--font-headings); font-size: 38px; margin-bottom: 20px; color: white;">Help our community Prosper, Support KCT</h2>
+        <p style="opacity: 0.9; font-size: 16px; line-height: 1.6em;">Support local developmental structures and skill augmentation. KCT General funding goes directly towards human capital development programs to raise local community entrepreneurial skills levels.</p>
+      </div>
+
+      <!-- Right side GiveWP Widget card -->
+      <div class="givewp-card reveal-on-scroll reveal-right" style="background: white; color: var(--color-text); border-radius: var(--border-radius); padding: 40px; box-shadow: var(--box-shadow); max-width: 480px; margin-left: auto; width: 100%;">
+        <h4 style="font-size: 18px; font-family: var(--font-headings); color: var(--color-secondary); margin-bottom: 20px;">Khayelitsha Youth & Enterprise Fund</h4>
+        
+        <!-- Progress bar -->
+        <div class="give-goal-progress" style="margin-bottom: 30px;">
+          <div class="give-goal-progress-bar" style="height: 10px; background-color: rgba(14,59,78,0.1); border-radius: 50px; overflow: hidden; margin-bottom: 10px;">
+            <div class="give-goal-progress-fill" style="width: 73%; height: 100%; background-color: var(--color-primary);"></div>
+          </div>
+          <div class="give-goal-stats" style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; color: var(--color-secondary);">
+            <span>73% Funded</span>
+            <span>R73 000 of R100 000 Target</span>
+          </div>
+        </div>
+
+        <!-- Pledge amounts form -->
+        <form onsubmit="event.preventDefault(); alert('Thank you for your generous pledge of ' + document.querySelector('.give-amount-btn.active').dataset.amt + ' to the Khayelitsha Youth & Enterprise Fund!');" id="donation-fundraiser-action">
+          <div class="give-amount-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 25px;">
+            <button type="button" class="give-amount-btn" data-amt="R100" style="padding: 12px 0; border: 1px solid var(--color-border); background: var(--color-background); font-weight: 700; border-radius: var(--border-radius-sm); cursor: pointer;" onclick="document.querySelectorAll('.give-amount-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');">R100</button>
+            <button type="button" class="give-amount-btn active" data-amt="R250" style="padding: 12px 0; border: 1px solid var(--color-border); background: var(--color-background); font-weight: 700; border-radius: var(--border-radius-sm); cursor: pointer;" onclick="document.querySelectorAll('.give-amount-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');">R250</button>
+            <button type="button" class="give-amount-btn" data-amt="R500" style="padding: 12px 0; border: 1px solid var(--color-border); background: var(--color-background); font-weight: 700; border-radius: var(--border-radius-sm); cursor: pointer;" onclick="document.querySelectorAll('.give-amount-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');">R500</button>
+            <button type="button" class="give-amount-btn" data-amt="R1000" style="padding: 12px 0; border: 1px solid var(--color-border); background: var(--color-background); font-weight: 700; border-radius: var(--border-radius-sm); cursor: pointer;" onclick="document.querySelectorAll('.give-amount-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');">R1000</button>
+          </div>
+          <button type="submit" class="give-btn-submit" style="width: 100%; border: none; background: var(--color-secondary); color: white; padding: 15px 0; font-weight: 700; font-size: 15px; border-radius: 50px; text-transform: uppercase; cursor: pointer;">Pledge Support</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.give-amount-btn.active {
+  background-color: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+}
+</style>
+
+<!-- 8. REVIEWS SIDE-BY-SIDE GRID (What Partners Say) -->
+<section class="section" id="citizen-reviews-triple" style="background-color: var(--color-background); padding: 100px 0;">
+  <div class="container">
+    <div class="section-header text-center" style="margin-bottom: 50px;">
+      <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Community Feedback</span>
+      <h2 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 40px; margin-top: 5px;">What Partners & Shoppers Say</h2>
+    </div>
+
+    <div class="reviews-grid-triple" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+      <!-- Review 1 -->
+      <div class="review-card-compact reveal-on-scroll reveal-delay-1" style="background: white; padding: 35px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="review-stars" style="color: var(--color-primary); margin-bottom: 15px; font-size: 14px;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-size: 15px; line-height: 1.6em; color: var(--color-text); font-style: italic; margin-bottom: 25px;">"The Property Management Unit has really done amazing work. Procuring local Khayelitsha entrepreneurs for planned and reactive maintenance at KCT Mall creates sustainable jobs."</p>
+        </div>
+        <div class="review-author-compact" style="display: flex; gap: 15px; align-items: center;">
+          <div class="review-author-compact-avatar" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+            <img src="{{relativePath}}assets/images/76-testimonial-2.webp" alt="Service Provider Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="review-author-compact-meta">
+            <h5 style="font-size: 15px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 3px;">S. Mthimkhulu</h5>
+            <span style="font-size: 12px; opacity: 0.7;">Local Service Provider</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card-compact reveal-on-scroll reveal-delay-2" style="background: white; padding: 35px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="review-stars" style="color: var(--color-primary); margin-bottom: 15px; font-size: 14px;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-size: 15px; line-height: 1.6em; color: var(--color-text); font-style: italic; margin-bottom: 25px;">"Shopping at KCT Mall is incredibly convenient. The fair tenant mix, preventative maintenance, and safety management keep the environment clean and very family friendly."</p>
+        </div>
+        <div class="review-author-compact" style="display: flex; gap: 15px; align-items: center;">
+          <div class="review-author-compact-avatar" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+            <img src="{{relativePath}}assets/images/76-testimonial-3.webp" alt="Shopper Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="review-author-compact-meta">
+            <h5 style="font-size: 15px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 3px;">Amanda N.</h5>
+            <span style="font-size: 12px; opacity: 0.7;">KCT Mall Regular Shopper</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card-compact reveal-on-scroll reveal-delay-3" style="background: white; padding: 35px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="review-stars" style="color: var(--color-primary); margin-bottom: 15px; font-size: 14px;">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p style="font-size: 15px; line-height: 1.6em; color: var(--color-text); font-style: italic; margin-bottom: 25px;">"The Trust's compliance with King IV principles and commitment to integrity gives stakeholders and corporate partners immense confidence in KCT's planning systems."</p>
+        </div>
+        <div class="review-author-compact" style="display: flex; gap: 15px; align-items: center;">
+          <div class="review-author-compact-avatar" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+            <img src="{{relativePath}}assets/images/76-testimonial-1.webp" alt="Partner Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="review-author-compact-meta">
+            <h5 style="font-size: 15px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 3px;">T. Botha</h5>
+            <span style="font-size: 12px; opacity: 0.7;">Stakeholder Advisor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. BOTANICAL SPLIT BLOCKQUOTE SECTION -->
+<section class="section" id="botanical-split-quote" style="background-color: var(--color-background); padding: 0 0 100px;">
+  <div class="container">
+    <div class="quote-split-row reveal-on-scroll reveal-scale" style="display: grid; grid-template-columns: 1.3fr 1.7fr; gap: 60px; align-items: center;">
+      <!-- Left side: Landscape Image -->
+      <div class="quote-greenhouse-image" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow);">
+        <img src="{{relativePath}}assets/images/A39A3231-1024x683.jpg" alt="Khayelitsha CBD Skyline Shoreline" style="width: 100%; display: block; object-fit: cover; height: 350px;">
+      </div>
+      
+      <!-- Right side: Giant Text Blockquote -->
+      <div class="blockquote-text-large" style="font-family: var(--font-headings); font-size: 26px; line-height: 1.5em; font-style: italic; color: var(--color-secondary); position: relative; padding-left: 30px; border-left: 5px solid var(--color-primary);">
+        "KCT's vision is to empower the Khayelitsha community through the promotion of social and economic development by creating a sustainable asset portfolio."
+        <span class="blockquote-author-name" style="display: block; font-style: normal; font-size: 14px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; margin-top: 15px; letter-spacing: 1px;">KCT Board of Trustees</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. RADIAL GRADIENT EVENTS LIST SECTION -->
+<section class="section spruce-gradient" id="spruce-gradient-events-schedule" style="background: var(--color-gradient-spruce-brown); padding: 100px 0; color: white;">
+  <div class="container">
+    <div class="section-header text-center" style="margin-bottom: 50px;">
+      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Media Desk</span>
+      <h2 style="font-family: var(--font-headings); font-size: 40px; margin-top: 5px; color: white !important;">Downloads & Tenders</h2>
+    </div>
+
+    <div class="event-horizontal-list" style="display: flex; flex-direction: column; gap: 20px;">
+      <!-- Event 1 -->
+      <div class="event-strip reveal-on-scroll reveal-scale reveal-delay-1" style="background: rgba(255,255,255,0.05); padding: 25px 35px; border-radius: var(--border-radius); border-left: 5px solid var(--color-tertiary); display: flex; justify-content: space-between; align-items: center;">
+        <div class="event-strip-left" style="display: flex; gap: 25px; align-items: center;">
+          <div class="event-strip-img" style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--color-tertiary); flex-shrink: 0;">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div class="event-strip-details">
+            <h4 style="font-size: 18px; font-family: var(--font-headings); margin-bottom: 8px; color: white;">KCT Mall Preventative Maintenance RFQ</h4>
+            <div class="event-strip-meta" style="font-size: 13px; opacity: 0.8; display: flex; gap: 20px;">
+              <span><i class="fa-regular fa-clock"></i> Submission Deadline: July 2026</span>
+              <span><i class="fa-solid fa-location-dot"></i> Bellville & Mall Offices</span>
+            </div>
+          </div>
+        </div>
+        <a href="{{relativePath}}media/index.html" class="event-strip-link" style="border: 2px solid var(--color-tertiary); color: var(--color-tertiary); padding: 10px 25px; border-radius: 50px; font-weight: 700; font-size: 13px; text-transform: uppercase; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--color-tertiary)'; this.style.color='var(--color-secondary)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-tertiary)';">Download →</a>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="event-strip reveal-on-scroll reveal-scale reveal-delay-2" style="background: rgba(255,255,255,0.05); padding: 25px 35px; border-radius: var(--border-radius); border-left: 5px solid var(--color-tertiary); display: flex; justify-content: space-between; align-items: center;">
+        <div class="event-strip-left" style="display: flex; gap: 25px; align-items: center;">
+          <div class="event-strip-img" style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--color-tertiary); flex-shrink: 0;">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <div class="event-strip-details">
+            <h4 style="font-size: 18px; font-family: var(--font-headings); margin-bottom: 8px; color: white;">Spatial Development Framework (SDF) Blueprint</h4>
+            <div class="event-strip-meta" style="font-size: 13px; opacity: 0.8; display: flex; gap: 20px;">
+              <span><i class="fa-regular fa-clock"></i> Statutory SDF Parameters</span>
+              <span><i class="fa-solid fa-location-dot"></i> Approved Cape Town Documents</span>
+            </div>
+          </div>
+        </div>
+        <a href="{{relativePath}}media/index.html" class="event-strip-link" style="border: 2px solid var(--color-tertiary); color: var(--color-tertiary); padding: 10px 25px; border-radius: 50px; font-weight: 700; font-size: 13px; text-transform: uppercase; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--color-tertiary)'; this.style.color='var(--color-secondary)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-tertiary)';">Download →</a>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="event-strip reveal-on-scroll reveal-scale reveal-delay-3" style="background: rgba(255,255,255,0.05); padding: 25px 35px; border-radius: var(--border-radius); border-left: 5px solid var(--color-tertiary); display: flex; justify-content: space-between; align-items: center;">
+        <div class="event-strip-left" style="display: flex; gap: 25px; align-items: center;">
+          <div class="event-strip-img" style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--color-tertiary); flex-shrink: 0;">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="event-strip-details">
+            <h4 style="font-size: 18px; font-family: var(--font-headings); margin-bottom: 8px; color: white;">Board of Trustees Written Governance Charter</h4>
+            <div class="event-strip-meta" style="font-size: 13px; opacity: 0.8; display: flex; gap: 20px;">
+              <span><i class="fa-regular fa-clock"></i> King IV compliance principles</span>
+              <span><i class="fa-solid fa-location-dot"></i> KCT Administration desk</span>
+            </div>
+          </div>
+        </div>
+        <a href="{{relativePath}}media/index.html" class="event-strip-link" style="border: 2px solid var(--color-tertiary); color: var(--color-tertiary); padding: 10px 25px; border-radius: 50px; font-weight: 700; font-size: 13px; text-transform: uppercase; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--color-tertiary)'; this.style.color='var(--color-secondary)';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--color-tertiary)';">Download →</a>
+      </div>
+    </div>
+
+    <div class="text-center reveal-on-scroll" style="margin-top: 50px;">
+      <a href="{{relativePath}}media/index.html" class="btn btn-primary" style="background-color: var(--color-primary); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: 700; text-transform: uppercase;">Browse News & RFQs</a>
+    </div>
+  </div>
+</section>
+
+<!-- 11. WATERFRONT SKYLINE CONTACT SECTION -->
+<section class="section" id="waterfront-contacts" style="background-color: var(--color-background); padding: 100px 0;">
+  <div class="container">
+    <div class="contact-waterfront-split" style="display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 60px; align-items: center;">
+      <!-- Left Column: Form -->
+      <div class="contact-waterfront-form-col reveal-on-scroll reveal-left" style="background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+        <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; font-size: 14px; text-transform: uppercase;">Feedback Desk</span>
+        <h3 style="color:var(--color-secondary); font-size:32px; font-family: var(--font-headings); margin-bottom:25px; margin-top: 5px;">How to Contact Us</h3>
+        
+        <form onsubmit="event.preventDefault(); alert('Your feedback message has been successfully sent to KCT Office.'); this.reset();" id="waterfront-feedback-action">
+          <div style="display:flex; flex-direction:column; gap:8px; margin-bottom: 20px;">
+            <input type="text" placeholder="Your Name" required style="padding:15px; border:1px solid var(--color-border); border-radius:var(--border-radius-sm); outline:none; font-size:15px; background: var(--color-background);">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; margin-bottom: 20px;">
+            <input type="email" placeholder="Your Email" required style="padding:15px; border:1px solid var(--color-border); border-radius:var(--border-radius-sm); outline:none; font-size:15px; background: var(--color-background);">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; margin-bottom: 25px;">
+            <textarea placeholder="Message Details..." required rows="5" style="padding:15px; border:1px solid var(--color-border); border-radius:var(--border-radius-sm); outline:none; font-size:15px; font-family:var(--font-body); resize:vertical; background: var(--color-background);"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color:var(--color-primary); color:white; border:none; padding:15px 30px; border-radius:50px; font-weight:700; width:100%; cursor:pointer; text-transform: uppercase; font-size: 14px;">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Right Column: Skyline Image -->
+      <div class="contact-waterfront-img-col reveal-on-scroll reveal-right" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow);">
+        <img src="{{relativePath}}assets/images/A39A8807-1024x683.jpg" alt="waterfront city skyline reflection at dusk" style="width: 100%; display: block; object-fit: cover; height: 480px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. HUGE CENTRED QUOTATION STATEMENT BANNER -->
+<section class="huge-statement-banner" id="municipal-huge-quote" style="background: white; text-align: center; padding: 100px 0; border-top: 1px solid var(--color-border);">
+  <div class="container">
+    <blockquote class="huge-statement-text reveal-on-scroll reveal-scale" style="border:none; padding:0; margin:0; background:none; font-family: var(--font-headings); font-size: 28px; line-height: 1.5em; color: var(--color-secondary); font-style: italic;">
+      "The Khayelitsha CBD development offers a unique and <span style="color: var(--color-primary); font-style: normal; font-weight: 700;">strategic opportunity</span> due to its location, plans, and existing infrastructure."
+      <span class="huge-statement-author" style="display: block; font-style: normal; font-size: 14px; font-weight: 700; color: var(--color-text); text-transform: uppercase; margin-top: 20px; letter-spacing: 1px;">KCT CBD Mandate & Core Strategy</span>
+    </blockquote>
+    <a href="{{relativePath}}our-projects/index.html" class="btn btn-outline reveal-on-scroll" style="border: 2px solid var(--color-secondary); color: var(--color-secondary); padding: 12px 30px; border-radius: 50px; font-weight: 700; text-transform: uppercase; margin-top: 35px; display: inline-block;">Explore Spatial Projects</a>
+  </div>
+</section>
