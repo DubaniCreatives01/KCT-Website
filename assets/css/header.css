@@ -5,13 +5,14 @@
 /* 1. Solid Header Layout */
 .site-header {
   position: absolute;
-  top: -1px; /* Slightly pulled up to ensure perfect overlap with viewport top and eliminate sub-pixel line gap */
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-top: none !important;
   margin-top: 0 !important;
+  background-color: transparent !important; /* Force transparent */
 }
 
 /* Header container padding adjustment */
@@ -54,8 +55,8 @@
   padding: 12px 35px;
   max-width: 1280px;
   width: 92%;
-  margin: 15px auto 0 auto; /* Centered with a sleek floating top margin */
-  border-radius: 100px; /* High pill capsule shape */
+  margin: 40px auto 0 auto; /* Centered with a sleek floating top margin */
+  border-radius: 12px; /* Reduced rounded corners */
   border: 1px solid rgba(255, 255, 255, 0.15); /* Sleek glass outline */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -89,7 +90,7 @@
   max-width: 1220px; /* Squeezes slightly on scroll for responsive micro-interaction! */
   width: 92%;
   margin: 10px auto 0 auto; /* Floats down slightly from top of scroll area */
-  border-radius: 100px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   transform: none;
