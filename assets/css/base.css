@@ -19,6 +19,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background-color: #00253d; /* Prevent sub-pixel white gap line at top of viewport */
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top: none !important;
+  outline: none !important;
 }
 
 body {
@@ -27,8 +31,12 @@ body {
   line-height: var(--lh-body);
   font-weight: var(--fw-body);
   color: var(--color-text);
-  background-color: var(--color-background);
+  background: linear-gradient(to bottom, #00253d 0, #00253d 120px, var(--color-background) 120px, var(--color-background) 100%) !important;
   overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top: none !important;
+  outline: none !important;
 }
 
 /* 3. Typography Presets */
