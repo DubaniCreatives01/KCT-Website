@@ -1,0 +1,104 @@
+:root {
+  /* ==========================================================================
+     DESIGN SYSTEM TOKENS - TOWN HALL THEME (MAIN PALETTE)
+     ========================================================================== */
+
+  /* 1. Color Palette (KCT Trust official branding variables) */
+  --color-primary: #f2922c;           /* Brand Orange Accent (Buttons, hovers, checks) */
+  --color-secondary: #003c61;         /* Brand Slate Blue (Core background, headers) */
+  --color-text: #282828;              /* Brand Dark Grey (Core body text on white) */
+  --color-accent: #f2922c;            /* Brand Accent Orange */
+  --color-tertiary: #15b7de;          /* Brand Accent Cyan (Hover text, highlights) */
+  --color-background: #ffffff;        /* Pure White (Overall site background backdrop) */
+  --color-alternate: #ffffff;         /* Pure White (Card bodies, input forms) */
+  --color-border: #E8E8E8;            /* Light Grey Border */
+  
+  /* Additional Curated Shades */
+  --color-dark-bg: #003c61;           /* Dark Areas Backdrop */
+  --color-light-bg: #F5F5F5;          /* Light Off-White Grey */
+  --color-meta: #5A7065;              /* Muted Grey */
+  --color-muted: rgba(40, 40, 40, 0.6); /* Translucent Text Slate */
+
+  /* Translucent Colors for Hover States & Backdrops */
+  --color-primary-rgb: 242, 146, 44;
+  --color-secondary-rgb: 0, 60, 97;
+  
+  --color-primary-light: rgba(var(--color-primary-rgb), 0.1);
+  --color-primary-semi: rgba(var(--color-primary-rgb), 0.25);
+  --color-secondary-light: rgba(var(--color-secondary-rgb), 0.05);
+  --color-secondary-semi: rgba(var(--color-secondary-rgb), 0.2);
+
+  /* Deep Blue Gradient (Used in Sections & Headers) */
+  --color-gradient-spruce-brown: linear-gradient(135deg, #003c61 0%, #00253d 100%);
+
+  /* 2. Typography Definitions (KCT official fonts) */
+  --font-headings: "Montserrat", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+
+  /* Font Sizes & Spacings */
+  --fs-h1: 68px;
+  --lh-h1: 1.15em;
+  --ls-h1: -2px;
+  --fw-h1: 700;
+
+  --fs-h2: 56px;
+  --lh-h2: 1.2em;
+  --ls-h2: -2px;
+  --fw-h2: 700;
+
+  --fs-h3: 38px;
+  --lh-h3: 1.25em;
+  --ls-h3: -1px;
+  --fw-h3: 600;
+
+  --fs-h4: 32px;
+  --lh-h4: 1.3em;
+  --ls-h4: -1px;
+  --fw-h4: 600;
+
+  --fs-h5: 24px;
+  --lh-h5: 1.35em;
+  --ls-h5: 0px;
+  --fw-h5: 600;
+
+  --fs-h6: 18px;
+  --lh-h6: 1.4em;
+  --ls-h6: 2px;
+  --fw-h6: 700;
+
+  --fs-body: 18px;
+  --lh-body: 1.55em;
+  --fw-body: 400;
+
+  --fs-small: 16px;
+  --lh-small: 1.5em;
+  --fw-small: 400;
+
+  --fs-button: 14px;
+  --lh-button: 1.45em;
+  --ls-button: 1px;
+  --fw-button: 700;
+
+  --fs-blockquote: 36px;
+  --lh-blockquote: 1.3em;
+  --ls-blockquote: -1px;
+  --fw-blockquote: 400;
+
+  /* 3. Global Dimensions & Gaps */
+  --container-width: 1320px;
+  --section-padding: 100px 0;
+  --section-padding-mobile: 60px 0;
+  --grid-gap: 30px;
+  --border-radius: 12px;
+  --border-radius-sm: 6px;
+  --transition-speed: 0.3s;
+  --transition-curve: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --box-shadow: 0 10px 30px rgba(13, 60, 76, 0.08);
+  --box-shadow-hover: 0 20px 40px rgba(13, 60, 76, 0.15);
+
+  /* 4. Responsive Breakpoints */
+  --breakpoint-desktop: 1200px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-mobile: 768px;
+  --breakpoint-sm: 480px;
+}
