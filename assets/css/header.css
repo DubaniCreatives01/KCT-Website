@@ -5,11 +5,13 @@
 /* 1. Solid Header Layout */
 .site-header {
   position: absolute;
-  top: 0;
+  top: -1px; /* Slightly pulled up to ensure perfect overlap with viewport top and eliminate sub-pixel line gap */
   left: 0;
   width: 100%;
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-top: none !important;
+  margin-top: 0 !important;
 }
 
 /* Header container padding adjustment */
