@@ -294,6 +294,11 @@ function initHeaderDate() {
 
 /* 9. Animated Pop-up for 2024 Integrated Annual Report */
 function initAnnualReportPopup() {
+  // Hide popup entirely on mobile devices (screen width <= 768px)
+  if (window.innerWidth <= 768) {
+    return;
+  }
+
   // Check if user has already dismissed the popup
   if (localStorage.getItem('kct-annual-report-dismissed') === 'true') {
     return;
