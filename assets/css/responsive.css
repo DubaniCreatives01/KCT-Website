@@ -1,0 +1,1022 @@
+/* ==========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVE OVERRIDES
+   Loaded LAST to override all component, base, header, and footer styles
+   for tablet (≤1024px), mobile (≤768px), and small mobile (≤480px).
+   ========================================================================== */
+
+/* ==========================================================================
+   VIEWPORT META & GLOBAL MOBILE ADJUSTMENTS
+   ========================================================================== */
+
+/* Prevent horizontal scroll on all devices */
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ==========================================================================
+   TABLET BREAKPOINT (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+
+  /* --- HERO SECTION --- */
+  .hero-slider-container {
+    height: auto !important;
+    min-height: 700px;
+  }
+
+  .hero-container-flex {
+    padding-top: 120px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 48px !important;
+    line-height: 1.15em !important;
+  }
+
+  .hero-content-wrapper h2 {
+    font-size: 22px !important;
+  }
+
+  /* Hero alerts box stacking */
+  .hero-alerts-box {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    padding: 20px !important;
+  }
+
+  .hero-alerts-column {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-right: 0 !important;
+    padding-bottom: 15px;
+  }
+
+  .hero-alerts-column:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* --- FLIP CARDS --- */
+  .hero-overlap-wrapper {
+    margin-top: 30px !important;
+  }
+
+  .hero-overlap-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .hero-overlap-flip-card {
+    height: 320px !important;
+  }
+
+  /* Disable flip on touch devices — show front only */
+  .hero-overlap-flip-card:hover .hero-overlap-flip-card-inner {
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  /* --- MAYOR SECTION --- */
+  .mayor-box {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .mayor-twin-photos {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .mayor-img-left,
+  .mayor-img-right {
+    height: 260px !important;
+  }
+
+  .mayor-text h3 {
+    font-size: 32px !important;
+  }
+
+  /* --- DEPARTMENTS GRID --- */
+  .dept-grid-outlined {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* --- PROJECTS --- */
+  .projects-tier-row {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .project-card {
+    height: 280px !important;
+  }
+
+  .project-card-landscape {
+    height: auto !important;
+    min-height: 120px;
+  }
+
+  .project-card-landscape-img {
+    width: 140px !important;
+  }
+
+  /* --- DONATION SECTION --- */
+  .donation-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .donation-text-col h2 {
+    font-size: 34px !important;
+  }
+
+  /* --- REVIEWS / TESTIMONIALS --- */
+  .reviews-grid-triple {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* --- QUOTE SPLIT --- */
+  .quote-split-row {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .quote-greenhouse-image {
+    height: 300px !important;
+  }
+
+  .blockquote-text-large {
+    font-size: 26px !important;
+  }
+
+  /* --- EVENT STRIP --- */
+  .event-strip {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 15px !important;
+  }
+
+  .event-strip-left {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  /* --- CONTACT SPLIT --- */
+  .contact-waterfront-split {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-waterfront-img-col {
+    height: 280px !important;
+    min-height: auto !important;
+  }
+
+  /* --- HUGE STATEMENT --- */
+  .huge-statement-text {
+    font-size: 26px !important;
+  }
+
+  /* --- COMMITTEE FLIP CARDS --- */
+  .committee-flip-card {
+    height: 260px !important;
+  }
+
+  .committee-flip-card:hover .committee-flip-card-inner {
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  /* --- COUNTER GRID --- */
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .counter-num {
+    font-size: 44px !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE BREAKPOINT (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  /* --- GLOBAL TYPOGRAPHY DOWNSIZING --- */
+  body {
+    font-size: 15px !important;
+  }
+
+  .section {
+    padding: 50px 0 !important;
+  }
+
+  .section-header {
+    margin-bottom: 35px !important;
+  }
+
+  .section-subtitle {
+    font-size: 12px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .section-title {
+    font-size: 28px !important;
+    line-height: 1.25em !important;
+  }
+
+  /* Buttons smaller on mobile */
+  .btn {
+    padding: 14px 24px !important;
+    font-size: 12px !important;
+  }
+
+  /* --- HERO SECTION --- */
+  .hero-slider-container {
+    min-height: 580px !important;
+  }
+
+  .hero-container-flex {
+    padding-top: 90px !important;
+    padding-bottom: 140px !important;
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 32px !important;
+    line-height: 1.15em !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .hero-content-wrapper h2 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Hero CTA buttons stacking on small screens */
+  .hero-content-wrapper > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: center;
+  }
+
+  .hero-content-wrapper .btn,
+  .hero-content-wrapper a[class*="btn"] {
+    width: 100% !important;
+    max-width: 280px;
+    text-align: center;
+    justify-content: center;
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+  }
+
+  /* Hero alerts box */
+  .hero-alerts-box {
+    margin-bottom: -30px !important;
+    padding: 15px !important;
+    gap: 12px !important;
+    font-size: 12px;
+  }
+
+  #hero-weather-temp {
+    font-size: 24px !important;
+  }
+
+  /* --- FLIP CARDS --- */
+  .hero-overlap-wrapper {
+    margin-top: 20px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .hero-overlap-flip-card {
+    height: 280px !important;
+  }
+
+  .hero-overlap-flip-card-icon {
+    font-size: 40px !important;
+  }
+
+  .hero-overlap-flip-card-front h3 {
+    font-size: 20px !important;
+  }
+
+  .hero-overlap-flip-card-front p {
+    font-size: 13px !important;
+  }
+
+  /* --- INFO CARDS --- */
+  .info-card {
+    padding: 25px !important;
+  }
+
+  .info-card h3 {
+    font-size: 20px !important;
+  }
+
+  .info-card p {
+    font-size: 14px !important;
+  }
+
+  .info-card-icon {
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 24px !important;
+  }
+
+  /* --- MAYOR SECTION --- */
+  .mayor-text h3 {
+    font-size: 26px !important;
+    line-height: 1.2em !important;
+  }
+
+  .mayor-quote {
+    font-size: 16px !important;
+    padding-left: 15px !important;
+  }
+
+  .mayor-img-left,
+  .mayor-img-right {
+    height: 220px !important;
+  }
+
+  .mayor-signature {
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 15px !important;
+  }
+
+  .signature-img {
+    max-width: 120px !important;
+  }
+
+  /* --- COUNTERS --- */
+  .counters-section {
+    padding: 40px 0 !important;
+  }
+
+  .counter-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+  }
+
+  .counter-num {
+    font-size: 36px !important;
+  }
+
+  .counter-title {
+    font-size: 12px !important;
+  }
+
+  /* --- DEPARTMENTS --- */
+  .dept-grid-outlined {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  .dept-card-outlined {
+    padding: 25px !important;
+  }
+
+  .dept-card-outlined-icon {
+    font-size: 28px !important;
+  }
+
+  .dept-card-outlined h4 {
+    font-size: 18px !important;
+  }
+
+  .dept-card-outlined p {
+    font-size: 13px !important;
+  }
+
+  /* --- DEPT CARDS (with images) --- */
+  .dept-card-image {
+    height: 180px !important;
+  }
+
+  .dept-card-content {
+    padding: 20px !important;
+  }
+
+  .dept-card h4 {
+    font-size: 18px !important;
+  }
+
+  .dept-card p {
+    font-size: 13px !important;
+  }
+
+  /* --- PROJECTS --- */
+  .projects-tier-text-col h3 {
+    font-size: 24px !important;
+  }
+
+  .project-card {
+    height: 240px !important;
+  }
+
+  .project-card-content {
+    padding: 20px !important;
+  }
+
+  .project-card h4 {
+    font-size: 18px !important;
+  }
+
+  .project-card-landscape {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .project-card-landscape-img {
+    width: 100% !important;
+    height: 160px !important;
+  }
+
+  .project-card-landscape-content {
+    padding: 15px 20px !important;
+  }
+
+  .project-card-landscape-content h4 {
+    font-size: 16px !important;
+  }
+
+  /* --- EVENTS --- */
+  .event-card {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px !important;
+    gap: 15px !important;
+  }
+
+  .event-date-badge {
+    width: 65px !important;
+    height: 75px !important;
+  }
+
+  .event-day {
+    font-size: 26px !important;
+  }
+
+  .event-details h4 {
+    font-size: 17px !important;
+  }
+
+  .event-meta {
+    justify-content: center;
+    font-size: 12px !important;
+  }
+
+  .event-strip-details h4 {
+    font-size: 16px !important;
+  }
+
+  .event-strip-meta {
+    justify-content: center;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonial-slide blockquote {
+    font-size: 18px !important;
+    line-height: 1.5em !important;
+  }
+
+  .testimonial-quote-icon {
+    font-size: 36px !important;
+  }
+
+  /* --- NEWS CARDS --- */
+  .news-card-image {
+    height: 180px !important;
+  }
+
+  .news-card-content {
+    padding: 20px !important;
+  }
+
+  .news-card h4 {
+    font-size: 18px !important;
+  }
+
+  /* --- DONATION SECTION --- */
+  .donation-pledge-section {
+    padding: 60px 0 !important;
+  }
+
+  .donation-text-col h2 {
+    font-size: 28px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .donation-text-col p {
+    font-size: 14px !important;
+  }
+
+  .givewp-card {
+    padding: 25px !important;
+  }
+
+  .give-amount-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .give-amount-btn {
+    font-size: 14px !important;
+    padding: 10px 0 !important;
+  }
+
+  /* --- REVIEWS --- */
+  .review-card-compact {
+    padding: 25px !important;
+  }
+
+  .review-card-compact p {
+    font-size: 14px !important;
+  }
+
+  /* --- QUOTE SECTION --- */
+  .blockquote-text-large {
+    font-size: 22px !important;
+    padding-left: 20px !important;
+  }
+
+  .quote-greenhouse-image {
+    height: 250px !important;
+  }
+
+  /* --- MARQUEE / TICKER --- */
+  .notice-marquee-bar {
+    font-size: 12px !important;
+    padding: 10px 0 !important;
+  }
+
+  /* --- CONTACT FORM --- */
+  .contact-waterfront-form-col {
+    padding: 25px !important;
+  }
+
+  /* --- COMMITTEE FLIP CARDS --- */
+  .committee-flip-card {
+    height: 240px !important;
+  }
+
+  .committee-flip-card-icon {
+    font-size: 34px !important;
+  }
+
+  .committee-flip-card-front h4 {
+    font-size: 17px !important;
+  }
+
+  /* --- HUGE STATEMENT --- */
+  .huge-statement-banner {
+    padding: 50px 0 !important;
+  }
+
+  .huge-statement-text {
+    font-size: 22px !important;
+  }
+
+  /* --- NEWSLETTER BAR --- */
+  .newsletter-bar {
+    padding: 30px 0 !important;
+    margin-top: 30px !important;
+  }
+
+  .newsletter-info h3 {
+    font-size: 22px !important;
+  }
+
+  .newsletter-info p {
+    font-size: 14px !important;
+  }
+
+  .newsletter-form {
+    flex-direction: column !important;
+  }
+
+  .newsletter-form input[type="email"] {
+    padding: 14px 20px !important;
+    font-size: 14px !important;
+  }
+
+  .newsletter-form button {
+    padding: 14px 0 !important;
+    font-size: 13px !important;
+  }
+
+  /* --- FOOTER --- */
+  .site-footer {
+    padding: 50px 0 30px 0 !important;
+  }
+
+  .site-footer-widgets {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .footer-widget h4 {
+    font-size: 18px !important;
+  }
+
+  .subfooter-inner {
+    flex-direction: column !important;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .subfooter-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* --- BACK TO TOP --- */
+  .back-to-top {
+    width: 42px !important;
+    height: 42px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+
+  /* --- HEADER TOP BAR (hide on mobile) --- */
+  .header-top {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE BREAKPOINT (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+
+  /* Extra tight padding */
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .section {
+    padding: 40px 0 !important;
+  }
+
+  /* --- HERO --- */
+  .hero-slider-container {
+    min-height: 520px !important;
+  }
+
+  .hero-container-flex {
+    padding-top: 75px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .hero-content-wrapper h1 {
+    font-size: 26px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-content-wrapper h2 {
+    font-size: 14px !important;
+  }
+
+  .hero-content-wrapper .btn,
+  .hero-content-wrapper a[class*="btn"] {
+    max-width: 100%;
+    font-size: 11px !important;
+    padding: 11px 16px !important;
+  }
+
+  /* --- SECTION HEADERS --- */
+  .section-title {
+    font-size: 24px !important;
+  }
+
+  .section-subtitle {
+    font-size: 11px !important;
+  }
+
+  /* --- FLIP CARDS --- */
+  .hero-overlap-flip-card {
+    height: 250px !important;
+  }
+
+  .hero-overlap-flip-card-front h3 {
+    font-size: 18px !important;
+  }
+
+  .hero-overlap-flip-card-icon {
+    font-size: 34px !important;
+  }
+
+  /* --- COUNTERS --- */
+  .counter-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .counter-box {
+    padding: 10px !important;
+  }
+
+  .counter-num {
+    font-size: 30px !important;
+  }
+
+  .counter-title {
+    font-size: 11px !important;
+  }
+
+  /* --- MAYOR --- */
+  .mayor-text h3 {
+    font-size: 22px !important;
+  }
+
+  .mayor-quote {
+    font-size: 15px !important;
+  }
+
+  .mayor-img-left,
+  .mayor-img-right {
+    height: 180px !important;
+  }
+
+  /* --- DEPARTMENTS --- */
+  .dept-card-outlined {
+    padding: 20px !important;
+  }
+
+  .dept-card-outlined h4 {
+    font-size: 16px !important;
+  }
+
+  /* --- PROJECTS --- */
+  .projects-tier-text-col h3 {
+    font-size: 20px !important;
+  }
+
+  .project-card {
+    height: 200px !important;
+  }
+
+  .project-card h4 {
+    font-size: 16px !important;
+  }
+
+  /* --- EVENTS --- */
+  .event-date-badge {
+    width: 55px !important;
+    height: 65px !important;
+  }
+
+  .event-day {
+    font-size: 22px !important;
+  }
+
+  .event-details h4 {
+    font-size: 15px !important;
+  }
+
+  /* --- DONATION --- */
+  .donation-text-col h2 {
+    font-size: 24px !important;
+  }
+
+  .givewp-card {
+    padding: 20px !important;
+  }
+
+  .give-amount-btn {
+    font-size: 13px !important;
+  }
+
+  /* --- TESTIMONIALS --- */
+  .testimonial-slide blockquote {
+    font-size: 16px !important;
+  }
+
+  /* --- NEWS --- */
+  .news-card-image {
+    height: 160px !important;
+  }
+
+  .news-card h4 {
+    font-size: 16px !important;
+  }
+
+  /* --- REVIEWS --- */
+  .review-card-compact {
+    padding: 20px !important;
+  }
+
+  .review-card-compact p {
+    font-size: 13px !important;
+  }
+
+  /* --- QUOTE --- */
+  .blockquote-text-large {
+    font-size: 18px !important;
+    line-height: 1.4em !important;
+  }
+
+  .quote-greenhouse-image {
+    height: 200px !important;
+  }
+
+  /* --- COMMITTEE CARDS --- */
+  .committee-flip-card {
+    height: 220px !important;
+  }
+
+  .committee-flip-card-icon {
+    font-size: 28px !important;
+  }
+
+  .committee-flip-card-front h4 {
+    font-size: 15px !important;
+  }
+
+  /* --- HUGE STATEMENT --- */
+  .huge-statement-text {
+    font-size: 18px !important;
+  }
+
+  /* --- NEWSLETTER --- */
+  .newsletter-info h3 {
+    font-size: 20px !important;
+  }
+
+  /* --- FOOTER --- */
+  .footer-widget h4 {
+    font-size: 16px !important;
+  }
+
+  .site-footer {
+    font-size: 13px !important;
+  }
+
+  /* --- HEADER STICKY COMPACT --- */
+  .site-header.is-sticky .header-main {
+    padding: 6px 0 !important;
+  }
+
+  .logo img {
+    height: 35px !important;
+  }
+}
+
+/* ==========================================================================
+   INLINE STYLE OVERRIDES
+   Many HTML elements use inline styles with fixed pixel values.
+   These rules use attribute selectors and !important to override them on mobile.
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  /* Hero headings with inline font-size: 64px */
+  .hero-content-wrapper > h1[style*="font-size"] {
+    font-size: 30px !important;
+    line-height: 1.15em !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Hero subheading with inline font-size: 28px */
+  .hero-content-wrapper > h2[style*="font-size"] {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Hero action buttons wrapper */
+  .hero-content-wrapper > div[style*="display: flex"][style*="gap"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  /* Hero action buttons */
+  .hero-content-wrapper > div > a[style*="padding"] {
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+    width: 100% !important;
+    max-width: 280px;
+    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /* Section titles with inline font-size > 30px */
+  h2[style*="font-size: 46px"],
+  h2[style*="font-size: 42px"],
+  h2[style*="font-size: 56px"],
+  h3[style*="font-size: 46px"],
+  h3[style*="font-size: 34px"] {
+    font-size: 24px !important;
+    line-height: 1.25em !important;
+  }
+
+  /* Paragraph text with inline font-size > 16px */
+  p[style*="font-size: 20px"],
+  p[style*="font-size: 18px"] {
+    font-size: 15px !important;
+    line-height: 1.5em !important;
+  }
+
+  /* Inline gap containers (flex rows) → stack on mobile */
+  div[style*="display: flex"][style*="gap: 60px"],
+  div[style*="display: flex"][style*="gap: 40px"],
+  div[style*="display: grid"][style*="grid-template-columns: 1.2fr"],
+  div[style*="display: grid"][style*="grid-template-columns: 2fr"],
+  div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  /* Elements with inline width > 300px */
+  div[style*="width: 380px"],
+  div[style*="width: 400px"],
+  div[style*="width: 500px"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Elements with inline height > 300px */
+  div[style*="height: 380px"],
+  div[style*="height: 400px"],
+  div[style*="height: 500px"] {
+    height: auto !important;
+    min-height: 250px;
+  }
+
+  /* Fixed position bottom-left cards (like inline-styled overlays) */
+  div[style*="position: fixed"][style*="bottom"] {
+    left: 15px !important;
+    right: 15px !important;
+    width: auto !important;
+    max-width: calc(100vw - 30px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller hero headings */
+  .hero-content-wrapper > h1[style*="font-size"] {
+    font-size: 24px !important;
+  }
+
+  .hero-content-wrapper > h2[style*="font-size"] {
+    font-size: 13px !important;
+  }
+
+  /* Large inline headings */
+  h2[style*="font-size: 46px"],
+  h2[style*="font-size: 42px"],
+  h2[style*="font-size: 56px"],
+  h3[style*="font-size: 46px"],
+  h3[style*="font-size: 34px"] {
+    font-size: 20px !important;
+  }
+}
+
+/* ==========================================================================
+   TOUCH DEVICE IMPROVEMENTS
+   ========================================================================== */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover-dependent transforms on touch */
+  .info-card:hover,
+  .dept-card:hover,
+  .news-card:hover,
+  .event-card:hover,
+  .review-card-compact:hover,
+  .project-card-landscape:hover {
+    transform: none !important;
+  }
+
+  /* Disable flip card hover on touch - show front only */
+  .hero-overlap-flip-card:hover .hero-overlap-flip-card-inner,
+  .committee-flip-card:hover .committee-flip-card-inner {
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  /* Make flip cards clickable instead */
+  .hero-overlap-flip-card,
+  .committee-flip-card {
+    cursor: pointer;
+  }
+}
+
+/* ==========================================================================
+   PRINT FRIENDLY
+   ========================================================================== */
+@media print {
+  .site-header,
+  .notice-marquee-bar,
+  .back-to-top,
+  .hero-pattern-side,
+  #annual-report-popup {
+    display: none !important;
+  }
+}
