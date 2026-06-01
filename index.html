@@ -9,20 +9,29 @@
   <title>Khayelitsha Community Trust (KCT) - Home</title>
   <meta name="description" content="Official portal for Khayelitsha Community Trust (KCT). R443.7M asset portfolio, 1,008 jobs created, 200+ local businesses supported. Empowering Khayelitsha through commercial, residential, and community infrastructure development since 2003.">
   
+  <!-- Network Optimization: Preconnect to CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="./assets/images/KCT_LOGO-300x300.jpg" sizes="300x300">
   <link rel="apple-touch-icon" href="./assets/images/KCT_LOGO-300x300.jpg">
   
+  <!-- Preload Critical Above-The-Fold Assets (First Hero Canvas Frame) -->
+  <link rel="preload" as="image" href="./assets/images/2.webp">
+  
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   
-  <!-- Central Stylesheet Framework -->
-  <link rel="stylesheet" href="./assets/css/variables.css?v=1.6">
-  <link rel="stylesheet" href="./assets/css/base.css?v=1.6">
-  <link rel="stylesheet" href="./assets/css/header.css?v=1.6">
-  <link rel="stylesheet" href="./assets/css/footer.css?v=1.6">
-  <link rel="stylesheet" href="./assets/css/components.css?v=1.6">
-  <link rel="stylesheet" href="./assets/css/responsive.css?v=1.6">
+  <!-- Google Fonts - Asynchronous & Swap Loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  </noscript>
+  
+  <!-- Central Stylesheet Framework (Production Bundle) -->
+  <link rel="stylesheet" href="./assets/css/main.min.css?v=1.6">
   
   <!-- Custom page style injections if any -->
   
@@ -97,7 +106,7 @@
                   </ul>
                 </div>
                 <div class="mega-menu-column" style="grid-column: span 2; display: flex; gap: 20px; align-items: center; background-color: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm);">
-                  <img src="./assets/images/Board-300x200.jpg" alt="KCT Board Info" style="width: 120px; border-radius: var(--border-radius-sm);">
+                  <img src="./assets/images/Board-300x200.webp" alt="KCT Board Info" style="width: 120px; border-radius: var(--border-radius-sm);">
                   <div>
                     <h6 style="color: var(--color-secondary); font-size: 14px; margin-bottom: 5px;">Corporate Governance</h6>
                     <p style="font-size: 12px; line-height: 1.4em; margin-bottom: 0; color: var(--color-text);">The Board of Trustees and committees assist in discharging collective responsibility for corporate governance.</p>
@@ -128,7 +137,7 @@
                   </ul>
                 </div>
                 <div class="mega-menu-column" style="grid-column: span 2; display: flex; gap: 20px; align-items: center; background-color: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm);">
-                  <img src="./assets/images/A39A8807-300x200.jpg" alt="KCT Mall Info" style="width: 120px; border-radius: var(--border-radius-sm);">
+                  <img src="./assets/images/A39A8807-300x200.webp" alt="KCT Mall Info" style="width: 120px; border-radius: var(--border-radius-sm);">
                   <div>
                     <h6 style="color: var(--color-secondary); font-size: 14px; margin-bottom: 5px;">Spatial Development</h6>
                     <p style="font-size: 12px; line-height: 1.4em; margin-bottom: 0; color: var(--color-text);">We expand residential, commercial, and communal facilities under Cape Town approved frameworks.</p>
@@ -277,9 +286,9 @@
   'use strict';
 
   const IMAGES = [
-    './assets/images/2.jpg',   // scene 0: reception + Table Mtn
-    './assets/images/1.jpg',   // scene 1: boardroom + KCT logo at sunset
-    './assets/images/3.jpg',   // scene 2: planning desk + Table Mtn
+    './assets/images/2.webp',   // scene 0: reception + Table Mtn
+    './assets/images/1.webp',   // scene 1: boardroom + KCT logo at sunset
+    './assets/images/3.webp',   // scene 2: planning desk + Table Mtn
   ];
 
   // Drone motion paths per scene: {sx,sy,ex,ey,sScale,eScale}
@@ -683,10 +692,10 @@
       <!-- Right side: Twin Landscape Photos -->
       <div class="mayor-twin-photos reveal-on-scroll reveal-right" style="display: flex; gap: 20px; width: 100%;">
         <div class="mayor-img-left" style="width: 50%; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.03)';" onmouseout="this.style.transform='scale(1)';">
-          <img src="./assets/images/Board-1024x682.jpg" alt="KCT Board Group Meeting" style="width: 100%; display: block; object-fit: cover; height: 350px;">
+          <img src="./assets/images/Board-1024x682.webp" alt="KCT Board Group Meeting" style="width: 100%; display: block; object-fit: cover; height: 350px;">
         </div>
         <div class="mayor-img-right" style="width: 50%; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.03)';" onmouseout="this.style.transform='scale(1)';">
-          <img src="./assets/images/A39A8807-1024x683.jpg" alt="KCT Mall Landscape" style="width: 100%; display: block; object-fit: cover; height: 350px;">
+          <img src="./assets/images/A39A8807-1024x683.webp" alt="KCT Mall Landscape" style="width: 100%; display: block; object-fit: cover; height: 350px;">
         </div>
       </div>
     </div>
@@ -817,7 +826,7 @@
         <!-- Card 1 -->
         <div class="project-card-landscape" onclick="window.location.href='./our-projects/index.html#spatial-blueprint'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
           <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
-            <img src="./assets/images/A39A8903-1024x683.jpg" alt="KBD Spatial Framework" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./assets/images/A39A8903-1024x683.webp" alt="KBD Spatial Framework" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="project-card-landscape-content">
             <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">KBD Spatial Framework (SDF)</h4>
@@ -828,7 +837,7 @@
         <!-- Card 2 -->
         <div class="project-card-landscape" onclick="window.location.href='./our-projects/index.html#precinct-planning'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
           <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
-            <img src="./assets/images/ACTING-CEO-683x1024.jpg" alt="Precinct Planning JVs" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./assets/images/ACTING-CEO-683x1024.webp" alt="Precinct Planning JVs" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="project-card-landscape-content">
             <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">Precinct Planning JVs</h4>
@@ -839,7 +848,7 @@
         <!-- Card 3 -->
         <div class="project-card-landscape" onclick="window.location.href='./our-projects/index.html#capacity-building'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
           <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
-            <img src="./assets/images/GH4-1024x683.jpg" alt="Local Enterprise Sponsoring" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./assets/images/GH4-1024x683.webp" alt="Local Enterprise Sponsoring" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="project-card-landscape-content">
             <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">Enterprise Capacity Building</h4>
@@ -865,7 +874,7 @@
         <!-- Card 1 -->
         <div class="project-card-landscape" onclick="window.location.href='./kct-mall/index.html'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
           <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
-            <img src="./assets/images/A39A8807-1024x683.jpg" alt="KCT Mall Facelift" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./assets/images/A39A8807-1024x683.webp" alt="KCT Mall Facelift" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="project-card-landscape-content">
             <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">KCT Mall Upgrade & Facelift</h4>
@@ -876,7 +885,7 @@
         <!-- Card 2 -->
         <div class="project-card-landscape" onclick="window.location.href='./kct-mall/index.html#pmu-overview'" style="background: white; border-radius: var(--border-radius); padding: 20px; display: flex; gap: 20px; align-items: center; box-shadow: var(--box-shadow); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
           <div class="project-card-landscape-img" style="width: 150px; height: 100px; border-radius: var(--border-radius-sm); overflow: hidden; flex-shrink: 0;">
-            <img src="./assets/images/A39A59-1024x683.jpg" alt="Local service providers" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./assets/images/A39A59-1024x683.webp" alt="Local service providers" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="project-card-landscape-content">
             <h4 style="font-size: 18px; color: var(--color-secondary); font-family: var(--font-headings); margin-bottom: 8px;">Local Economic Empowerment</h4>
@@ -906,7 +915,7 @@
 </style>
 
 <!-- 7. GiveWP DONATION PLEDGE SECTION (Empowerment Sponsoring) -->
-<section class="donation-pledge-section " style="background-image: linear-gradient(rgba(0, 60, 97, 0.9), rgba(0, 37, 61, 0.9)), url('./assets/images/header-back-scaled.jpg'); background-size: cover; background-position: center; padding: 100px 0; color: white;" id="municipal-donation-pledge">
+<section class="donation-pledge-section " style="background-image: linear-gradient(rgba(0, 60, 97, 0.9), rgba(0, 37, 61, 0.9)), url('./assets/images/header-back-scaled.webp'); background-size: cover; background-position: center; padding: 100px 0; color: white;" id="municipal-donation-pledge">
   <div class="container">
     <div class="donation-wrapper" style="display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 60px; align-items: center;">
       <!-- Left side text -->
@@ -1028,7 +1037,7 @@
     <div class="quote-split-row reveal-on-scroll reveal-scale" style="display: grid; grid-template-columns: 1.3fr 1.7fr; gap: 60px; align-items: center;">
       <!-- Left side: Landscape Image -->
       <div class="quote-greenhouse-image" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow);">
-        <img src="./assets/images/A39A3231-1024x683.jpg" alt="Khayelitsha CBD Landscape" style="width: 100%; display: block; object-fit: cover; height: 350px;">
+        <img src="./assets/images/A39A3231-1024x683.webp" alt="Khayelitsha CBD Landscape" style="width: 100%; display: block; object-fit: cover; height: 350px;">
       </div>
       
       <!-- Right side: Giant Text Blockquote -->
@@ -1132,7 +1141,7 @@
 
       <!-- Right Column: Skyline Image -->
       <div class="contact-waterfront-img-col reveal-on-scroll reveal-right" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow);">
-        <img src="./assets/images/A39A8807-1024x683.jpg" alt="waterfront city skyline reflection at dusk" style="width: 100%; display: block; object-fit: cover; height: 480px;">
+        <img src="./assets/images/A39A8807-1024x683.webp" alt="waterfront city skyline reflection at dusk" style="width: 100%; display: block; object-fit: cover; height: 480px;">
       </div>
     </div>
   </div>
@@ -1556,9 +1565,8 @@
   <button class="back-to-top" aria-label="Scroll back to top" id="floating-back-to-top-btn">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
-  <!-- Interactivity Javascript Scripts -->
-  <script src="./assets/js/main.js?v=1.2"></script>
-  <script src="./assets/js/slider.js?v=1.2"></script>
+  <!-- Consolidated Interactivity Javascript Bundle (Deferred) -->
+  <script src="./assets/js/app.min.js?v=1.6" defer></script>
   
 </body>
 </html>
