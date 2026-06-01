@@ -365,7 +365,7 @@ function initAnnualReportPopup() {
         box-shadow: 0 0 15px rgba(21, 183, 222, 0.4);
         background: rgba(255, 255, 255, 0.05);
       ">
-        <img src="${prefix}assets/images/sa_character_avatar.png" alt="KCT Assistant" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="${prefix}assets/images/sa_character_avatar.webp" alt="KCT Assistant" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div style="flex-grow: 1;">
         <span style="
