@@ -9,20 +9,29 @@
   <title>Contact Us - KCT Office & Center Manager Locations</title>
   <meta name="description" content="Contact directories for Khayelitsha Community Trust. Address, phone, and PO Box details for Bellville and KCT Mall offices.">
   
+  <!-- Network Optimization: Preconnect to CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="../assets/images/KCT_LOGO-300x300.jpg" sizes="300x300">
   <link rel="apple-touch-icon" href="../assets/images/KCT_LOGO-300x300.jpg">
   
+  <!-- Preload Critical Above-The-Fold Assets (First Hero Canvas Frame) -->
+  <link rel="preload" as="image" href="../assets/images/2.webp">
+  
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   
-  <!-- Central Stylesheet Framework -->
-  <link rel="stylesheet" href="../assets/css/variables.css?v=1.6">
-  <link rel="stylesheet" href="../assets/css/base.css?v=1.6">
-  <link rel="stylesheet" href="../assets/css/header.css?v=1.6">
-  <link rel="stylesheet" href="../assets/css/footer.css?v=1.6">
-  <link rel="stylesheet" href="../assets/css/components.css?v=1.6">
-  <link rel="stylesheet" href="../assets/css/responsive.css?v=1.6">
+  <!-- Google Fonts - Asynchronous & Swap Loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  </noscript>
+  
+  <!-- Central Stylesheet Framework (Production Bundle) -->
+  <link rel="stylesheet" href="../assets/css/main.min.css?v=1.6">
   
   <!-- Custom page style injections if any -->
   
@@ -97,7 +106,7 @@
                   </ul>
                 </div>
                 <div class="mega-menu-column" style="grid-column: span 2; display: flex; gap: 20px; align-items: center; background-color: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm);">
-                  <img src="../assets/images/Board-300x200.jpg" alt="KCT Board Info" style="width: 120px; border-radius: var(--border-radius-sm);">
+                  <img src="../assets/images/Board-300x200.webp" alt="KCT Board Info" style="width: 120px; border-radius: var(--border-radius-sm);">
                   <div>
                     <h6 style="color: var(--color-secondary); font-size: 14px; margin-bottom: 5px;">Corporate Governance</h6>
                     <p style="font-size: 12px; line-height: 1.4em; margin-bottom: 0; color: var(--color-text);">The Board of Trustees and committees assist in discharging collective responsibility for corporate governance.</p>
@@ -128,7 +137,7 @@
                   </ul>
                 </div>
                 <div class="mega-menu-column" style="grid-column: span 2; display: flex; gap: 20px; align-items: center; background-color: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm);">
-                  <img src="../assets/images/A39A8807-300x200.jpg" alt="KCT Mall Info" style="width: 120px; border-radius: var(--border-radius-sm);">
+                  <img src="../assets/images/A39A8807-300x200.webp" alt="KCT Mall Info" style="width: 120px; border-radius: var(--border-radius-sm);">
                   <div>
                     <h6 style="color: var(--color-secondary); font-size: 14px; margin-bottom: 5px;">Spatial Development</h6>
                     <p style="font-size: 12px; line-height: 1.4em; margin-bottom: 0; color: var(--color-text);">We expand residential, commercial, and communal facilities under Cape Town approved frameworks.</p>
@@ -171,7 +180,7 @@
 
 
 <!-- 1. PAGE HEADER -->
-<section class="section dark" style="background-image: linear-gradient(rgba(0, 60, 97, 0.9), rgba(0, 60, 97, 0.9)), url('../assets/images/header-back-scaled.jpg'); background-size: cover; background-position: center; padding: 80px 0; text-align: center; margin-top: 0;">
+<section class="section dark" style="background-image: linear-gradient(rgba(0, 60, 97, 0.9), rgba(0, 60, 97, 0.9)), url('../assets/images/header-back-scaled.webp'); background-size: cover; background-position: center; padding: 80px 0; text-align: center; margin-top: 0;">
   <div class="container">
     <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Direct Line</span>
     <h1 style="color: var(--color-alternate); margin-bottom: 10px; font-family: var(--font-headings);">Contact Us</h1>
@@ -666,9 +675,8 @@
   <button class="back-to-top" aria-label="Scroll back to top" id="floating-back-to-top-btn">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
-  <!-- Interactivity Javascript Scripts -->
-  <script src="../assets/js/main.js?v=1.2"></script>
-  <script src="../assets/js/slider.js?v=1.2"></script>
+  <!-- Consolidated Interactivity Javascript Bundle (Deferred) -->
+  <script src="../assets/js/app.min.js?v=1.6" defer></script>
   
 </body>
 </html>
