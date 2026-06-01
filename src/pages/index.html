@@ -16,14 +16,10 @@ description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asse
 
   <!-- Vignette overlay (edges dark) -->
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,10,25,0.65) 100%);z-index:2;pointer-events:none;"></div>
-  <!-- Left gradient so text is readable -->
-  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,20,45,0.88) 0%,rgba(0,30,60,0.6) 42%,transparent 72%);z-index:2;pointer-events:none;"></div>
+  <!-- Stronger legibility gradient overlay (navy-to-transparent) -->
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,20,45,0.85) 0%,rgba(0,35,75,0.70) 45%,rgba(0,35,75,0.45) 100%);z-index:2;pointer-events:none;"></div>
   <!-- Bottom fade -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:260px;background:linear-gradient(to top,rgba(0,15,35,0.97) 0%,transparent 100%);z-index:3;pointer-events:none;"></div>
-
-  <!-- Cinematic letterbox bars -->
-  <div id="hero-letterbox-top" style="position:absolute;top:0;left:0;right:0;height:50px;background:#000;z-index:4;transform:translateY(-100%);animation:letterboxReveal 1.2s 0.3s ease-out forwards;"></div>
-  <div id="hero-letterbox-bot" style="position:absolute;bottom:0;left:0;right:0;height:50px;background:#000;z-index:4;transform:translateY(100%);animation:letterboxReveal 1.2s 0.3s ease-out forwards;"></div>
 
   <!-- ── MAIN CONTENT ── -->
   <div class="container" style="position:relative;z-index:10;height:100%;display:flex;flex-direction:column;justify-content:center;padding-top:80px;padding-bottom:160px;">
@@ -69,28 +65,28 @@ description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asse
     </div>
   </div>
 
-  <!-- Bottom info bar -->
-  <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,10,28,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,0.07);z-index:10;animation:heroFadeUp 1s 0.8s ease-out both;">
+  <!-- Bottom info bar (Responsive Glassmorphism) -->
+  <div class="hero-bottom-info-bar">
     <div class="container">
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);">
-        <div style="padding:15px 20px;border-right:1px solid rgba(255,255,255,0.06);">
-          <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#128226; Notice</span>
-          <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">KCT Mall Upgrade active &mdash; construction 45% complete as of May 2024.</p>
+      <div class="hero-info-grid">
+        <div class="hero-info-col">
+          <span class="hero-info-label">&#128226; Notice</span>
+          <p class="hero-info-text">KCT Mall Upgrade active &mdash; construction 45% complete as of May 2024.</p>
         </div>
-        <div style="padding:15px 20px;border-right:1px solid rgba(255,255,255,0.06);">
-          <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#128196; Tenders &amp; RFQs</span>
-          <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">New maintenance &amp; procurement bids published. <a href="{{relativePath}}media/index.html" style="color:#c8a04a;text-decoration:none;font-weight:700;">View Media Desk &rarr;</a></p>
+        <div class="hero-info-col">
+          <span class="hero-info-label">&#128196; Tenders &amp; RFQs</span>
+          <p class="hero-info-text">New maintenance &amp; procurement bids published. <a href="{{relativePath}}media/index.html">View Media Desk &rarr;</a></p>
         </div>
-        <div style="padding:15px 20px;">
-          <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#127959; Development</span>
-          <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">KBD Precinct spatial planning ongoing. Hospital &amp; housing sites under stakeholder engagement.</p>
+        <div class="hero-info-col">
+          <span class="hero-info-label">&#127959; Development</span>
+          <p class="hero-info-text">KBD Precinct spatial planning ongoing. Hospital &amp; housing sites under stakeholder engagement.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Scroll indicator -->
-  <div style="position:absolute;bottom:72px;left:50%;transform:translateX(-50%);z-index:10;text-align:center;animation:heroFadeUp 1s 1.2s ease-out both;">
+  <div style="position:absolute;bottom:85px;left:50%;transform:translateX(-50%);z-index:10;text-align:center;animation:heroFadeUp 1s 1.2s ease-out both;">
     <div style="font-size:9px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">Scroll</div>
     <div style="width:22px;height:38px;border:2px solid rgba(255,255,255,0.18);border-radius:12px;margin:0 auto;display:flex;align-items:flex-start;justify-content:center;padding-top:5px;">
       <div style="width:3px;height:7px;background:#c8a04a;border-radius:2px;animation:scrollDot 1.8s ease-in-out infinite;"></div>
@@ -100,10 +96,6 @@ description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asse
 </section>
 
 <style>
-/* ── Letterbox cinematic reveal ── */
-@keyframes letterboxReveal {
-  to { transform: translateY(0); }
-}
 /* ── Text entrances ── */
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(26px); }
