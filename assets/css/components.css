@@ -858,6 +858,63 @@
    SCREENSHOT VISUAL COMPONENTS REPLICATION (CIVIC SUNRISE KIT)
    ========================================================================== */
 
+/* --- HERO BOTTOM INFO BAR (GLASSMORPHISM) --- */
+.hero-bottom-info-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 15, 35, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 10;
+  animation: heroFadeUp 1s 0.8s ease-out both;
+}
+
+.hero-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.hero-info-col {
+  padding: 18px 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-info-col:last-child {
+  border-right: none;
+}
+
+.hero-info-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #c8a04a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hero-info-text {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hero-info-text a {
+  color: #c8a04a;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.hero-info-text a:hover {
+  color: white;
+}
+
 /* 1. HERO OVERLAPPING SERVICE CARDS */
 .hero-overlap-wrapper {
   margin-top: -100px; /* Overlap the bottom of the hero section elegantly */
