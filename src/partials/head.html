@@ -9,20 +9,29 @@
   <title>{{title}}</title>
   <meta name="description" content="{{description}}">
   
+  <!-- Network Optimization: Preconnect to CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="{{relativePath}}assets/images/KCT_LOGO-300x300.jpg" sizes="300x300">
   <link rel="apple-touch-icon" href="{{relativePath}}assets/images/KCT_LOGO-300x300.jpg">
   
+  <!-- Preload Critical Above-The-Fold Assets (First Hero Canvas Frame) -->
+  <link rel="preload" as="image" href="{{relativePath}}assets/images/2.webp">
+  
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   
-  <!-- Central Stylesheet Framework -->
-  <link rel="stylesheet" href="{{relativePath}}assets/css/variables.css?v=1.6">
-  <link rel="stylesheet" href="{{relativePath}}assets/css/base.css?v=1.6">
-  <link rel="stylesheet" href="{{relativePath}}assets/css/header.css?v=1.6">
-  <link rel="stylesheet" href="{{relativePath}}assets/css/footer.css?v=1.6">
-  <link rel="stylesheet" href="{{relativePath}}assets/css/components.css?v=1.6">
-  <link rel="stylesheet" href="{{relativePath}}assets/css/responsive.css?v=1.6">
+  <!-- Google Fonts - Asynchronous & Swap Loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  </noscript>
+  
+  <!-- Central Stylesheet Framework (Production Bundle) -->
+  <link rel="stylesheet" href="{{relativePath}}assets/css/main.min.css?v=1.6">
   
   <!-- Custom page style injections if any -->
   {{pageStyles}}
