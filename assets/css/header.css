@@ -100,6 +100,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 50px; /* Lock vertical alignment and layout balance */
 }
 
 /* 3. Logo and Branding */
@@ -107,6 +108,7 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s;
+  margin-right: 25px; /* Spacing buffer between logo and navigation */
 }
 
 .logo:hover {
@@ -116,8 +118,7 @@
 .logo img {
   height: 45px; /* Proportional logo in solid header */
   width: auto;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-  mix-blend-mode: multiply;
+  display: block;
 }
 
 /* 4. Modern Pill-Shaped Navigation Links */
