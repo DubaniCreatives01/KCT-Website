@@ -3,111 +3,85 @@ title: Khayelitsha Community Trust (KCT) - Home
 description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asset portfolio, 1,008 jobs created, 200+ local businesses supported. Empowering Khayelitsha through commercial, residential, and community infrastructure development since 2003.
 -->
 
-<!-- 1. CINEMATIC ANIMATED HERO - 2.jpg FEATURE -->
-<section id="homepage-hero-banner" style="position:relative;width:100%;min-height:100vh;overflow:hidden;display:flex;align-items:center;background:#00253d;">
+<!-- 1. CINEMATIC CANVAS HERO — DRONE SIMULATION -->
+<section id="homepage-hero-banner" style="position:relative;width:100%;height:100vh;min-height:600px;overflow:hidden;background:#00152a;">
 
-  <!-- Ken Burns animated 2.jpg background -->
-  <div style="position:absolute;inset:0;background-image:url('{{relativePath}}assets/images/2.jpg');background-size:cover;background-position:center top;animation:heroBgKenBurns 18s ease-in-out infinite alternate;will-change:transform;z-index:0;"></div>
+  <!-- ════════════════════════════════════════════
+       CINEMATIC CANVAS: drone-simulation engine
+       All motion rendered in JS — parallax, Ken Burns,
+       cross-dissolve scene transitions, particle dust,
+       bokeh orbs, and KCT logo glow pulse
+       ════════════════════════════════════════════ -->
+  <canvas id="kct-hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block;"></canvas>
 
-  <!-- Left text veil -->
-  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,25,50,0.93) 0%,rgba(0,40,75,0.78) 45%,rgba(0,25,50,0.38) 68%,transparent 100%);z-index:1;"></div>
+  <!-- Vignette overlay (edges dark) -->
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,10,25,0.65) 100%);z-index:2;pointer-events:none;"></div>
+  <!-- Left gradient so text is readable -->
+  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,20,45,0.88) 0%,rgba(0,30,60,0.6) 42%,transparent 72%);z-index:2;pointer-events:none;"></div>
   <!-- Bottom fade -->
-  <div style="position:absolute;bottom:0;left:0;right:0;height:220px;background:linear-gradient(to top,rgba(0,20,45,0.96) 0%,transparent 100%);z-index:2;"></div>
-  <!-- Animated gold shimmer sweep -->
-  <div style="position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(200,160,74,0.05) 50%,transparent 70%);animation:heroShimmerSweep 6s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:260px;background:linear-gradient(to top,rgba(0,15,35,0.97) 0%,transparent 100%);z-index:3;pointer-events:none;"></div>
 
-  <!-- Decorative pulse rings -->
-  <div style="position:absolute;top:10%;right:5%;width:280px;height:280px;border-radius:50%;border:1px solid rgba(200,160,74,0.12);animation:heroRingPulse 4s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
-  <div style="position:absolute;top:13%;right:8%;width:180px;height:180px;border-radius:50%;border:1px solid rgba(200,160,74,0.07);animation:heroRingPulse 4s 1s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
-  <div style="position:absolute;bottom:20%;left:3%;width:150px;height:150px;border-radius:50%;border:1px solid rgba(255,255,255,0.05);animation:heroRingPulse 5s 0.5s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
+  <!-- Cinematic letterbox bars -->
+  <div id="hero-letterbox-top" style="position:absolute;top:0;left:0;right:0;height:50px;background:#000;z-index:4;transform:translateY(-100%);animation:letterboxReveal 1.2s 0.3s ease-out forwards;"></div>
+  <div id="hero-letterbox-bot" style="position:absolute;bottom:0;left:0;right:0;height:50px;background:#000;z-index:4;transform:translateY(100%);animation:letterboxReveal 1.2s 0.3s ease-out forwards;"></div>
 
-  <!-- MAIN CONTENT GRID -->
-  <div class="container" style="position:relative;z-index:10;width:100%;padding-top:130px;padding-bottom:170px;">
-    <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:center;">
+  <!-- ── MAIN CONTENT ── -->
+  <div class="container" style="position:relative;z-index:10;height:100%;display:flex;flex-direction:column;justify-content:center;padding-top:80px;padding-bottom:160px;">
 
-      <!-- LEFT: Animated text -->
-      <div>
-        <!-- Gold badge -->
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,160,74,0.12);border:1px solid rgba(200,160,74,0.3);border-radius:50px;padding:6px 16px;margin-bottom:28px;animation:heroFadeUp 0.8s ease-out both;">
-          <span style="width:6px;height:6px;border-radius:50%;background:#c8a04a;display:inline-block;animation:heroBlink 1.5s infinite;"></span>
-          <span style="font-size:11px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:2px;">Est. 2003 &middot; Khayelitsha CBD</span>
-        </div>
-
-        <h2 style="font-family:var(--font-headings);font-size:22px;font-weight:400;color:rgba(255,255,255,0.7);margin:0 0 10px;animation:heroFadeUp 0.9s 0.1s ease-out both;">Welcome to the</h2>
-        <h1 style="font-family:var(--font-headings);font-size:clamp(38px,4.5vw,62px);font-weight:800;color:white;line-height:1.1;letter-spacing:-2px;margin:0 0 14px;animation:heroFadeUp 1s 0.2s ease-out both;">Khayelitsha<br>Community<br><span style="color:#c8a04a;">Trust</span></h1>
-
-        <!-- Animated gold bar -->
-        <div style="height:4px;background:linear-gradient(90deg,#c8a04a,transparent);border-radius:2px;margin-bottom:28px;animation:heroBarSlide 1.1s 0.4s ease-out both;"></div>
-
-        <p style="font-size:clamp(15px,1.3vw,18px);color:rgba(255,255,255,0.82);max-width:520px;line-height:1.75;margin:0 0 40px;animation:heroFadeUp 1s 0.35s ease-out both;">
-          Empowering Khayelitsha through sustainable commercial, residential, and community infrastructure &mdash; generating lasting economic value and community upliftment since 2003.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div style="display:flex;gap:16px;flex-wrap:wrap;animation:heroFadeUp 1s 0.5s ease-out both;">
-          <a href="{{relativePath}}about-us/index.html" id="hero-cta-discover" style="display:inline-flex;align-items:center;gap:8px;background:#c8a04a;color:#00253d;padding:14px 32px;border-radius:6px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;box-shadow:0 4px 20px rgba(200,160,74,0.4);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(200,160,74,0.65)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(200,160,74,0.4)'">
-            Discover Our Work <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i>
-          </a>
-          <a href="{{relativePath}}kct-team/index.html" id="hero-cta-board" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;padding:14px 32px;border-radius:6px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border:2px solid rgba(255,255,255,0.35);transition:border-color 0.3s,color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(200,160,74,0.7)';this.style.color='#c8a04a';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.35)';this.style.color='white';this.style.transform='none'">
-            Board &amp; Committees <i class="fa-solid fa-users" style="font-size:11px;"></i>
-          </a>
-        </div>
-
-        <!-- Mini stat strip -->
-        <div style="display:flex;gap:24px;margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.1);animation:heroFadeUp 1s 0.65s ease-out both;">
-          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">100%</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Occupancy</div></div>
-          <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
-          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">R443M</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Mall Value</div></div>
-          <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
-          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">1,008</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Jobs</div></div>
-          <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
-          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">+91%</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">EBIT</div></div>
-        </div>
+    <!-- Text block -->
+    <div style="max-width:600px;">
+      <!-- Badge -->
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,160,74,0.12);border:1px solid rgba(200,160,74,0.3);border-radius:50px;padding:6px 16px;margin-bottom:26px;animation:heroFadeUp 0.8s ease-out both;">
+        <span style="width:6px;height:6px;border-radius:50%;background:#c8a04a;display:inline-block;animation:heroBlink 1.5s infinite;"></span>
+        <span style="font-size:11px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:2px;">Est. 2003 &middot; Khayelitsha CBD</span>
       </div>
 
-      <!-- RIGHT: Glassmorphic image frame -->
-      <div style="position:relative;animation:heroFadeRight 1.1s 0.3s ease-out both;">
-        <!-- Glow behind frame -->
-        <div style="position:absolute;inset:-20px;border-radius:24px;background:radial-gradient(ellipse,rgba(200,160,74,0.18) 0%,transparent 70%);filter:blur(20px);z-index:0;"></div>
-        <!-- Frame -->
-        <div style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.14);box-shadow:0 24px 80px rgba(0,0,0,0.6);z-index:1;">
-          <img src="{{relativePath}}assets/images/2.jpg"
-               alt="KCT Community Trust modern reception with Table Mountain backdrop and Khayelitsha community members"
-               style="width:100%;display:block;object-fit:cover;object-position:center top;height:480px;animation:heroImgZoom 18s ease-in-out infinite alternate;">
-          <!-- Glassmorphic badge over image -->
-          <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(0,20,45,0.65);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.13);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;">
-            <div style="width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(200,160,74,0.5);background:white;display:flex;align-items:center;justify-content:center;">
-              <img src="{{relativePath}}media/logo.svg" alt="KCT Logo" style="width:90%;height:90%;object-fit:contain;">
-            </div>
-            <div>
-              <div style="font-size:12px;font-weight:700;color:white;margin-bottom:1px;">Khayelitsha Community Trust</div>
-              <div style="font-size:10px;color:#c8a04a;font-weight:600;">NPO &middot; PBO Registered &middot; Est. 2003</div>
-            </div>
-            <div style="margin-left:auto;text-align:center;">
-              <span style="width:8px;height:8px;border-radius:50%;background:#25D366;animation:heroBlink 2s infinite;display:block;margin:0 auto 3px;"></span>
-              <span style="font-size:9px;color:rgba(255,255,255,0.5);">Live</span>
-            </div>
-          </div>
-        </div>
-        <!-- FY2024 badge -->
-        <div style="position:absolute;top:-14px;right:-14px;z-index:3;background:linear-gradient(135deg,#c8a04a,#e0b85a);color:#00253d;font-size:10px;font-weight:800;padding:7px 14px;border-radius:50px;text-transform:uppercase;letter-spacing:1px;box-shadow:0 4px 16px rgba(200,160,74,0.5);animation:heroFadeUp 1s 0.7s ease-out both;">FY2024 Report &#10003;</div>
+      <h2 style="font-family:var(--font-headings);font-size:22px;font-weight:400;color:rgba(255,255,255,0.7);margin:0 0 10px;animation:heroFadeUp 0.9s 0.1s ease-out both;">Welcome to the</h2>
+      <h1 style="font-family:var(--font-headings);font-size:clamp(38px,4.5vw,64px);font-weight:800;color:white;line-height:1.1;letter-spacing:-2px;margin:0 0 14px;animation:heroFadeUp 1s 0.2s ease-out both;">
+        Khayelitsha<br>Community<br><span style="color:#c8a04a;">Trust</span>
+      </h1>
+
+      <div style="height:4px;background:linear-gradient(90deg,#c8a04a,transparent);border-radius:2px;margin-bottom:24px;animation:heroBarSlide 1.1s 0.4s ease-out both;"></div>
+
+      <p style="font-size:clamp(15px,1.3vw,18px);color:rgba(255,255,255,0.82);max-width:520px;line-height:1.75;margin:0 0 38px;animation:heroFadeUp 1s 0.35s ease-out both;">
+        Empowering Khayelitsha through sustainable commercial, residential, and community infrastructure &mdash; generating lasting economic value and community upliftment since 2003.
+      </p>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap;animation:heroFadeUp 1s 0.5s ease-out both;">
+        <a href="{{relativePath}}about-us/index.html" id="hero-cta-discover" style="display:inline-flex;align-items:center;gap:8px;background:#c8a04a;color:#00253d;padding:14px 32px;border-radius:6px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;box-shadow:0 4px 20px rgba(200,160,74,0.45);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(200,160,74,0.65)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(200,160,74,0.45)'">
+          Discover Our Work <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i>
+        </a>
+        <a href="{{relativePath}}kct-team/index.html" id="hero-cta-board" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;padding:14px 32px;border-radius:6px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border:2px solid rgba(255,255,255,0.35);transition:border-color 0.3s,color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(200,160,74,0.7)';this.style.color='#c8a04a';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.35)';this.style.color='white';this.style.transform='none'">
+          Board &amp; Committees <i class="fa-solid fa-users" style="font-size:11px;"></i>
+        </a>
+      </div>
+
+      <!-- Stat strip -->
+      <div style="display:flex;gap:24px;margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.1);animation:heroFadeUp 1s 0.65s ease-out both;flex-wrap:wrap;">
+        <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">100%</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Occupancy</div></div>
+        <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+        <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">R443M</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Mall Value</div></div>
+        <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+        <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">1,008</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Jobs</div></div>
+        <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+        <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">+91%</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">EBIT</div></div>
       </div>
     </div>
   </div>
 
   <!-- Bottom info bar -->
-  <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,12,30,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,0.07);z-index:10;animation:heroFadeUp 1s 0.8s ease-out both;">
+  <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,10,28,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,0.07);z-index:10;animation:heroFadeUp 1s 0.8s ease-out both;">
     <div class="container">
       <div style="display:grid;grid-template-columns:repeat(3,1fr);">
-        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,0.06);">
+        <div style="padding:15px 20px;border-right:1px solid rgba(255,255,255,0.06);">
           <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#128226; Notice</span>
           <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">KCT Mall Upgrade active &mdash; construction 45% complete as of May 2024.</p>
         </div>
-        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,0.06);">
+        <div style="padding:15px 20px;border-right:1px solid rgba(255,255,255,0.06);">
           <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#128196; Tenders &amp; RFQs</span>
           <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">New maintenance &amp; procurement bids published. <a href="{{relativePath}}media/index.html" style="color:#c8a04a;text-decoration:none;font-weight:700;">View Media Desk &rarr;</a></p>
         </div>
-        <div style="padding:16px 20px;">
+        <div style="padding:15px 20px;">
           <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#127959; Development</span>
           <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">KBD Precinct spatial planning ongoing. Hospital &amp; housing sites under stakeholder engagement.</p>
         </div>
@@ -116,7 +90,7 @@ description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asse
   </div>
 
   <!-- Scroll indicator -->
-  <div style="position:absolute;bottom:72px;left:50%;transform:translateX(-50%);z-index:10;text-align:center;animation:heroFadeUp 1s 1s ease-out both;">
+  <div style="position:absolute;bottom:72px;left:50%;transform:translateX(-50%);z-index:10;text-align:center;animation:heroFadeUp 1s 1.2s ease-out both;">
     <div style="font-size:9px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">Scroll</div>
     <div style="width:22px;height:38px;border:2px solid rgba(255,255,255,0.18);border-radius:12px;margin:0 auto;display:flex;align-items:flex-start;justify-content:center;padding-top:5px;">
       <div style="width:3px;height:7px;background:#c8a04a;border-radius:2px;animation:scrollDot 1.8s ease-in-out infinite;"></div>
@@ -126,31 +100,14 @@ description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asse
 </section>
 
 <style>
-@keyframes heroBgKenBurns {
-  0%   { transform: scale(1.08) translate(0px, 0px); }
-  33%  { transform: scale(1.12) translate(-14px, -7px); }
-  66%  { transform: scale(1.1)  translate(9px, -5px); }
-  100% { transform: scale(1.06) translate(-5px, 7px); }
+/* ── Letterbox cinematic reveal ── */
+@keyframes letterboxReveal {
+  to { transform: translateY(0); }
 }
-@keyframes heroImgZoom {
-  0%   { transform: scale(1) translate(0, 0); }
-  100% { transform: scale(1.07) translate(-8px, -4px); }
-}
-@keyframes heroShimmerSweep {
-  0%, 100% { opacity: 0; transform: translateX(-10%); }
-  50%       { opacity: 1; transform: translateX(10%); }
-}
-@keyframes heroRingPulse {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50%       { transform: scale(1.08); opacity: 0.15; }
-}
+/* ── Text entrances ── */
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(26px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes heroFadeRight {
-  from { opacity: 0; transform: translateX(38px); }
-  to   { opacity: 1; transform: translateX(0); }
 }
 @keyframes heroBarSlide {
   from { width: 0; opacity: 0; }
@@ -165,19 +122,295 @@ description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asse
   80%  { transform: translateY(15px); opacity: 0; }
   100% { transform: translateY(0); opacity: 0; }
 }
-@media (max-width: 900px) {
-  #homepage-hero-banner > .container > div {
-    grid-template-columns: 1fr !important;
-  }
-  #homepage-hero-banner > .container > div > div:last-child {
-    display: none !important;
-  }
-  #homepage-hero-banner > .container {
-    padding-top: 100px !important;
-    padding-bottom: 175px !important;
-  }
+@media (max-width: 768px) {
+  #homepage-hero-banner { height: 100svh; }
 }
 </style>
+
+<!-- ══════════════════════════════════════════════════════════
+     CINEMATIC CANVAS ENGINE
+     Simulates: drone pan/zoom (Ken Burns), scene cross-dissolve
+     with 3 images, floating particle dust, bokeh light orbs,
+     subtle "people movement" shimmer zones, KCT logo glow pulse
+     ══════════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  'use strict';
+
+  const IMAGES = [
+    '{{relativePath}}assets/images/2.jpg',   // scene 0: reception + Table Mtn
+    '{{relativePath}}assets/images/1.jpg',   // scene 1: boardroom + KCT logo at sunset
+    '{{relativePath}}assets/images/3.jpg',   // scene 2: planning desk + Table Mtn
+  ];
+
+  // Drone motion paths per scene: {sx,sy,ex,ey,sScale,eScale}
+  // s=start, e=end positions as fraction of (imgW-cW, imgH-cH)
+  const DRONE_PATHS = [
+    { sx:0.0, sy:0.0, ex:0.05, ey:0.03, sScale:1.08, eScale:1.18 },  // slow pull-back + drift right
+    { sx:0.1, sy:0.0, ex:0.0,  ey:0.05, sScale:1.15, eScale:1.06 },  // zoom out + drift left
+    { sx:0.0, sy:0.05,ex:0.08, ey:0.0,  sScale:1.1,  eScale:1.18 },  // push in from bottom
+  ];
+
+  // How long each scene stays (ms) before cross-dissolving to next
+  const SCENE_DURATION = 7000;
+  const DISSOLVE_DURATION = 2200;
+
+  const canvas = document.getElementById('kct-hero-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  let W, H;
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // ── Load all images ──
+  const imgs = IMAGES.map(src => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = src;
+    return img;
+  });
+
+  // ── Particle dust system ──
+  const PARTICLE_COUNT = 55;
+  const particles = Array.from({length: PARTICLE_COUNT}, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    r: 0.5 + Math.random() * 2.5,
+    vx: (Math.random() - 0.5) * 0.00012,
+    vy: -0.00005 - Math.random() * 0.00015,
+    opacity: 0.05 + Math.random() * 0.25,
+    phase: Math.random() * Math.PI * 2,
+  }));
+
+  // ── Bokeh orbs (simulates light from windows/ceiling) ──
+  const BOKEH_COUNT = 12;
+  const bokeh = Array.from({length: BOKEH_COUNT}, () => ({
+    x: Math.random(),
+    y: 0.05 + Math.random() * 0.6,
+    r: 20 + Math.random() * 60,
+    opacity: 0.03 + Math.random() * 0.07,
+    vx: (Math.random() - 0.5) * 0.00008,
+    vy: (Math.random() - 0.5) * 0.00004,
+    hue: Math.random() < 0.4 ? 'rgba(200,160,74,' : 'rgba(120,180,255,',
+    phase: Math.random() * Math.PI * 2,
+  }));
+
+  // ── "People movement" shimmer zones (scene 0 = 2.jpg, people on left/right) ──
+  // Expressed as fraction of canvas
+  const SHIMMER_ZONES = [
+    { scene: 0, x: 0.05, y: 0.55, w: 0.12, h: 0.38, intensity: 0.06 },   // reception desk area
+    { scene: 0, x: 0.55, y: 0.5,  w: 0.18, h: 0.45, intensity: 0.07 },   // right group of people
+    { scene: 0, x: 0.35, y: 0.45, w: 0.15, h: 0.25, intensity: 0.05 },   // centre walkway
+    { scene: 1, x: 0.55, y: 0.15, w: 0.35, h: 0.55, intensity: 0.12 },   // KCT logo wall (scene 1)
+  ];
+
+  let sceneIdx    = 0;
+  let sceneTimer  = 0;
+  let dissolving  = false;
+  let dissolveT   = 0;
+  let lastTime    = null;
+  let running     = true;
+
+  // Easing
+  function easeInOut(t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2*t)*t;
+  }
+
+  function drawScene(img, path, t, alpha) {
+    if (!img.complete || img.naturalWidth === 0) return;
+
+    const scale = path.sScale + (path.eScale - path.sScale) * t;
+    const drawW = W * scale;
+    const drawH = H * scale;
+
+    // Pan position
+    const maxOffX = drawW - W;
+    const maxOffY = drawH - H;
+    const ox = path.sx * maxOffX + (path.ex - path.sx) * maxOffX * t;
+    const oy = path.sy * maxOffY + (path.ey - path.sy) * maxOffY * t;
+
+    // Fit image to cover canvas
+    const imgAR = img.naturalWidth / img.naturalHeight;
+    const canvAR = W / H;
+    let iw, ih, ix, iy;
+    if (imgAR > canvAR) {
+      ih = drawH;
+      iw = ih * imgAR;
+      ix = -(iw - drawW) / 2;
+      iy = 0;
+    } else {
+      iw = drawW;
+      ih = iw / imgAR;
+      ix = 0;
+      iy = -(ih - drawH) / 2;
+    }
+
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(img, ix - ox, iy - oy, iw, ih);
+    ctx.restore();
+  }
+
+  function drawParticles(t) {
+    const now = t / 1000;
+    particles.forEach(p => {
+      const pulseOpacity = p.opacity * (0.6 + 0.4 * Math.sin(now * 1.2 + p.phase));
+      ctx.save();
+      ctx.globalAlpha = pulseOpacity;
+      ctx.beginPath();
+      ctx.arc(p.x * W, p.y * H, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,1)';
+      ctx.fill();
+      ctx.restore();
+      // drift
+      p.x += p.vx;
+      p.y += p.vy;
+      // wrap
+      if (p.y < -0.05) { p.y = 1.05; p.x = Math.random(); }
+      if (p.x < -0.05) p.x = 1.05;
+      if (p.x > 1.05)  p.x = -0.05;
+    });
+  }
+
+  function drawBokeh(t) {
+    const now = t / 1000;
+    bokeh.forEach(b => {
+      const pulse = 0.5 + 0.5 * Math.sin(now * 0.7 + b.phase);
+      ctx.save();
+      ctx.globalAlpha = b.opacity * pulse;
+      const grad = ctx.createRadialGradient(b.x * W, b.y * H, 0, b.x * W, b.y * H, b.r);
+      grad.addColorStop(0, b.hue + '1)');
+      grad.addColorStop(1, b.hue + '0)');
+      ctx.beginPath();
+      ctx.arc(b.x * W, b.y * H, b.r, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.restore();
+      b.x += b.vx;
+      b.y += b.vy;
+      if (b.x < -0.1) b.x = 1.1;
+      if (b.x > 1.1)  b.x = -0.1;
+      if (b.y < -0.1) b.y = 1.1;
+      if (b.y > 1.1)  b.y = -0.1;
+    });
+  }
+
+  // Shimmer zones — subtle rippling brightness to simulate movement
+  function drawShimmers(t, currentScene) {
+    const now = t / 1000;
+    SHIMMER_ZONES.forEach(zone => {
+      if (zone.scene !== currentScene) return;
+      const shimmer = zone.intensity * (0.5 + 0.5 * Math.sin(now * 2.5 + zone.x * 10));
+      ctx.save();
+      ctx.globalAlpha = shimmer;
+      ctx.fillStyle = 'rgba(255,255,255,1)';
+      ctx.fillRect(zone.x * W, zone.y * H, zone.w * W, zone.h * H);
+      ctx.restore();
+    });
+  }
+
+  // KCT logo glow pulse — draws a gold halo where the logo lives in scene 1 (1.jpg)
+  function drawLogoGlow(t, alpha) {
+    const now = t / 1000;
+    const pulse = 0.5 + 0.5 * Math.sin(now * 1.8);
+    // Logo is upper-right area of 1.jpg: approx 60-90% x, 10-70% y
+    const cx = W * 0.76;
+    const cy = H * 0.38;
+    const r  = Math.min(W, H) * 0.18;
+    ctx.save();
+    ctx.globalAlpha = alpha * pulse * 0.18;
+    const grd = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+    grd.addColorStop(0, 'rgba(200,160,74,1)');
+    grd.addColorStop(0.5, 'rgba(0,180,255,0.4)');
+    grd.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+    ctx.restore();
+  }
+
+  // ── Main animation loop ──
+  function frame(now) {
+    if (!running) return;
+    if (!lastTime) lastTime = now;
+    const dt = now - lastTime;
+    lastTime = now;
+
+    ctx.clearRect(0, 0, W, H);
+
+    const nextIdx = (sceneIdx + 1) % imgs.length;
+    const sceneT  = easeInOut(Math.min(sceneTimer / SCENE_DURATION, 1));
+
+    if (!dissolving) {
+      // Draw current scene only
+      drawScene(imgs[sceneIdx], DRONE_PATHS[sceneIdx], sceneT, 1);
+      if (sceneIdx === 1) drawLogoGlow(now, 1); // logo glow on boardroom scene
+      drawShimmers(now, sceneIdx);
+
+      sceneTimer += dt;
+      if (sceneTimer >= SCENE_DURATION) {
+        dissolving = true;
+        dissolveT  = 0;
+      }
+    } else {
+      // Cross dissolve: draw both scenes
+      const dProg = dissolveT / DISSOLVE_DURATION;
+      const alpha = easeInOut(dProg);
+
+      drawScene(imgs[sceneIdx], DRONE_PATHS[sceneIdx], 1, 1 - alpha);
+      drawScene(imgs[nextIdx],  DRONE_PATHS[nextIdx],  0, alpha);
+
+      if (sceneIdx === 1) drawLogoGlow(now, 1 - alpha);
+      if (nextIdx  === 1) drawLogoGlow(now, alpha);
+
+      dissolveT += dt;
+      if (dissolveT >= DISSOLVE_DURATION) {
+        sceneIdx    = nextIdx;
+        sceneTimer  = 0;
+        dissolving  = false;
+      }
+    }
+
+    // Always draw particles and bokeh on top
+    drawParticles(now);
+    drawBokeh(now);
+
+    requestAnimationFrame(frame);
+  }
+
+  // Start after images load
+  let loaded = 0;
+  imgs.forEach(img => {
+    img.onload = () => {
+      loaded++;
+      if (loaded === imgs.length) {
+        requestAnimationFrame(frame);
+      }
+    };
+    // If already cached
+    if (img.complete && img.naturalWidth > 0) {
+      loaded++;
+      if (loaded === imgs.length) requestAnimationFrame(frame);
+    }
+  });
+
+  // Pause when tab hidden to save CPU
+  document.addEventListener('visibilitychange', () => {
+    running = !document.hidden;
+    if (running) {
+      lastTime = null;
+      requestAnimationFrame(frame);
+    }
+  });
+
+})();
+</script>
 
 <!-- 2. OVERLAPPING SERVICE CARDS GRID -->
 <section class="hero-overlap-wrapper" id="quick-overlap-services" style="margin-top: -100px; position: relative; z-index: 10;">
