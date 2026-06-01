@@ -3,70 +3,181 @@ title: Khayelitsha Community Trust (KCT) - Home
 description: Official portal for Khayelitsha Community Trust (KCT). R443.7M asset portfolio, 1,008 jobs created, 200+ local businesses supported. Empowering Khayelitsha through commercial, residential, and community infrastructure development since 2003.
 -->
 
-<!-- 1. DRONE/Mall BACKGROUND HERO BANNER -->
-<section class="hero-slider-container" id="homepage-hero-banner">
-  <!-- Fading background slides of 1.jpg, 2.jpg, 3.jpg -->
-  <div class="hero-bg-slides">
-    <div class="hero-bg-slide active" style="background-image: url('{{relativePath}}assets/images/1.jpg');"></div>
-    <div class="hero-bg-slide" style="background-image: url('{{relativePath}}assets/images/2.jpg');"></div>
-    <div class="hero-bg-slide" style="background-image: url('{{relativePath}}assets/images/3.jpg');"></div>
-  </div>
+<!-- 1. CINEMATIC ANIMATED HERO - 2.jpg FEATURE -->
+<section id="homepage-hero-banner" style="position:relative;width:100%;min-height:100vh;overflow:hidden;display:flex;align-items:center;background:#00253d;">
 
+  <!-- Ken Burns animated 2.jpg background -->
+  <div style="position:absolute;inset:0;background-image:url('{{relativePath}}assets/images/2.jpg');background-size:cover;background-position:center top;animation:heroBgKenBurns 18s ease-in-out infinite alternate;will-change:transform;z-index:0;"></div>
 
+  <!-- Left text veil -->
+  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,25,50,0.93) 0%,rgba(0,40,75,0.78) 45%,rgba(0,25,50,0.38) 68%,transparent 100%);z-index:1;"></div>
+  <!-- Bottom fade -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:220px;background:linear-gradient(to top,rgba(0,20,45,0.96) 0%,transparent 100%);z-index:2;"></div>
+  <!-- Animated gold shimmer sweep -->
+  <div style="position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(200,160,74,0.05) 50%,transparent 70%);animation:heroShimmerSweep 6s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
 
-  <!-- Slate blue translucent overlay to darken the backdrop, leaving the green landscape slightly visible -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0, 60, 97, 0.75), rgba(0, 37, 61, 0.6)); z-index: 1;"></div>
-  
-  <div class="container hero-container-flex">
-    <div class="hero-content-wrapper">
-      <h2 style="font-family: var(--font-headings); font-size: 28px; font-weight: 500; color: white; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); text-transform: none; letter-spacing: 0;">Welcome to the</h2>
-      <h1 style="font-family: var(--font-headings); font-size: 48px; font-weight: 700; color: white; margin-bottom: 20px; text-shadow: 0 4px 10px rgba(0,0,0,0.4); line-height: 1.2em; letter-spacing: -1px;">Khayelitsha Community<br>Trust Official Portal</h1>
-      
-      <p style="font-family: var(--font-body); font-size: 18px; color: rgba(255, 255, 255, 0.95); max-width: 650px; margin: 0 auto 35px; line-height: 1.6; text-shadow: 0 2px 4px rgba(0,0,0,0.4); font-weight: 400;">
-        Empowering the Khayelitsha community through sustainable commercial, residential, and community infrastructure developments.
-      </p>
-      
-      <!-- Action buttons side-by-side matching screenshot -->
-      <div style="display: flex; gap: 20px; justify-content: center;">
-        <a href="{{relativePath}}kct-team/index.html" class="btn btn-outline" style="border: 2px solid white; color: white; padding: 12px 30px; border-radius: 4px; font-weight: 700; font-size: 13px; text-transform: uppercase; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.borderColor='var(--color-tertiary)'; this.style.color='var(--color-tertiary)';" onmouseout="this.style.borderColor='white'; this.style.color='white';">Explore Committees ↗</a>
-        <a href="{{relativePath}}about-us/index.html" class="btn btn-primary" style="background-color: white; color: #003c61; border: none; padding: 12px 30px; border-radius: 4px; font-weight: 700; font-size: 13px; text-transform: uppercase; text-decoration: none; transition: transform 0.3s, background-color 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#e6e6e6';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='white';">Discover Our Work</a>
+  <!-- Decorative pulse rings -->
+  <div style="position:absolute;top:10%;right:5%;width:280px;height:280px;border-radius:50%;border:1px solid rgba(200,160,74,0.12);animation:heroRingPulse 4s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
+  <div style="position:absolute;top:13%;right:8%;width:180px;height:180px;border-radius:50%;border:1px solid rgba(200,160,74,0.07);animation:heroRingPulse 4s 1s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:20%;left:3%;width:150px;height:150px;border-radius:50%;border:1px solid rgba(255,255,255,0.05);animation:heroRingPulse 5s 0.5s ease-in-out infinite;z-index:2;pointer-events:none;"></div>
+
+  <!-- MAIN CONTENT GRID -->
+  <div class="container" style="position:relative;z-index:10;width:100%;padding-top:130px;padding-bottom:170px;">
+    <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:center;">
+
+      <!-- LEFT: Animated text -->
+      <div>
+        <!-- Gold badge -->
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,160,74,0.12);border:1px solid rgba(200,160,74,0.3);border-radius:50px;padding:6px 16px;margin-bottom:28px;animation:heroFadeUp 0.8s ease-out both;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#c8a04a;display:inline-block;animation:heroBlink 1.5s infinite;"></span>
+          <span style="font-size:11px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:2px;">Est. 2003 &middot; Khayelitsha CBD</span>
+        </div>
+
+        <h2 style="font-family:var(--font-headings);font-size:22px;font-weight:400;color:rgba(255,255,255,0.7);margin:0 0 10px;animation:heroFadeUp 0.9s 0.1s ease-out both;">Welcome to the</h2>
+        <h1 style="font-family:var(--font-headings);font-size:clamp(38px,4.5vw,62px);font-weight:800;color:white;line-height:1.1;letter-spacing:-2px;margin:0 0 14px;animation:heroFadeUp 1s 0.2s ease-out both;">Khayelitsha<br>Community<br><span style="color:#c8a04a;">Trust</span></h1>
+
+        <!-- Animated gold bar -->
+        <div style="height:4px;background:linear-gradient(90deg,#c8a04a,transparent);border-radius:2px;margin-bottom:28px;animation:heroBarSlide 1.1s 0.4s ease-out both;"></div>
+
+        <p style="font-size:clamp(15px,1.3vw,18px);color:rgba(255,255,255,0.82);max-width:520px;line-height:1.75;margin:0 0 40px;animation:heroFadeUp 1s 0.35s ease-out both;">
+          Empowering Khayelitsha through sustainable commercial, residential, and community infrastructure &mdash; generating lasting economic value and community upliftment since 2003.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div style="display:flex;gap:16px;flex-wrap:wrap;animation:heroFadeUp 1s 0.5s ease-out both;">
+          <a href="{{relativePath}}about-us/index.html" id="hero-cta-discover" style="display:inline-flex;align-items:center;gap:8px;background:#c8a04a;color:#00253d;padding:14px 32px;border-radius:6px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;box-shadow:0 4px 20px rgba(200,160,74,0.4);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 32px rgba(200,160,74,0.65)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(200,160,74,0.4)'">
+            Discover Our Work <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i>
+          </a>
+          <a href="{{relativePath}}kct-team/index.html" id="hero-cta-board" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;padding:14px 32px;border-radius:6px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border:2px solid rgba(255,255,255,0.35);transition:border-color 0.3s,color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(200,160,74,0.7)';this.style.color='#c8a04a';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.35)';this.style.color='white';this.style.transform='none'">
+            Board &amp; Committees <i class="fa-solid fa-users" style="font-size:11px;"></i>
+          </a>
+        </div>
+
+        <!-- Mini stat strip -->
+        <div style="display:flex;gap:24px;margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.1);animation:heroFadeUp 1s 0.65s ease-out both;">
+          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">100%</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Occupancy</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">R443M</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Mall Value</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">1,008</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">Jobs</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+          <div><div style="font-size:20px;font-weight:800;color:#c8a04a;font-family:var(--font-headings);">+91%</div><div style="font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:2px;">EBIT</div></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Three-Column Alerts Box at Hero Bottom matching screenshot design exactly -->
-    <div class="hero-alerts-box reveal-on-scroll reveal-scale">
-      <!-- Column 1: Weather -->
-      <div class="hero-alerts-column">
-        <span style="font-size: 13px; font-weight: 700; color: var(--color-tertiary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Today's Weather:</span>
-        <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 8px;">
-          <span id="hero-weather-temp" style="font-size: 32px; font-weight: 700; color: white;">19°C</span>
-          <div style="display: flex; flex-direction: column;">
-            <span id="hero-weather-desc" style="font-size: 14px; font-weight: 600; color: white; display: flex; align-items: center; gap: 6px;">
-              <i class="fa-solid fa-cloud-sun" style="color: var(--color-tertiary);"></i> scattered clouds
-            </span>
+      <!-- RIGHT: Glassmorphic image frame -->
+      <div style="position:relative;animation:heroFadeRight 1.1s 0.3s ease-out both;">
+        <!-- Glow behind frame -->
+        <div style="position:absolute;inset:-20px;border-radius:24px;background:radial-gradient(ellipse,rgba(200,160,74,0.18) 0%,transparent 70%);filter:blur(20px);z-index:0;"></div>
+        <!-- Frame -->
+        <div style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.14);box-shadow:0 24px 80px rgba(0,0,0,0.6);z-index:1;">
+          <img src="{{relativePath}}assets/images/2.jpg"
+               alt="KCT Community Trust modern reception with Table Mountain backdrop and Khayelitsha community members"
+               style="width:100%;display:block;object-fit:cover;object-position:center top;height:480px;animation:heroImgZoom 18s ease-in-out infinite alternate;">
+          <!-- Glassmorphic badge over image -->
+          <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(0,20,45,0.65);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.13);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(200,160,74,0.5);background:white;display:flex;align-items:center;justify-content:center;">
+              <img src="{{relativePath}}media/logo.svg" alt="KCT Logo" style="width:90%;height:90%;object-fit:contain;">
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:white;margin-bottom:1px;">Khayelitsha Community Trust</div>
+              <div style="font-size:10px;color:#c8a04a;font-weight:600;">NPO &middot; PBO Registered &middot; Est. 2003</div>
+            </div>
+            <div style="margin-left:auto;text-align:center;">
+              <span style="width:8px;height:8px;border-radius:50%;background:#25D366;animation:heroBlink 2s infinite;display:block;margin:0 auto 3px;"></span>
+              <span style="font-size:9px;color:rgba(255,255,255,0.5);">Live</span>
+            </div>
           </div>
         </div>
-        <span style="font-size: 12px; opacity: 0.8; color: white;">Enjoy your day in Khayelitsha!</span>
-      </div>
-
-      <!-- Column 2: Notice -->
-      <div class="hero-alerts-column">
-        <span style="font-size: 13px; font-weight: 700; color: var(--color-tertiary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Notice:</span>
-        <p style="font-size: 13px; line-height: 1.5em; margin-bottom: 0; color: white; opacity: 0.95;">
-          Tenders & RFQs – New bids and quotations for KCT Mall preventative maintenance have been published. Submissions close weekly.
-        </p>
-      </div>
-
-      <!-- Column 3: Active Alert -->
-      <div class="hero-alerts-column">
-        <span style="font-size: 13px; font-weight: 700; color: var(--color-tertiary); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">Development Alert:</span>
-        <p style="font-size: 13px; line-height: 1.5em; margin-bottom: 0; color: white; opacity: 0.95;">
-          KBD Precinct spatial framework finalising. Preventive structural upgrades and mall covering phases active at KCT Mall.
-        </p>
+        <!-- FY2024 badge -->
+        <div style="position:absolute;top:-14px;right:-14px;z-index:3;background:linear-gradient(135deg,#c8a04a,#e0b85a);color:#00253d;font-size:10px;font-weight:800;padding:7px 14px;border-radius:50px;text-transform:uppercase;letter-spacing:1px;box-shadow:0 4px 16px rgba(200,160,74,0.5);animation:heroFadeUp 1s 0.7s ease-out both;">FY2024 Report &#10003;</div>
       </div>
     </div>
   </div>
+
+  <!-- Bottom info bar -->
+  <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,12,30,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,0.07);z-index:10;animation:heroFadeUp 1s 0.8s ease-out both;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);">
+        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,0.06);">
+          <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#128226; Notice</span>
+          <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">KCT Mall Upgrade active &mdash; construction 45% complete as of May 2024.</p>
+        </div>
+        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,0.06);">
+          <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#128196; Tenders &amp; RFQs</span>
+          <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">New maintenance &amp; procurement bids published. <a href="{{relativePath}}media/index.html" style="color:#c8a04a;text-decoration:none;font-weight:700;">View Media Desk &rarr;</a></p>
+        </div>
+        <div style="padding:16px 20px;">
+          <span style="font-size:10px;font-weight:700;color:#c8a04a;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px;">&#127959; Development</span>
+          <p style="font-size:11px;color:rgba(255,255,255,0.75);margin:0;line-height:1.5;">KBD Precinct spatial planning ongoing. Hospital &amp; housing sites under stakeholder engagement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:72px;left:50%;transform:translateX(-50%);z-index:10;text-align:center;animation:heroFadeUp 1s 1s ease-out both;">
+    <div style="font-size:9px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">Scroll</div>
+    <div style="width:22px;height:38px;border:2px solid rgba(255,255,255,0.18);border-radius:12px;margin:0 auto;display:flex;align-items:flex-start;justify-content:center;padding-top:5px;">
+      <div style="width:3px;height:7px;background:#c8a04a;border-radius:2px;animation:scrollDot 1.8s ease-in-out infinite;"></div>
+    </div>
+  </div>
+
 </section>
+
+<style>
+@keyframes heroBgKenBurns {
+  0%   { transform: scale(1.08) translate(0px, 0px); }
+  33%  { transform: scale(1.12) translate(-14px, -7px); }
+  66%  { transform: scale(1.1)  translate(9px, -5px); }
+  100% { transform: scale(1.06) translate(-5px, 7px); }
+}
+@keyframes heroImgZoom {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.07) translate(-8px, -4px); }
+}
+@keyframes heroShimmerSweep {
+  0%, 100% { opacity: 0; transform: translateX(-10%); }
+  50%       { opacity: 1; transform: translateX(10%); }
+}
+@keyframes heroRingPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%       { transform: scale(1.08); opacity: 0.15; }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeRight {
+  from { opacity: 0; transform: translateX(38px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes heroBarSlide {
+  from { width: 0; opacity: 0; }
+  to   { width: 80px; opacity: 1; }
+}
+@keyframes heroBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+@keyframes scrollDot {
+  0%   { transform: translateY(0); opacity: 1; }
+  80%  { transform: translateY(15px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+@media (max-width: 900px) {
+  #homepage-hero-banner > .container > div {
+    grid-template-columns: 1fr !important;
+  }
+  #homepage-hero-banner > .container > div > div:last-child {
+    display: none !important;
+  }
+  #homepage-hero-banner > .container {
+    padding-top: 100px !important;
+    padding-bottom: 175px !important;
+  }
+}
+</style>
 
 <!-- 2. OVERLAPPING SERVICE CARDS GRID -->
 <section class="hero-overlap-wrapper" id="quick-overlap-services" style="margin-top: -100px; position: relative; z-index: 10;">
