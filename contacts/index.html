@@ -354,6 +354,324 @@
     </div>
   </footer>
 
+  <!-- =============================================
+       FLOATING LEFT: LIVE WEATHER + CLOCK WIDGET
+       ============================================= -->
+  <div id="kct-weather-widget" aria-label="Live Khayelitsha weather and time" style="
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9000;
+    width: 170px;
+    background: rgba(0, 37, 61, 0.55);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 20px 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.1);
+    color: white;
+    font-family: var(--font-body, 'Inter', sans-serif);
+    transition: opacity 0.3s, transform 0.3s;
+  ">
+
+    <!-- Shimmer top border -->
+    <div style="position:absolute;top:0;left:16px;right:16px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);border-radius:1px;"></div>
+
+    <!-- Location badge -->
+    <div style="display:flex;align-items:center;gap:5px;margin-bottom:14px;">
+      <i class="fa-solid fa-location-dot" style="color:var(--color-tertiary,#c8a04a);font-size:11px;"></i>
+      <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:0.8;">Khayelitsha</span>
+    </div>
+
+    <!-- Live Clock -->
+    <div style="text-align:center;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.12);">
+      <div id="kct-live-time" style="font-size:30px;font-weight:800;letter-spacing:-1px;font-family:var(--font-headings,'Inter',sans-serif);color:white;line-height:1;">00:00</div>
+      <div id="kct-live-seconds" style="font-size:11px;opacity:0.55;letter-spacing:2px;margin-top:2px;">:00</div>
+      <div id="kct-live-date" style="font-size:10px;opacity:0.65;margin-top:4px;font-weight:500;">Mon, 1 Jun</div>
+    </div>
+
+    <!-- Weather Icon + Temp -->
+    <div style="text-align:center;margin-bottom:12px;">
+      <div id="kct-weather-icon" style="font-size:36px;line-height:1;margin-bottom:6px;animation:weatherFloat 3s ease-in-out infinite;">🌤️</div>
+      <div style="display:flex;align-items:baseline;justify-content:center;gap:3px;">
+        <span id="kct-weather-temp" style="font-size:28px;font-weight:800;font-family:var(--font-headings,'Inter',sans-serif);">--</span>
+        <span style="font-size:14px;opacity:0.7;font-weight:600;">°C</span>
+      </div>
+      <div id="kct-weather-desc" style="font-size:11px;opacity:0.75;text-transform:capitalize;margin-top:3px;line-height:1.3;">Loading...</div>
+    </div>
+
+    <!-- Extra stats -->
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;opacity:0.75;">
+        <span><i class="fa-solid fa-droplet" style="color:#6ec6ff;width:12px;"></i> Humidity</span>
+        <span id="kct-weather-humidity" style="font-weight:700;">--%</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;opacity:0.75;">
+        <span><i class="fa-solid fa-wind" style="color:#a8d8ff;width:12px;"></i> Wind</span>
+        <span id="kct-weather-wind" style="font-weight:700;">-- km/h</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;opacity:0.75;">
+        <span><i class="fa-solid fa-temperature-arrow-up" style="color:var(--color-tertiary,#c8a04a);width:12px;"></i> Feels like</span>
+        <span id="kct-weather-feels" style="font-weight:700;">--°C</span>
+      </div>
+    </div>
+
+    <!-- Powered label -->
+    <div style="text-align:center;margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.1);">
+      <span style="font-size:9px;opacity:0.4;letter-spacing:0.5px;">Live Weather Data</span>
+    </div>
+  </div>
+
+  <!-- =============================================
+       FLOATING RIGHT: WHATSAPP + EMAIL WIDGETS
+       ============================================= -->
+  <div id="kct-contact-widgets" style="
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9000;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-end;
+  ">
+
+    <!-- WhatsApp Widget -->
+    <div class="kct-floating-contact-item" style="display:flex;align-items:center;gap:0;cursor:pointer;" id="kct-wa-widget">
+      <!-- Tooltip label -->
+      <div id="kct-wa-tooltip" style="
+        background: rgba(37,211,102,0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 8px 14px;
+        border-radius: 50px 0 0 50px;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: opacity 0.3s, transform 0.3s;
+        pointer-events: none;
+        box-shadow: -4px 0 16px rgba(37,211,102,0.3);
+      ">Chat on WhatsApp</div>
+      <!-- Button -->
+      <a href="https://wa.link/u1peqj" target="_blank" rel="noopener" aria-label="Chat with KCT on WhatsApp" style="
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #25D366, #128C7E);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+        position: relative;
+        flex-shrink: 0;
+        transition: transform 0.3s, box-shadow 0.3s;
+      " id="kct-wa-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        <!-- Pulse ring -->
+        <span style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: rgba(37,211,102,0.4);
+          animation: kctPulseRing 2s ease-out infinite;
+        "></span>
+        <span style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: rgba(37,211,102,0.2);
+          animation: kctPulseRing 2s ease-out 0.6s infinite;
+        "></span>
+      </a>
+    </div>
+
+    <!-- Email Widget -->
+    <div class="kct-floating-contact-item" style="display:flex;align-items:center;gap:0;cursor:pointer;" id="kct-email-widget">
+      <!-- Tooltip label -->
+      <div id="kct-email-tooltip" style="
+        background: rgba(0, 60, 97, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 8px 14px;
+        border-radius: 50px 0 0 50px;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: opacity 0.3s, transform 0.3s;
+        pointer-events: none;
+        box-shadow: -4px 0 16px rgba(0,60,97,0.4);
+      ">info@kctrust.org.za</div>
+      <!-- Button -->
+      <a href="mailto:info@kctrust.org.za" aria-label="Email KCT at info@kctrust.org.za" style="
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, var(--color-primary, #0e3b4e), #004d7a);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(0,60,97,0.5);
+        border: 2px solid rgba(255,255,255,0.2);
+        position: relative;
+        flex-shrink: 0;
+        transition: transform 0.3s, box-shadow 0.3s;
+      " id="kct-email-btn">
+        <i class="fa-solid fa-envelope"></i>
+        <!-- Subtle shimmer ring -->
+        <span style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: 2px solid rgba(255,255,255,0.3);
+          animation: kctPulseRing 3s ease-out 1s infinite;
+        "></span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Widget CSS + JS -->
+  <style>
+    /* Weather float bob animation */
+    @keyframes weatherFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Pulse ring for contact buttons */
+    @keyframes kctPulseRing {
+      0%   { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    /* Hide widgets on very small screens */
+    @media (max-width: 768px) {
+      #kct-weather-widget { display: none !important; }
+      #kct-contact-widgets {
+        bottom: 20px;
+        top: auto;
+        transform: none;
+        right: 14px;
+        flex-direction: column;
+      }
+    }
+
+    /* Hover states */
+    #kct-wa-btn:hover  { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.7) !important; }
+    #kct-email-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(0,60,97,0.7) !important; }
+  </style>
+
+  <script>
+  (function() {
+    /* ---- LIVE CLOCK ---- */
+    function updateClock() {
+      var now = new Date();
+      var h = now.getHours().toString().padStart(2,'0');
+      var m = now.getMinutes().toString().padStart(2,'0');
+      var s = now.getSeconds().toString().padStart(2,'0');
+      var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var el = document.getElementById('kct-live-time');
+      var elS = document.getElementById('kct-live-seconds');
+      var elD = document.getElementById('kct-live-date');
+      if (el) el.textContent = h + ':' + m;
+      if (elS) elS.textContent = ':' + s;
+      if (elD) elD.textContent = days[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()];
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    /* ---- LIVE WEATHER (wttr.in free API — no key needed) ---- */
+    var weatherIcons = {
+      113: '☀️', 116: '⛅', 119: '☁️', 122: '☁️',
+      143: '🌫️', 176: '🌦️', 179: '🌨️', 182: '🌧️',
+      185: '🌧️', 200: '⛈️', 227: '❄️', 230: '❄️',
+      248: '🌫️', 260: '🌫️', 263: '🌦️', 266: '🌧️',
+      281: '🌧️', 284: '🌧️', 293: '🌧️', 296: '🌧️',
+      299: '🌧️', 302: '🌧️', 305: '🌧️', 308: '🌧️',
+      311: '🌧️', 314: '🌧️', 317: '🌨️', 320: '🌨️',
+      323: '❄️', 326: '❄️', 329: '❄️', 332: '❄️',
+      335: '❄️', 338: '❄️', 350: '🌧️', 353: '🌦️',
+      356: '🌧️', 359: '🌧️', 362: '🌨️', 365: '🌨️',
+      368: '🌨️', 371: '❄️', 374: '🌨️', 377: '🌨️',
+      386: '⛈️', 389: '⛈️', 392: '⛈️', 395: '❄️'
+    };
+
+    function fetchWeather() {
+      fetch('https://wttr.in/Khayelitsha,South+Africa?format=j1')
+        .then(function(r){ return r.json(); })
+        .then(function(data) {
+          var cur = data.current_condition[0];
+          var code = parseInt(cur.weatherCode);
+          var icon = weatherIcons[code] || '🌤️';
+          var temp = cur.temp_C;
+          var desc = cur.weatherDesc[0].value;
+          var hum  = cur.humidity + '%';
+          var wind = cur.windspeedKmph + ' km/h';
+          var feels= cur.FeelsLikeC + '°C';
+
+          var ei = document.getElementById('kct-weather-icon');
+          var et = document.getElementById('kct-weather-temp');
+          var ed = document.getElementById('kct-weather-desc');
+          var eh = document.getElementById('kct-weather-humidity');
+          var ew = document.getElementById('kct-weather-wind');
+          var ef = document.getElementById('kct-weather-feels');
+
+          if (ei) ei.textContent = icon;
+          if (et) et.textContent = temp;
+          if (ed) ed.textContent = desc;
+          if (eh) eh.textContent = hum;
+          if (ew) ew.textContent = wind;
+          if (ef) ef.textContent = feels;
+        })
+        .catch(function() {
+          // Silently fail — clock still works
+        });
+    }
+
+    fetchWeather();
+    // Refresh every 15 minutes
+    setInterval(fetchWeather, 15 * 60 * 1000);
+
+    /* ---- TOOLTIP HOVER for Contact Widgets ---- */
+    function setupTooltip(widgetId, tooltipId) {
+      var widget  = document.getElementById(widgetId);
+      var tooltip = document.getElementById(tooltipId);
+      if (!widget || !tooltip) return;
+      widget.addEventListener('mouseenter', function() {
+        tooltip.style.opacity = '1';
+        tooltip.style.transform = 'translateX(0)';
+      });
+      widget.addEventListener('mouseleave', function() {
+        tooltip.style.opacity = '0';
+        tooltip.style.transform = 'translateX(10px)';
+      });
+    }
+    setupTooltip('kct-wa-widget', 'kct-wa-tooltip');
+    setupTooltip('kct-email-widget', 'kct-email-tooltip');
+
+  })();
+  </script>
+
   <!-- FLOATING BACK-TO-TOP BUTTON -->
   <button class="back-to-top" aria-label="Scroll back to top" id="floating-back-to-top-btn">
     <i class="fa-solid fa-arrow-up"></i>
