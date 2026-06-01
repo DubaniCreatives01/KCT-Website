@@ -65,7 +65,17 @@ html, body {
 
   /* --- FLIP CARDS --- */
   .hero-overlap-wrapper {
-    margin-top: 30px !important;
+    margin-top: -60px !important;
+  }
+
+  /* --- HERO BOTTOM INFO BAR --- */
+  .hero-bottom-info-bar {
+    position: absolute !important;
+    bottom: 0 !important;
+  }
+
+  .hero-info-col {
+    padding: 12px 15px !important;
   }
 
   .hero-overlap-grid {
@@ -297,8 +307,34 @@ html, body {
 
   /* --- FLIP CARDS --- */
   .hero-overlap-wrapper {
-    margin-top: 20px !important;
+    margin-top: -45px !important;
     padding-bottom: 30px !important;
+  }
+
+  /* --- HERO BOTTOM INFO BAR --- */
+  .hero-bottom-info-bar {
+    position: absolute !important;
+    bottom: 0 !important;
+    background: rgba(0, 10, 25, 0.75) !important; /* Slightly darker glass for stacked contrast */
+  }
+
+  .hero-info-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-info-col {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 10px 15px !important;
+    text-align: center;
+  }
+
+  .hero-info-col:last-child {
+    border-bottom: none !important;
+  }
+
+  #homepage-hero-banner .container {
+    padding-bottom: 220px !important;
   }
 
   .hero-overlap-flip-card {
