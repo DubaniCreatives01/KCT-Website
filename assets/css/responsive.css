@@ -19,6 +19,11 @@ html, body {
    ========================================================================== */
 @media (max-width: 1024px) {
 
+  /* Floating navigation capsule mobile margin gap fix */
+  .header-main {
+    margin-top: 10px !important;
+  }
+
   /* --- HERO SECTION --- */
   .hero-slider-container {
     height: auto !important;
