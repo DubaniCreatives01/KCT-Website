@@ -125,7 +125,7 @@
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 20px; /* Elegant, spacious gap for premium capsule menu */
+  gap: 0; /* Spacing handled by margin/padding on desktop */
   align-items: center;
 }
 
@@ -133,18 +133,11 @@
   position: relative;
 }
 
-/* Subtle line divider ONLY between Committees, Projects, and Media */
-.nav-menu > .nav-item:nth-child(3)::after,
-.nav-menu > .nav-item:nth-child(4)::after {
-  content: '';
-  position: absolute;
-  right: -10px; /* Centered in the 20px gap */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.2); /* Subtle translucent white divider line */
-  pointer-events: none;
+/* Subtle vertical divider lines between all main menu items on desktop */
+.nav-menu > .nav-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  padding-right: 16px;
+  margin-right: 16px;
 }
 
 .nav-link {
@@ -431,7 +424,19 @@
 @media (max-width: 1024px) {
   /* Show mobile dropdown toggles on mobile screens */
   .mobile-dropdown-toggle {
-    display: inline-block !important;
+    display: inline-flex !important;
+  }
+
+  /* Hide static plus icons next to text on mobile to avoid double plus signs */
+  .dropdown-plus-icon {
+    display: none !important;
+  }
+
+  /* Reset vertical dividers and margins/paddings on mobile */
+  .nav-menu > .nav-item:not(:last-child) {
+    border-right: none !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
   }
 
   .site-header {
