@@ -663,7 +663,13 @@ opacity:0;
 .hamburger-toggle.is-active .hamburger-line:nth-child(3){
 transform:rotate(-45deg) translate(4px,-4px);
 }
+.mobile-dropdown-toggle{
+display:none !important;
+}
 @media (max-width:1024px){
+.mobile-dropdown-toggle{
+display:inline-block !important;
+}
 .site-header{
 padding:15px 0;
 }
