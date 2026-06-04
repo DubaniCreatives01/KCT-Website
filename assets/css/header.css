@@ -420,10 +420,20 @@
   transform: rotate(-45deg) translate(4px, -4px);
 }
 
+/* Hide mobile dropdown toggles on desktop */
+.mobile-dropdown-toggle {
+  display: none !important;
+}
+
 /* ==========================================================================
    MOBILE GLASS CAPSULE NAVIGATION OVERRIDES
    ========================================================================== */
 @media (max-width: 1024px) {
+  /* Show mobile dropdown toggles on mobile screens */
+  .mobile-dropdown-toggle {
+    display: inline-block !important;
+  }
+
   .site-header {
     padding: 15px 0;
   }
