@@ -419,6 +419,17 @@ align-items:center;
 .nav-item{
 position:relative;
 }
+.nav-item:not(:last-child)::after{
+content:'';
+position:absolute;
+right:-10px;
+top:50%;
+transform:translateY(-50%);
+width:1px;
+height:12px;
+background-color:rgba(255,255,255,0.2);
+pointer-events:none;
+}
 .nav-link{
 font-family:var(--font-headings);
 font-size:14px;
@@ -670,6 +681,9 @@ gap:8px;
 }
 .nav-menu.is-active{
 right:20px;
+}
+.nav-item::after{
+display:none !important;
 }
 .nav-link{
 width:100%;
