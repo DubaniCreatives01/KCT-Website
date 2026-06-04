@@ -133,8 +133,9 @@
   position: relative;
 }
 
-/* Subtle line divider between menu items */
-.nav-item:not(:last-child)::after {
+/* Subtle line divider ONLY between Committees, Projects, and Media */
+.nav-menu > .nav-item:nth-child(3)::after,
+.nav-menu > .nav-item:nth-child(4)::after {
   content: '';
   position: absolute;
   right: -10px; /* Centered in the 20px gap */
