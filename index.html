@@ -197,9 +197,39 @@
        cross-dissolve scene transitions, particle dust,
        bokeh orbs, and KCT logo glow pulse
        ════════════════════════════════════════════ -->
-  <video autoplay muted loop playsinline poster="./assets/images/2.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
+  <video id="hero-video-1" autoplay muted playsinline poster="./assets/images/2.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transition:opacity 1.8s ease-in-out;opacity:1;">
     <source src="./assets/video/hero_1_compressed.mp4" type="video/mp4">
   </video>
+  <video id="hero-video-2" muted playsinline poster="./assets/images/Board-1024x682.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;transition:opacity 1.8s ease-in-out;opacity:0;">
+    <source src="./assets/video/hero_2_compressed.mp4" type="video/mp4">
+  </video>
+  <script>
+    (function() {
+      var v1 = document.getElementById('hero-video-1');
+      var v2 = document.getElementById('hero-video-2');
+      if (!v1 || !v2) return;
+      
+      var activeVideo = v1;
+      var nextVideo = v2;
+      
+      function swapVideos() {
+        nextVideo.currentTime = 0;
+        nextVideo.play().then(function() {
+          nextVideo.style.opacity = 1;
+          activeVideo.style.opacity = 0;
+          
+          var temp = activeVideo;
+          activeVideo = nextVideo;
+          nextVideo = temp;
+        }).catch(function(e) {
+          console.warn("Video cross-fade transition failed:", e);
+        });
+      }
+      
+      v1.addEventListener('ended', swapVideos);
+      v2.addEventListener('ended', swapVideos);
+    })();
+  </script>
 
   <!-- Vignette overlay (edges dark) -->
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,10,25,0.85) 100%);z-index:2;pointer-events:none;"></div>
