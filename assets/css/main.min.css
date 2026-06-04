@@ -419,7 +419,8 @@ align-items:center;
 .nav-item{
 position:relative;
 }
-.nav-item:not(:last-child)::after{
+.nav-menu > .nav-item:nth-child(3)::after,
+.nav-menu > .nav-item:nth-child(4)::after{
 content:'';
 position:absolute;
 right:-10px;
