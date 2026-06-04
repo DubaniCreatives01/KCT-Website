@@ -133,6 +133,19 @@
   position: relative;
 }
 
+/* Subtle line divider between menu items */
+.nav-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -10px; /* Centered in the 20px gap */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle translucent white divider line */
+  pointer-events: none;
+}
+
 .nav-link {
   font-family: var(--font-headings);
   font-size: 14px;
@@ -428,6 +441,10 @@
 
   .nav-menu.is-active {
     right: 20px;
+  }
+
+  .nav-item::after {
+    display: none !important;
   }
 
   .nav-link {
