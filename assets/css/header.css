@@ -10,6 +10,9 @@
   width: 100%;
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-top: none !important;
+  margin-top: 0 !important;
+  background-color: transparent !important; /* Force transparent */
 }
 
 /* Header container padding adjustment */
@@ -44,21 +47,34 @@
   gap: 15px;
 }
 
-/* Full-width Main Navigation Bar exactly as design */
+/* Premium Floating Glassmorphism Capsule Main Navigation Bar */
 .header-main {
-  background-color: #003c61; /* Solid brand Slate Blue */
-  padding: 15px 0;
-  border-radius: 0;
-  border: none;
-  border-bottom: 3px solid var(--color-primary); /* Golden-orange accent underline */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 60, 97, 0.85); /* Premium glass slate blue */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 35px;
+  max-width: 1280px;
+  width: 92%;
+  margin: 40px auto 0 auto; /* Centered with a sleek floating top margin */
+  border-radius: 12px; /* Reduced rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Sleek glass outline */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 2. Solid Sticky Transition */
+/* Ensure container inside floating header fills capsule perfectly */
+.header-main .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* 2. Floating Sticky Transition */
 .site-header.is-sticky {
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   padding: 0;
 }
 
@@ -67,11 +83,16 @@
 }
 
 .site-header.is-sticky .header-main {
-  background-color: rgba(0, 60, 97, 0.98); /* Solid slate blue slightly translucent on scroll */
-  padding: 10px 0;
-  border-radius: 0;
-  border-bottom: 3px solid var(--color-primary);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 48, 77, 0.95); /* Deep glass slate blue on scroll for readability */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 10px 35px;
+  max-width: 1220px; /* Squeezes slightly on scroll for responsive micro-interaction! */
+  width: 92%;
+  margin: 10px auto 0 auto; /* Floats down slightly from top of scroll area */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   transform: none;
 }
 
@@ -79,6 +100,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 50px; /* Lock vertical alignment and layout balance */
 }
 
 /* 3. Logo and Branding */
@@ -86,6 +108,7 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s;
+  margin-right: 25px; /* Spacing buffer between logo and navigation */
 }
 
 .logo:hover {
@@ -95,19 +118,26 @@
 .logo img {
   height: 45px; /* Proportional logo in solid header */
   width: auto;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  display: block;
 }
 
 /* 4. Modern Pill-Shaped Navigation Links */
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 8px; /* Tighter gap for capsule items */
+  gap: 0; /* Spacing handled by margin/padding on desktop */
   align-items: center;
 }
 
 .nav-item {
   position: relative;
+}
+
+/* Subtle vertical divider lines between all main menu items on desktop */
+.nav-menu > .nav-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  padding-right: 16px;
+  margin-right: 16px;
 }
 
 .nav-link {
@@ -151,6 +181,20 @@
 
 .nav-item:hover > .nav-link .dropdown-arrow {
   transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Dropdown plus icon transitions */
+.dropdown-plus-icon {
+  font-size: 9px;
+  margin-left: 5px;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav-item:hover > .nav-link .dropdown-plus-icon {
+  transform: rotate(45deg);
   opacity: 1;
 }
 
@@ -369,10 +413,32 @@
   transform: rotate(-45deg) translate(4px, -4px);
 }
 
+/* Hide mobile dropdown toggles on desktop */
+.mobile-dropdown-toggle {
+  display: none !important;
+}
+
 /* ==========================================================================
    MOBILE GLASS CAPSULE NAVIGATION OVERRIDES
    ========================================================================== */
 @media (max-width: 1024px) {
+  /* Show mobile dropdown toggles on mobile screens */
+  .mobile-dropdown-toggle {
+    display: inline-flex !important;
+  }
+
+  /* Hide static plus icons next to text on mobile to avoid double plus signs */
+  .dropdown-plus-icon {
+    display: none !important;
+  }
+
+  /* Reset vertical dividers and margins/paddings on mobile */
+  .nav-menu > .nav-item:not(:last-child) {
+    border-right: none !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .site-header {
     padding: 15px 0;
   }
@@ -405,6 +471,10 @@
 
   .nav-menu.is-active {
     right: 20px;
+  }
+
+  .nav-item::after {
+    display: none !important;
   }
 
   .nav-link {
@@ -450,4 +520,80 @@
   .header-cta-btn {
     display: none !important;
   }
+}
+
+/* ==========================================================================
+   SEARCH OVERLAY MODAL STYLES
+   ========================================================================== */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 37, 61, 0.95); /* Semi-transparent dark slate blue */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 10000; /* Ensure it is above everything else */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.search-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 40px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.search-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.search-form-container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  background: transparent !important; /* Force transparent, no white block! */
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+  font-family: var(--font-headings);
+  font-size: 28px;
+  padding: 15px 0;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-bottom-color: var(--color-tertiary); /* Gold / Cyan accent */
+}
+
+/* Hide default browser search decoration */
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+  display: none;
 }

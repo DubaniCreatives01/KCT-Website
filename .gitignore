@@ -14,3 +14,7 @@ Desktop.ini
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary and local developer files
+scratch/
+Creatives/

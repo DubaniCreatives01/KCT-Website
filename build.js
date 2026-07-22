@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { processAssets } = require('./scratch/minify.js');
 
 const srcDir = path.join(__dirname, 'src');
 const pagesDir = path.join(srcDir, 'pages');
@@ -137,6 +138,13 @@ function compilePage(srcFile, destFile) {
 }
 
 function run() {
+  // Automatically bundle and minify CSS and JS before page compilation
+  try {
+    processAssets();
+  } catch (err) {
+    console.error('Failed to bundle assets:', err);
+  }
+
   console.log('--- COMPILING STATIC HTML WEBSITE ---');
   for (const [src, dest] of Object.entries(PAGES_MAP)) {
     try {

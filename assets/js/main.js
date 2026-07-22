@@ -54,26 +54,31 @@ function initMobileMenu() {
       // Append a small toggle button next to the link for mobile expansion
       const toggleBtn = document.createElement('button');
       toggleBtn.className = 'mobile-dropdown-toggle';
-      toggleBtn.innerHTML = '<span class="dropdown-arrow-indicator">▼</span>';
+      toggleBtn.innerHTML = '<span class="dropdown-plus-indicator">+</span>';
       toggleBtn.style.cssText = `
         background: none;
         border: none;
         color: inherit;
         padding: 10px;
         cursor: pointer;
-        font-size: 10px;
+        font-size: 14px;
+        font-weight: 700;
         margin-left: auto;
+        transition: transform 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
       `;
       
       link.appendChild(toggleBtn);
 
-      // Make arrow toggle sub-menus on mobile
+      // Make plus toggle sub-menus on mobile
       toggleBtn.addEventListener('click', (e) => {
         if (window.innerWidth <= 1024) {
           e.preventDefault();
           e.stopPropagation();
           dropdown.classList.toggle('is-open');
-          toggleBtn.style.transform = dropdown.classList.contains('is-open') ? 'rotate(180deg)' : 'rotate(0deg)';
+          toggleBtn.style.transform = dropdown.classList.contains('is-open') ? 'rotate(45deg)' : 'rotate(0deg)';
         }
       });
     }
@@ -294,6 +299,11 @@ function initHeaderDate() {
 
 /* 9. Animated Pop-up for 2024 Integrated Annual Report */
 function initAnnualReportPopup() {
+  // Hide popup entirely on mobile devices (screen width <= 768px)
+  if (window.innerWidth <= 768) {
+    return;
+  }
+
   // Check if user has already dismissed the popup
   if (localStorage.getItem('kct-annual-report-dismissed') === 'true') {
     return;
@@ -360,7 +370,7 @@ function initAnnualReportPopup() {
         box-shadow: 0 0 15px rgba(21, 183, 222, 0.4);
         background: rgba(255, 255, 255, 0.05);
       ">
-        <img src="${prefix}assets/images/sa_character_avatar.png" alt="KCT Assistant" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="${prefix}assets/images/sa_character_avatar.webp" alt="KCT Assistant" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div style="flex-grow: 1;">
         <span style="

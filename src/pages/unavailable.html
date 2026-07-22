@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Temporary Unavailable | Khayelitsha Community Trust</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #ff9900;
+      --color-secondary: #003c61;
+      --color-dark: #001e30;
+      --color-light: #ffffff;
+      --color-accent: #15b7de;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: radial-gradient(circle at center, #00304d 0%, #00121e 100%);
+      color: var(--color-light);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Animated background elements */
+    .bg-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(21, 183, 222, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+      top: -10%;
+      left: -10%;
+      z-index: 1;
+      animation: float-glow 15s infinite ease-in-out alternate;
+    }
+
+    .bg-glow-2 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255, 153, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      bottom: -10%;
+      right: -10%;
+      z-index: 1;
+      animation: float-glow 20s infinite ease-in-out alternate-reverse;
+    }
+
+    @keyframes float-glow {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(50px, 50px) scale(1.2); }
+    }
+
+    .container {
+      max-width: 620px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 50px 40px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      z-index: 10;
+      position: relative;
+      animation: fade-in-up 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    }
+
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Logo Styling */
+    .logo-wrapper {
+      margin-bottom: 35px;
+    }
+
+    .logo-wrapper img {
+      height: 70px;
+      width: auto;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    }
+
+    /* Status indicator */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 153, 0, 0.15);
+      border: 1px solid rgba(255, 153, 0, 0.3);
+      color: var(--color-primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--color-primary);
+      animation: pulse-dot 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 15px var(--color-primary); }
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 18px;
+      line-height: 1.25em;
+      letter-spacing: -0.5px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--color-primary), #ffc87c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.65em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 35px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.1), rgba(255,255,255,0));
+      margin-bottom: 30px;
+    }
+
+    /* Contact Details section */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .contact-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-accent);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-item:hover {
+      color: var(--color-primary);
+    }
+
+    .contact-item i {
+      color: var(--color-primary);
+      width: 16px;
+    }
+
+    /* Footer copy */
+    .footer-copy {
+      margin-top: 40px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 580px) {
+      .container {
+        padding: 40px 25px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+
+  <div class="container">
+    <div class="logo-wrapper">
+      <img src="media/logo.svg" alt="Khayelitsha Community Trust Logo">
+    </div>
+
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      <span>Temporary Maintenance</span>
+    </div>
+
+    <h1>Website <span>Temporarily Unavailable</span></h1>
+    
+    <p>
+      We are currently performing essential system maintenance and upgrades to improve our community portal. We apologize for any inconvenience caused and will be back online shortly.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="contact-info">
+      <span class="contact-title">Urgent Enquiries</span>
+      <a href="mailto:info@kctrust.org.za" class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@kctrust.org.za</span>
+      </a>
+      <a href="tel:+27213618989" class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+27 (0) 21 361 8989</span>
+      </a>
+      <a href="tel:0733464805" class="contact-item">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <span>For more info Please contact 0733464805</span>
+      </a>
+    </div>
+
+    <p class="footer-copy">&copy; 2026 Khayelitsha Community Trust (KCT). All Rights Reserved.</p>
+  </div>
+
+</body>
+</html>
