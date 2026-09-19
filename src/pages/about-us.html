@@ -40,11 +40,24 @@ description: Learn about the founding history, strategic agreements, objectives,
   }
 
   .bod-tier-leadership {
-    grid-template-columns: repeat(2, minmax(260px, 340px));
+    grid-template-columns: minmax(260px, 340px);
   }
 
   .bod-tier-members {
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: min(100%, 1040px);
+  }
+
+  .bod-tier-members .bod-card {
+    grid-column: span 2;
+  }
+
+  .bod-tier-members .bod-card:nth-last-child(2) {
+    grid-column: 2 / span 2;
+  }
+
+  .bod-tier-members .bod-card:last-child {
+    grid-column: 4 / span 2;
   }
 
   .bod-card {
@@ -122,6 +135,12 @@ description: Learn about the founding history, strategic agreements, objectives,
   @media (max-width: 900px) {
     .bod-tier-members {
       grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .bod-tier-members .bod-card,
+    .bod-tier-members .bod-card:nth-last-child(2),
+    .bod-tier-members .bod-card:last-child {
+      grid-column: auto;
     }
   }
 
