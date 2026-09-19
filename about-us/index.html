@@ -196,6 +196,177 @@
     <p style="max-width: 600px; margin: 0 auto; opacity: 0.8; font-size: 16px;">Empowering the Khayelitsha community through strategic social, residential, and commercial development.</p>
   </div>
 </section>
+<!-- 5. BOARD OF DIRECTORS -->
+<style>
+  .bod-section {
+    background: linear-gradient(180deg, #f4f8fb 0%, #ffffff 100%);
+    padding: 100px 0;
+    overflow: hidden;
+  }
+
+  .bod-intro {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+
+  .bod-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .bod-tier {
+    width: 100%;
+    display: grid;
+    gap: 22px;
+    justify-items: center;
+  }
+
+  .bod-tier-leadership {
+    grid-template-columns: repeat(2, minmax(260px, 340px));
+  }
+
+  .bod-tier-members {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+
+  .bod-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 26px 20px 22px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid rgba(0, 60, 97, 0.14);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 37, 61, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .bod-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(0, 37, 61, 0.16);
+  }
+
+  .bod-card-chair {
+    border-top: 5px solid var(--color-primary);
+  }
+
+  .bod-card-deputy {
+    border-top: 5px solid var(--color-tertiary);
+  }
+
+  .bod-photo {
+    width: 132px;
+    height: 132px;
+    margin: 0 auto 18px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 6px solid var(--color-secondary);
+    outline: 3px solid var(--color-primary);
+    background: #eef4f8;
+  }
+
+  .bod-card-deputy .bod-photo,
+  .bod-card:nth-child(even) .bod-photo {
+    outline-color: var(--color-tertiary);
+  }
+
+  .bod-name {
+    margin: 0 0 7px;
+    color: var(--color-secondary);
+    font-family: var(--font-headings);
+    font-size: 19px;
+  }
+
+  .bod-role {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+  }
+
+  .bod-tenure {
+    color: var(--color-text);
+    font-size: 13px;
+    opacity: 0.72;
+  }
+
+  .bod-connector {
+    width: 1px;
+    height: 24px;
+    background: linear-gradient(var(--color-primary), var(--color-tertiary));
+  }
+
+  @media (max-width: 900px) {
+    .bod-tier-members {
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bod-section {
+      padding: 64px 0;
+    }
+
+    .bod-tier-leadership,
+    .bod-tier-members {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .bod-card {
+      max-width: 360px;
+    }
+  }
+</style>
+
+<section class="bod-section" id="board-of-directors">
+  <div class="container">
+    <div class="bod-intro">
+      <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; text-transform: uppercase;">Governance Leadership</span>
+      <h2 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: clamp(32px, 4vw, 48px); margin: 8px 0 16px;">Board of Directors</h2>
+      <p style="font-size: 16px; line-height: 1.7em; color: var(--color-text); margin: 0;">The Board provides strategic direction, oversight, and accountable leadership in support of KCT’s long-term community mandate.</p>
+    </div>
+
+    <div class="bod-chart">
+      <div class="bod-tier">
+        <article class="bod-card bod-card-chair reveal-on-scroll reveal-scale">
+          <img class="bod-photo" src="../assets/images/bod/mandla-maxongo.jpg" alt="Mandla Maxongo">
+          <h3 class="bod-name">Mandla Maxongo</h3>
+          <span class="bod-role">Chairperson</span>
+          <span class="bod-tenure">Appointment: 2006</span>
+        </article>
+      </div>
+
+      <div class="bod-connector" aria-hidden="true"></div>
+
+      <div class="bod-tier bod-tier-leadership">
+        <article class="bod-card bod-card-deputy reveal-on-scroll reveal-scale">
+          <img class="bod-photo" src="../assets/images/bod/pholisa-makeleni.jpg" alt="Pholisa Makeleni">
+          <h3 class="bod-name">Pholisa Makeleni</h3>
+          <span class="bod-role">Deputy Chair</span>
+          <span class="bod-tenure">Appointment: 2012</span>
+        </article>
+      </div>
+
+      <div class="bod-connector" aria-hidden="true"></div>
+
+      <div class="bod-tier bod-tier-members">
+        <article class="bod-card reveal-on-scroll reveal-scale"><img class="bod-photo" src="../assets/images/bod/ndithini-tyhido.jpg" alt="Ndithini Tyhido"><h3 class="bod-name">Ndithini Tyhido</h3><span class="bod-role">Board Member</span><span class="bod-tenure">Appointment: 2012</span></article>
+        <article class="bod-card reveal-on-scroll reveal-scale"><img class="bod-photo" src="../assets/images/bod/zamikhaya-mbalo.jpg" alt="Zamikhaya Mbalo"><h3 class="bod-name">Zamikhaya Mbalo</h3><span class="bod-role">Board Member</span><span class="bod-tenure">Appointment: 2012</span></article>
+        <article class="bod-card reveal-on-scroll reveal-scale"><img class="bod-photo" src="../assets/images/bod/sebastian-jozi.jpg" alt="Sebastian Jozi"><h3 class="bod-name">Sebastian Jozi</h3><span class="bod-role">Board Member</span><span class="bod-tenure">Appointment: 2012</span></article>
+        <article class="bod-card reveal-on-scroll reveal-scale"><img class="bod-photo" src="../assets/images/bod/funeka-mpetha.jpg" alt="Funeka Mpetha"><h3 class="bod-name">Funeka Mpetha</h3><span class="bod-role">Board Member</span><span class="bod-tenure">Appointment: 2012</span></article>
+        <article class="bod-card reveal-on-scroll reveal-scale"><img class="bod-photo" src="../assets/images/bod/burton-van-staaden.jpg" alt="Burton Van Staaden"><h3 class="bod-name">Burton Van Staaden</h3><span class="bod-role">Board Member</span><span class="bod-tenure">Appointment: 2012</span></article>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- 2. KCT HISTORY SECTION -->
 <section class="section" id="city-history-section" style="background-color: white; padding: 100px 0; overflow: hidden;">
@@ -310,36 +481,6 @@
   </div>
 </section>
 
-<!-- 5. VALUE MEASURE SECTION (IDP Pillars) -->
-<section class="section alternate" id="value-measurement" style="background-color: var(--color-background); padding: 100px 0; overflow: hidden;">
-  <div class="container text-center">
-    <span class="section-subtitle reveal-on-scroll reveal-scale" style="color: var(--color-primary); font-weight: 700; text-transform: uppercase;">Strategic Alignment</span>
-    <h2 class="reveal-on-scroll reveal-scale reveal-delay-1" style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 40px; margin-top: 5px; margin-bottom: 20px;">How KCT's Value is Measured</h2>
-    <p class="reveal-on-scroll reveal-scale reveal-delay-2" style="max-width: 800px; margin: 0 auto 40px; font-size: 16px; line-height: 1.6em; color: var(--color-text);">We align our developmental objectives with the five pillars of the City of Cape Town's Integrated Development Plan (IDP) to alleviate specific local community needs:</p>
-    
-    <div class="mayor-box" style="grid-template-columns: 1.5fr 1.5fr; gap: 60px; align-items: center; text-align: left; display: grid;">
-      <div class="reveal-on-scroll reveal-left" style="background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid var(--color-border); padding-bottom: 8px;">Local Community Needs Alleviation</h4>
-        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
-          <li style="font-size: 14px; display: flex; gap: 10px; align-items: center;"><i class="fa-solid fa-check" style="color: var(--color-primary);"></i> Addressing spatial inefficiency</li>
-          <li style="font-size: 14px; display: flex; gap: 10px; align-items: center;"><i class="fa-solid fa-check" style="color: var(--color-primary);"></i> Improving available facilities & security</li>
-          <li style="font-size: 14px; display: flex; gap: 10px; align-items: center;"><i class="fa-solid fa-check" style="color: var(--color-primary);"></i> Creating equity participation & ownership</li>
-          <li style="font-size: 14px; display: flex; gap: 10px; align-items: center;"><i class="fa-solid fa-check" style="color: var(--color-primary);"></i> Promoting socio-economic growth</li>
-          <li style="font-size: 14px; display: flex; gap: 10px; align-items: center;"><i class="fa-solid fa-check" style="color: var(--color-primary);"></i> Ensuring jobs, training, & learning directories</li>
-        </ul>
-      </div>
-      
-      <div class="reveal-on-scroll reveal-right" style="background: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); text-align: center;">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid var(--color-border); padding-bottom: 8px;">Value Measurement Framework</h4>
-        <img loading="lazy" src="../assets/images/40-diagram.webp" alt="KCT Strategic Value Measure Diagram" style="max-height: 250px; max-width: 100%; border-radius: var(--border-radius-sm); margin: 0 auto; display: block;">
-      </div>
-    </div>
-    
-    <div style="margin-top: 50px;">
-      <a href="../kct-team/" class="btn btn-primary" style="background-color: var(--color-primary); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: 700; text-transform: uppercase;">Meet KCT Team</a>
-    </div>
-  </div>
-</section>
   <!-- 2. FOOTER SECTION -->
   <section class="newsletter-bar" style="margin-top: 0;">
     <div class="container newsletter-inner">
