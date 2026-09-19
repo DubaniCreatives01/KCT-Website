@@ -431,6 +431,17 @@
     </div>
   </section>
 
+  <!-- Keep the About-page Board of Directors after the strategic content and before the newsletter. -->
+  <script>
+    (function () {
+      var boardSection = document.getElementById('board-of-directors');
+      var newsletterSection = document.querySelector('.newsletter-bar');
+      if (boardSection && newsletterSection) {
+        newsletterSection.parentNode.insertBefore(boardSection, newsletterSection);
+      }
+    })();
+  </script>
+
   <footer class="site-footer">
     <div class="container site-footer-widgets">
       <!-- Column 1: About / Social -->
