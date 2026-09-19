@@ -14,6 +14,142 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* ========================================================================
+   DESKTOP FLUIDITY (preserve the large-screen composition on laptops)
+   ========================================================================
+
+   The homepage uses a cinematic desktop composition with several legacy
+   inline pixel values.  Scale the desktop-only chrome and hero rhythm before
+   the mobile navigation breakpoint so a shorter/smaller laptop viewport does
+   not make the header and floating widgets dominate the hero.
+*/
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .header-main {
+    width: min(92%, 1160px);
+    padding: 10px 24px;
+    margin-top: clamp(24px, 3.2vw, 40px);
+  }
+
+  .header-main-inner {
+    min-height: 44px;
+  }
+
+  .logo {
+    margin-right: 12px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-link {
+    font-size: clamp(12px, 0.9vw, 14px);
+    padding: 7px 9px;
+  }
+
+  .nav-menu > .nav-item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .btn-search-trigger {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-cta-btn {
+    font-size: 12px;
+    padding: 10px 19px;
+  }
+
+  #homepage-hero-banner > .container {
+    padding-top: clamp(48px, 6vh, 80px) !important;
+    padding-bottom: clamp(96px, 12vh, 160px) !important;
+  }
+
+  #homepage-hero-banner > .container > div:first-child {
+    max-width: min(600px, 46vw) !important;
+  }
+
+  #homepage-hero-banner h2 {
+    font-size: clamp(18px, 1.7vw, 22px) !important;
+  }
+
+  #homepage-hero-banner h1 {
+    font-size: clamp(42px, 4.2vw, 64px) !important;
+  }
+
+  #homepage-hero-banner p {
+    font-size: clamp(15px, 1.15vw, 18px) !important;
+    margin-bottom: clamp(26px, 3vw, 38px) !important;
+  }
+
+  #homepage-hero-banner a {
+    padding: 12px 26px !important;
+  }
+
+  #homepage-hero-banner > .container > div:first-child > div:last-child {
+    margin-top: clamp(28px, 3.5vh, 48px) !important;
+    padding-top: clamp(18px, 2.1vh, 26px) !important;
+  }
+
+  #kct-weather-widget {
+    left: clamp(14px, 1.6vw, 20px) !important;
+    width: clamp(140px, 11vw, 170px) !important;
+    padding: 16px 13px !important;
+  }
+
+  #kct-contact-widgets {
+    right: clamp(14px, 1.6vw, 20px) !important;
+  }
+
+  #kct-contact-widgets a {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 23px !important;
+  }
+
+  #annual-report-popup {
+    left: clamp(16px, 1.8vw, 28px) !important;
+    bottom: clamp(16px, 2.2vh, 32px) !important;
+    width: min(305px, 23vw) !important;
+  }
+}
+
+/* Keep the same visual rhythm on shorter desktop viewports. */
+@media (min-width: 1025px) and (max-height: 850px) {
+  .header-main {
+    margin-top: 20px;
+  }
+
+  #homepage-hero-banner > .container {
+    padding-top: 34px !important;
+    padding-bottom: 82px !important;
+  }
+
+  #homepage-hero-banner > .container > div:first-child > div:first-child {
+    margin-bottom: 16px !important;
+  }
+
+  #homepage-hero-banner p {
+    line-height: 1.55 !important;
+    margin-bottom: 24px !important;
+  }
+
+  #homepage-hero-banner > .container > div:first-child > div:last-child {
+    margin-top: 26px !important;
+    padding-top: 18px !important;
+  }
+
+  #homepage-hero-banner > div:last-child {
+    bottom: 24px !important;
+  }
+}
+
 /* ==========================================================================
    TABLET BREAKPOINT (max-width: 1024px)
    ========================================================================== */
