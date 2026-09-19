@@ -330,13 +330,13 @@ function initAnnualReportPopup() {
     position: fixed;
     bottom: 35px;
     left: 28px;
-    width: 380px;
+    width: 320px;
     background: linear-gradient(135deg, #003c61, #00253d);
     border-left: 6px solid var(--color-primary, #ff9900);
     border-radius: 10px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 24px;
+    padding: 18px;
     z-index: 9999;
     transform: translateX(-125%);
     transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
@@ -359,10 +359,10 @@ function initAnnualReportPopup() {
       transition: color 0.2s, transform 0.2s;
     " onmouseover="this.style.color='white'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='rgba(255,255,255,0.6)'; this.style.transform='scale(1)';">×</button>
     
-    <div style="display: flex; gap: 16px; align-items: flex-start;">
+    <div style="display: flex; gap: 12px; align-items: flex-start;">
       <div style="
-        width: 75px;
-        height: 75px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         overflow: hidden;
         flex-shrink: 0;
@@ -392,7 +392,7 @@ function initAnnualReportPopup() {
           opacity: 0.95;
           margin: 0 0 16px 0;
         ">
-          Sawubona! The new <strong>2025 Integrated Annual Report</strong> is officially available. Click below to explore our community's growth and milestones! 🇿🇦
+          Sawubona! The new <strong>2025 Integrated Annual Report</strong> is officially available.
         </p>
         
         <a href="${reportLink}" target="_blank" rel="noopener noreferrer" class="popup-btn-action" style="

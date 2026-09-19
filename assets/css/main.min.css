@@ -3006,7 +3006,7 @@ font-size:23px !important;
 #annual-report-popup{
 left:clamp(16px,1.8vw,28px) !important;
 bottom:clamp(16px,2.2vh,32px) !important;
-width:min(305px,23vw) !important;
+width:min(300px,23vw) !important;
 }
 }
 @media (min-width:1025px) and (max-height:850px){
