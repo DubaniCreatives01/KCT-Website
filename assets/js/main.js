@@ -297,7 +297,7 @@ function initHeaderDate() {
   dateSpan.textContent = today.toLocaleDateString('en-US', options);
 }
 
-/* 9. Animated Pop-up for 2024 Integrated Annual Report */
+/* 9. Animated Pop-up for 2025 Integrated Annual Report */
 function initAnnualReportPopup() {
   // Hide popup entirely on mobile devices (screen width <= 768px)
   if (window.innerWidth <= 768) {
@@ -317,7 +317,7 @@ function initAnnualReportPopup() {
     prefix = '../';
   }
 
-  // Fixed Google Drive link to the 2024 Integrated Annual Report
+  // Fixed Google Drive link to the 2025 Integrated Annual Report
   const reportLink = 'https://drive.google.com/file/d/19FippZMiO7I92uySr--cIinbIFVxnGEW/view?usp=sharing';
 
   // Create popup container element
@@ -392,7 +392,7 @@ function initAnnualReportPopup() {
           opacity: 0.95;
           margin: 0 0 16px 0;
         ">
-          Sawubona! The new <strong>2024 Integrated Annual Report</strong> is officially available. Click below to explore our community's growth and milestones! 🇿🇦
+          Sawubona! The new <strong>2025 Integrated Annual Report</strong> is officially available. Click below to explore our community's growth and milestones! 🇿🇦
         </p>
         
         <a href="${reportLink}" target="_blank" rel="noopener noreferrer" class="popup-btn-action" style="
