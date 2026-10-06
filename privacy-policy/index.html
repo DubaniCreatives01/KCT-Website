@@ -15,8 +15,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <!-- SEO Best Practices -->
-  <title>KCT Team - Corporate Governance & Trustees</title>
-  <meta name="description" content="Official Board of Trustees, executive team, corporate governance principles, and specialized committee charters of KCT.">
+  <title>Privacy Policy - Khayelitsha Community Trust (KCT)</title>
+  <meta name="description" content="Read the Khayelitsha Community Trust privacy policy, including how personal information is collected, used, stored, and protected.">
   
   <!-- Network Optimization: Preconnect to CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,99 +43,7 @@
   <link rel="stylesheet" href="../assets/css/main.min.css?v=2.3">
   
   <!-- Custom page style injections if any -->
-  <style>
-    .governance-hero {
-      position: relative;
-      background: linear-gradient(rgba(0, 60, 97, 0.85), rgba(0, 60, 97, 0.85)), url('{{relativePath}}assets/images/Board-1024x682.webp') center/cover no-repeat;
-      padding: 100px 0;
-      text-align: center;
-      overflow: hidden;
-      color: white;
-    }
-    .governance-hero h2 {
-      font-family: var(--font-headings);
-      font-size: 38px;
-      margin-bottom: 40px;
-      color: white;
-    }
-    .wheel-wrap {
-      position: relative;
-      width: 380px;
-      height: 380px;
-      margin: 0 auto;
-    }
-    .wheel-arc-line {
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 300px; height: 300px;
-      margin-top: -150px; margin-left: -150px;
-      border-radius: 50%;
-      border: 2px dashed rgba(21, 183, 222, 0.4); /* High contrast cyan arc on dark */
-    }
-    .wheel-label {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-      font-size: 18px;
-      font-family: var(--font-headings);
-      font-weight: 700;
-      z-index: 2;
-      width: 180px;
-      background: var(--color-secondary);
-      padding: 20px;
-      border-radius: 50%;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      border: 2px solid var(--color-tertiary); /* Cyan border */
-    }
-    .c-icon {
-      position: absolute;
-      width: 60px; height: 60px;
-      border-radius: 50%;
-      background: var(--color-tertiary); /* Cyan icon background to avoid orange on dark */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      z-index: 3;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .c-icon:hover, .c-icon.active {
-      transform: scale(1.15);
-      box-shadow: 0 4px 20px rgba(21, 183, 222, 0.6); /* Cyan glow */
-      background: white;
-    }
-    .c-icon i {
-      font-size: 22px;
-      color: white;
-      transition: color 0.3s;
-    }
-    .c-icon:hover i, .c-icon.active i {
-      color: var(--color-secondary);
-    }
-    /* Position icons around arc */
-    .c-icon.ci-1 { top: 20px; left: 50%; margin-left: -30px; }
-    .c-icon.ci-2 { top: 75px; right: 40px; }
-    .c-icon.ci-3 { bottom: 75px; right: 40px; }
-    .c-icon.ci-4 { bottom: 20px; left: 50%; margin-left: -30px; }
-    .c-icon.ci-5 { bottom: 75px; left: 40px; }
-    .c-icon.ci-6 { top: 75px; left: 40px; }
-
-    .committee-detail-block {
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  
 </head>
 <body>
   <!-- 1. HEADER CONTAINER -->
@@ -280,208 +188,255 @@
   </div>
 
 
-<!-- ===== GOVERNANCE HERO with Committee Wheel ===== -->
-<section class="governance-hero" id="content">
-  <div class="container">
-    <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Institutional Arrangements</span>
-    <h2>Governance & Committee Charters</h2>
+<style>
+  .privacy-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 148px 0 78px;
+    background:
+      radial-gradient(circle at 82% 20%, rgba(42, 174, 211, 0.22), transparent 30%),
+      linear-gradient(135deg, #003c61 0%, #062f4a 100%);
+  }
 
-    <div class="wheel-wrap">
-      <div class="wheel-arc-line"></div>
-      <div class="wheel-label" id="wheel-label">Finance Committee</div>
-      <div class="c-icon ci-1 active" data-committee="finance" title="Finance Committee"><i class="fas fa-coins"></i></div>
-      <div class="c-icon ci-2" data-committee="audit" title="Audit and Risk Management"><i class="fas fa-shield-halved"></i></div>
-      <div class="c-icon ci-3" data-committee="development" title="Development Committee"><i class="fas fa-building"></i></div>
-      <div class="c-icon ci-4" data-committee="procurement" title="Procurement and Bidding"><i class="fas fa-handshake"></i></div>
-      <div class="c-icon ci-5" data-committee="marketing" title="Marketing and PR"><i class="fas fa-bullhorn"></i></div>
-      <div class="c-icon ci-6" data-committee="hr" title="Human Resources"><i class="fas fa-users-gear"></i></div>
-    </div>
+  .privacy-hero::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -100px;
+    bottom: -150px;
+    border: 24px solid rgba(255, 159, 26, 0.2);
+    border-radius: 50%;
+  }
+
+  .privacy-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+  }
+
+  .privacy-hero h1 {
+    margin: 10px 0 18px;
+    color: var(--color-alternate);
+    font-family: var(--font-headings);
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+  }
+
+  .privacy-hero p {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .privacy-layout {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.7fr) minmax(0, 2fr);
+    gap: 64px;
+    align-items: start;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .privacy-aside {
+    position: sticky;
+    top: 28px;
+    padding: 24px;
+    background: #f2f7fa;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+
+  .privacy-aside strong {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--color-secondary);
+    font-family: var(--font-headings);
+  }
+
+  .privacy-aside a {
+    display: block;
+    padding: 7px 0;
+    color: var(--color-text);
+    font-size: 13px;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .privacy-aside a:hover,
+  .privacy-aside a:focus-visible {
+    color: var(--color-primary);
+  }
+
+  .privacy-content {
+    color: var(--color-text);
+  }
+
+  .privacy-content h2 {
+    margin: 0 0 14px;
+    color: var(--color-secondary);
+    font-family: var(--font-headings);
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.2;
+  }
+
+  .privacy-content section {
+    scroll-margin-top: 28px;
+    margin-bottom: 48px;
+  }
+
+  .privacy-content p,
+  .privacy-content li {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .privacy-content ul {
+    margin: 14px 0 0;
+    padding-left: 22px;
+  }
+
+  .privacy-note {
+    margin: 0 0 42px;
+    padding: 22px 24px;
+    background: #fff8ed;
+    border: 1px solid rgba(255, 159, 26, 0.35);
+    border-radius: var(--border-radius);
+  }
+
+  .privacy-note p {
+    margin: 0;
+  }
+
+  .privacy-contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .privacy-contact-card {
+    padding: 20px;
+    background: #f2f7fa;
+    border-radius: var(--border-radius-sm);
+  }
+
+  .privacy-contact-card strong {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--color-secondary);
+  }
+
+  .privacy-contact-card a {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  @media (max-width: 800px) {
+    .privacy-layout {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .privacy-aside {
+      position: static;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .privacy-hero {
+      padding: 118px 0 60px;
+    }
+
+    .privacy-contact {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section class="privacy-hero">
+  <div class="container privacy-hero-inner">
+    <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Trust &amp; accountability</span>
+    <h1>Privacy Policy</h1>
+    <p>We respect the people and communities we serve. This policy explains how Khayelitsha Community Trust handles personal information when you use this website or contact us.</p>
   </div>
 </section>
 
-<!-- ===== BOARD OF TRUSTEES (Light) ===== -->
-<section class="section" style="background-color: white; padding: 100px 0;">
-  <div class="container">
-    <div class="mayor-box" style="grid-template-columns: 1.5fr 1.5fr; gap: 60px; align-items: center; display: grid; margin-bottom: 40px;">
-      <div class="reveal-on-scroll reveal-left">
-        <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; text-transform: uppercase;">Leadership Structure</span>
-        <h3 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 36px; margin-top: 5px; margin-bottom: 20px;">Board of Trustees</h3>
-        <p style="font-size: 15px; line-height: 1.65em; color: var(--color-text); margin-bottom: 15px;">The Board of Trustees operates in terms of a formal written charter and comprises a balance of leadership with non-executive trustees who are appointed through a structured and formal process.</p>
-        <p style="font-size: 15px; line-height: 1.65em; color: var(--color-text);">The Chief Executive Officer and executive management participate actively at meetings to support operational alignment. The Trust and its trustees are committed to complying with the principles of openness, integrity, and accountability as advocated in the King Report on Governance for South Africa (King IV).</p>
-      </div>
-      <div class="reveal-on-scroll reveal-right" style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow);">
-        <img loading="lazy" src="../assets/images/Board.webp" alt="Khayelitsha Community Trust (KCT)ees Meeting" style="width: 100%; display: block; object-fit: cover; height: 350px;">
-      </div>
-    </div>
+<section class="section" style="background: #ffffff; padding: 78px 0 100px;">
+  <div class="container privacy-layout">
+    <aside class="privacy-aside" aria-label="Privacy policy sections">
+      <strong>On this page</strong>
+      <a href="#scope">Scope</a>
+      <a href="#information">Information we collect</a>
+      <a href="#use">How we use information</a>
+      <a href="#sharing">When information is shared</a>
+      <a href="#retention">Retention and security</a>
+      <a href="#rights">Your choices and rights</a>
+      <a href="#contact">Contact us</a>
+    </aside>
 
-    <!-- Board Grid -->
-    <div style="text-align: center; margin-bottom: 40px;">
-      <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; font-size: 13px;">Official Members</span>
-      <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 26px; margin-top: 5px;">Board of Trustees Listing</h4>
-    </div>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
-      
-      <!-- Trustee 1 -->
-      <div style="background: var(--color-background); padding: 25px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); text-align: center; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)';">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 17px; margin-bottom: 5px;">Mr Mandla Maxongo</h4>
-        <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; display: block; letter-spacing: 0.5px;">Chairperson</span>
-        <span style="font-size: 11px; opacity: 0.8; color: var(--color-text); display: block; margin-top: 5px;">Non-Executive Trustee</span>
+    <div class="privacy-content">
+      <div class="privacy-note">
+        <p><strong>Effective date:</strong> 7 October 2026. We may update this policy when our services, website, or legal obligations change. The latest version will always be published on this page.</p>
       </div>
 
-      <!-- Trustee 3 -->
-      <div style="background: var(--color-background); padding: 25px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); text-align: center; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)';">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 17px; margin-bottom: 5px;">Mr Burton Van Staaden</h4>
-        <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; display: block; letter-spacing: 0.5px;">Trustee Member</span>
-        <span style="font-size: 11px; opacity: 0.8; color: var(--color-text); display: block; margin-top: 5px;">Non-Executive Trustee</span>
-      </div>
+      <section id="scope">
+        <h2>1. Scope</h2>
+        <p>This policy applies to the Khayelitsha Community Trust (KCT) website, including its information pages, contact channels, media resources, and links to our social-media profiles. It does not apply to websites or platforms operated by third parties.</p>
+      </section>
 
-      <!-- Trustee 4 -->
-      <div style="background: var(--color-background); padding: 25px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); text-align: center; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)';">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 17px; margin-bottom: 5px;">Mr Ndithini Tyhido</h4>
-        <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; display: block; letter-spacing: 0.5px;">Deputy Chairperson</span>
-        <span style="font-size: 11px; opacity: 0.8; color: var(--color-text); display: block; margin-top: 5px;">Non-Executive Trustee</span>
-      </div>
+      <section id="information">
+        <h2>2. Information we collect</h2>
+        <p>We collect only information that is relevant to responding to you or operating the website. Depending on how you interact with us, this may include:</p>
+        <ul>
+          <li>your name and contact details when you send an enquiry;</li>
+          <li>the contents of your message and any information you choose to include;</li>
+          <li>your email address when you request website updates or communications; and</li>
+          <li>technical information such as browser, device, and website-usage data where it is collected by hosting, security, or analytics services.</li>
+        </ul>
+        <p>Please do not send passwords, identity numbers, payment details, or other highly sensitive information through a general website enquiry.</p>
+      </section>
 
-      <!-- Trustee 5 -->
-      <div style="background: var(--color-background); padding: 25px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); text-align: center; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)';">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 17px; margin-bottom: 5px;">Mr Sebastian Jozi</h4>
-        <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; display: block; letter-spacing: 0.5px;">Trustee Member</span>
-        <span style="font-size: 11px; opacity: 0.8; color: var(--color-text); display: block; margin-top: 5px;">Non-Executive Trustee</span>
-      </div>
+      <section id="use">
+        <h2>3. How we use information</h2>
+        <p>We may use personal information to respond to enquiries, provide requested information, share relevant announcements, maintain website security, improve our content and services, and meet legal or governance obligations.</p>
+        <p>We do not sell personal information. We use information for the purpose for which it was provided and for compatible administrative or operational purposes.</p>
+      </section>
 
-      <!-- Trustee 6 -->
-      <div style="background: var(--color-background); padding: 25px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); text-align: center; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)';">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 17px; margin-bottom: 5px;">Ms Pholisa Makeleni</h4>
-        <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; display: block; letter-spacing: 0.5px;">Trustee Member</span>
-        <span style="font-size: 11px; opacity: 0.8; color: var(--color-text); display: block; margin-top: 5px;">Non-Executive Trustee</span>
-      </div>
+      <section id="sharing">
+        <h2>4. When information is shared</h2>
+        <p>We may share information with trusted service providers who help us host, secure, maintain, or communicate through the website. They may process information only as needed to provide those services. We may also disclose information where required by law, court order, or a legitimate governance or safety requirement.</p>
+        <p>Links to Facebook, Instagram, LinkedIn, X, WhatsApp, and other external services are provided for convenience. Those services apply their own privacy policies when you use them.</p>
+      </section>
 
-      <!-- Trustee 7 -->
-      <div style="background: var(--color-background); padding: 25px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); text-align: center; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)';">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 17px; margin-bottom: 5px;">Ms Funeka Mpetha-Nyati</h4>
-        <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; display: block; letter-spacing: 0.5px;">Trustee Member</span>
-        <span style="font-size: 11px; opacity: 0.8; color: var(--color-text); display: block; margin-top: 5px;">Non-Executive Trustee</span>
-      </div>
+      <section id="retention">
+        <h2>5. Retention and security</h2>
+        <p>We retain information only for as long as reasonably necessary for the purpose it was collected, to maintain appropriate records, or to meet legal obligations. We use reasonable administrative, technical, and organisational safeguards to reduce the risk of unauthorised access, loss, misuse, or disclosure.</p>
+        <p>No online transmission or storage system can be guaranteed completely secure. If we become aware of a material data incident, we will take appropriate steps to investigate, contain, and address it.</p>
+      </section>
 
-      <!-- Trustee 8 -->
-      <div style="background: var(--color-background); padding: 25px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); text-align: center; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--color-border)';">
-        <h4 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 17px; margin-bottom: 5px;">Mr Zamikhaya Mbalo</h4>
-        <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; display: block; letter-spacing: 0.5px;">Trustee Member</span>
-        <span style="font-size: 11px; opacity: 0.8; color: var(--color-text); display: block; margin-top: 5px;">Non-Executive Trustee</span>
-      </div>
+      <section id="rights">
+        <h2>6. Your choices and rights</h2>
+        <p>Subject to applicable law, you may ask us what personal information we hold about you, request correction of inaccurate information, ask us to stop using your information for a particular purpose, or withdraw a consent you previously provided. We may need to verify your identity before responding and may retain information where the law requires it.</p>
+        <p>You can also unsubscribe from non-essential communications by following the instructions in the communication or contacting us directly.</p>
+      </section>
 
-    </div>
-  </div>
-</section>
-
-<!-- ===== COMMITTEE DETAILS (Dark) ===== -->
-<section class="section" style="background: var(--color-gradient-spruce-brown); padding: 100px 0; color: white;">
-  <div class="container text-center">
-    <div id="committee-finance" class="committee-detail-block" style="display: block;">
-      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Committee Focus</span>
-      <h3 class="section-title" style="font-family: var(--font-headings); font-size: 36px; margin-top: 5px; margin-bottom: 20px; color: white;">Finance Committee</h3>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.7em; opacity: 0.9;">The Finance Committee ensures the competence and integrity of the Khayelitsha Community Trust (KCT) Group's financial management processes, budgeting models, and asset ledger reviews.</p>
-    </div>
-    
-    <div id="committee-audit" class="committee-detail-block">
-      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Committee Focus</span>
-      <h3 class="section-title" style="font-family: var(--font-headings); font-size: 36px; margin-top: 5px; margin-bottom: 20px; color: white;">Audit and Risk Management</h3>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.7em; opacity: 0.9;">The Audit and Risk Management Committee provides a forum for discussing business risk and control issues. It also monitors the work of external and internal auditors and reviews the annual financial statements.</p>
-    </div>
-    
-    <div id="committee-development" class="committee-detail-block">
-      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Committee Focus</span>
-      <h3 class="section-title" style="font-family: var(--font-headings); font-size: 36px; margin-top: 5px; margin-bottom: 20px; color: white;">Development Committee</h3>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.7em; opacity: 0.9;">The Development Committee assists the Board in carrying out its due diligence function relating to development plans. It creates an enabling environment, provides a supporting role, facilitates implementation through strategic direction and develops supporting operation systems.</p>
-    </div>
-    
-    <div id="committee-procurement" class="committee-detail-block">
-      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Committee Focus</span>
-      <h3 class="section-title" style="font-family: var(--font-headings); font-size: 36px; margin-top: 5px; margin-bottom: 20px; color: white;">Procurement and Bidding</h3>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.7em; opacity: 0.9;">The Procurement and Bidding Committee reviews the Trust's procurement policies and practices to ensure that they are in line with current best practice. It also ensures that all procurement processes are conducted in a fair and ethical manner, whilst complying with the Trust's Supply Chain Management Policy.</p>
-    </div>
-    
-    <div id="committee-marketing" class="committee-detail-block">
-      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Committee Focus</span>
-      <h3 class="section-title" style="font-family: var(--font-headings); font-size: 36px; margin-top: 5px; margin-bottom: 20px; color: white;">Marketing and Public Relations</h3>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.7em; opacity: 0.9;">The Marketing and Public Relations Committee develops strategies that encourage the target audience's involvement and generates interest and awareness in the organisation's mission through its projects.</p>
-    </div>
-    
-    <div id="committee-hr" class="committee-detail-block">
-      <span class="section-subtitle" style="color: var(--color-tertiary); font-weight: 700; text-transform: uppercase;">Committee Focus</span>
-      <h3 class="section-title" style="font-family: var(--font-headings); font-size: 36px; margin-top: 5px; margin-bottom: 20px; color: white;">Human Resources</h3>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.7em; opacity: 0.9;">The Human Resource and Remuneration Committee assists the Board in fulfilling its obligations regarding human resources, including performance and succession matters.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== EXECUTIVE MANAGEMENT ORGANIZATIONAL STRUCTURE ===== -->
-<section class="section" style="background-color: var(--color-background); padding: 100px 0;">
-  <div class="container text-center">
-    <span class="section-subtitle" style="color: var(--color-primary); font-weight: 700; text-transform: uppercase;">Operational Structure</span>
-    <h3 style="font-family: var(--font-headings); color: var(--color-secondary); font-size: 36px; margin-top: 5px; margin-bottom: 20px;">Executive Management Team</h3>
-    <p style="max-width: 800px; margin: 0 auto 40px; font-size: 16px; line-height: 1.6em; color: var(--color-text);">The executive team is collectively accountable for overall organisational performance. They take responsibility for vision, alignment, and deployment, supporting the CEO in formulating strategy and handling significant operational matters.</p>
-    
-    <!-- Org Chart Diagram -->
-    <div class="org-chart-wrapper">
-      
-      <!-- Top Level: CEO -->
-      <div class="org-chart-top">
-        <div class="org-card reveal-on-scroll reveal-scale">
-          <img loading="lazy" src="../assets/images/ACTING-CEO-200x300.webp" alt="Samela Titus Nabe Chief Executive Officer" class="org-card-img">
-          <div class="org-card-banner">
-            <h4 class="org-card-name">Samela Titus Nabe</h4>
-            <p class="org-card-title">Chief Executive Officer</p>
+      <section id="contact">
+        <h2>7. Contact us</h2>
+        <p>For privacy questions, requests, or concerns, contact the Khayelitsha Community Trust using the details below. Please include enough information for us to understand and respond to your request.</p>
+        <div class="privacy-contact">
+          <div class="privacy-contact-card">
+            <strong>Email</strong>
+            <a href="mailto:info@kctrust.org.za">info@kctrust.org.za</a>
+          </div>
+          <div class="privacy-contact-card">
+            <strong>Main office</strong>
+            <span>Office 3, Ground Floor, Old Dutch Square, Bellville, 7535</span>
           </div>
         </div>
-      </div>
-
-      <!-- Connector Stems & Horizontal Line -->
-      <div class="org-stem-top"></div>
-      <div class="org-line-horizontal"></div>
-
-      <!-- Bottom Level: 3 Managers Grid -->
-      <div class="org-chart-bottom-grid">
-        
-        <!-- Manager 1 -->
-        <div class="org-column">
-          <div class="org-stem-bottom"></div>
-          <div class="org-card reveal-on-scroll reveal-scale reveal-delay-1">
-            <img loading="lazy" src="../assets/images/Lukholo Badi.webp" alt="Lukholo Badi Group Development Manager" class="org-card-img">
-            <div class="org-card-banner">
-              <h4 class="org-card-name">Lukholo Badi</h4>
-              <p class="org-card-title">Group Development Manager</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Manager 2 -->
-        <div class="org-column">
-          <div class="org-stem-bottom"></div>
-          <div class="org-card reveal-on-scroll reveal-scale reveal-delay-2">
-            <img loading="lazy" src="../assets/images/Property-Portfolio-Manager.webp" alt="Samela Titus Nabe Property Portfolio Manager" class="org-card-img">
-            <div class="org-card-banner">
-              <h4 class="org-card-name">Samela Titus Nabe</h4>
-              <p class="org-card-title">Property Portfolio Manager</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Manager 3 -->
-        <div class="org-column">
-          <div class="org-stem-bottom"></div>
-          <div class="org-card reveal-on-scroll reveal-scale reveal-delay-3">
-            <img loading="lazy" src="../assets/images/Mehjabeen Hassan.webp" alt="Mehjabeen Hassan Finance Manager" class="org-card-img">
-            <div class="org-card-banner">
-              <h4 class="org-card-name">Mehjabeen Hassan</h4>
-              <p class="org-card-title">Finance Manager</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+      </section>
     </div>
   </div>
 </section>
@@ -907,26 +862,6 @@
   </button>
   <!-- Consolidated Interactivity Javascript Bundle (Deferred) -->
   <script src="../assets/js/app.min.js?v=2.3" defer></script>
-  <script>
-    var committeeNames = {
-      finance: 'Finance Committee',
-      audit: 'Audit and Risk Management',
-      development: 'Development Committee',
-      procurement: 'Procurement and Bidding',
-      marketing: 'Marketing and PR',
-      hr: 'Human Resources'
-    };
-    document.querySelectorAll('.c-icon').forEach(function(icon) {
-      icon.addEventListener('click', function() {
-        var committee = this.getAttribute('data-committee');
-        document.getElementById('wheel-label').textContent = committeeNames[committee];
-        document.querySelectorAll('.c-icon').forEach(function(i) { i.classList.remove('active'); });
-        this.classList.add('active');
-        document.querySelectorAll('.committee-detail-block').forEach(function(b) { b.style.display = 'none'; });
-        var target = document.getElementById('committee-' + committee);
-        if (target) target.style.display = 'block';
-      });
-    });
-  </script>
+  
 </body>
 </html>

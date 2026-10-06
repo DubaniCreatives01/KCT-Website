@@ -20,7 +20,8 @@ const PAGES_MAP = {
   'kct-team.html': 'kct-team/index.html',
   'our-projects.html': 'our-projects/index.html',
   'kct-mall.html': 'kct-mall/index.html',
-  'media.html': 'media/index.html'
+  'media.html': 'media/index.html',
+  'privacy-policy.html': 'privacy-policy/index.html'
 };
 
 function calculateRelativePath(destFile) {
