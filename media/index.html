@@ -197,33 +197,12 @@
 </section>
 
 <!-- 2. KCT SOCIAL IMPACT 2025–2026 -->
-<link rel="stylesheet" href="../assets/css/kct-social-impact.css">
 <section class="impact-section" id="kct-social-impact" aria-labelledby="impact-title">
   <div class="container">
     <div class="section-header text-center">
       <span class="impact-eyebrow"><i class="fa-solid fa-hands-holding-circle"></i> KCT Social Impact <span class="impact-year">2025–2026</span></span>
       <h2 id="impact-title" style="font-family: var(--font-headings); color: #fff; font-size: 42px; margin: 14px 0 0;">Stronger Communities. Brighter Tomorrows.</h2>
       <p class="impact-intro">A visual record of Khayelitsha Community Trust’s work across education, community safety, disaster relief, care across generations, and strategic partnerships.</p>
-    </div>
-
-    <div class="impact-carousel" data-impact-carousel tabindex="0" aria-label="KCT Social Impact 2025–2026 image carousel">
-      <div class="impact-viewport">
-        <div class="impact-track">
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_1.jpg" alt="KCT Social Impact 2025–2026 cover: Stronger Communities. Brighter Tomorrows." loading="eager"><figcaption>2025–2026 Social Impact</figcaption></figure>
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_2.jpg" alt="KCT social impact focus on people and ESG priorities" loading="lazy"><figcaption>Impact starts with people</figcaption></figure>
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_3.jpg" alt="KCT education infrastructure support for Luleka Primary School" loading="lazy"><figcaption>Education infrastructure</figcaption></figure>
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_4.jpg" alt="KCT schools and scholars support" loading="lazy"><figcaption>Schools and scholars</figcaption></figure>
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_5.jpg" alt="KCT community safety support through the CPF Khayelitsha Programme" loading="lazy"><figcaption>Community safety</figcaption></figure>
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_6.jpg" alt="KCT disaster relief support for affected families" loading="lazy"><figcaption>Disaster relief</figcaption></figure>
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_7.jpg" alt="KCT care across generations initiatives" loading="lazy"><figcaption>Care across generations</figcaption></figure>
-          <figure class="impact-slide"><img src="../assets/images/kct-social-impact-2025-26/KCT_Social_Impact_Carousel_Fully_Editable_8.jpg" alt="KCT partnerships across education, safety, sport and culture" loading="lazy"><figcaption>Strategic partnerships</figcaption></figure>
-        </div>
-      </div>
-      <button class="impact-control prev" type="button" aria-label="Previous Social Impact image"><i class="fa-solid fa-arrow-left"></i></button>
-      <button class="impact-control next" type="button" aria-label="Next Social Impact image"><i class="fa-solid fa-arrow-right"></i></button>
-      <div class="impact-dots" role="tablist" aria-label="Choose Social Impact image">
-        <button class="impact-dot" type="button" aria-label="Show image 1" aria-current="true"></button><button class="impact-dot" type="button" aria-label="Show image 2" aria-current="false"></button><button class="impact-dot" type="button" aria-label="Show image 3" aria-current="false"></button><button class="impact-dot" type="button" aria-label="Show image 4" aria-current="false"></button><button class="impact-dot" type="button" aria-label="Show image 5" aria-current="false"></button><button class="impact-dot" type="button" aria-label="Show image 6" aria-current="false"></button><button class="impact-dot" type="button" aria-label="Show image 7" aria-current="false"></button><button class="impact-dot" type="button" aria-label="Show image 8" aria-current="false"></button>
-      </div>
     </div>
 
     <div class="impact-pdf" aria-labelledby="impact-pdf-title">
@@ -888,23 +867,6 @@
   <!-- Consolidated Interactivity Javascript Bundle (Deferred) -->
   <script src="../assets/js/app.min.js?v=2.3" defer></script>
   <script>
-    (function () {
-      const root = document.querySelector('[data-impact-carousel]');
-      if (!root) return;
-      const track = root.querySelector('.impact-track');
-      const slides = Array.from(root.querySelectorAll('.impact-slide'));
-      const dots = Array.from(root.querySelectorAll('.impact-dot'));
-      let current = 0;
-      function goTo(index) {
-        current = (index + slides.length) % slides.length;
-        track.style.transform = 'translateX(-' + (current * 100) + '%)';
-        dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === current)));
-      }
-      root.querySelector('.impact-control.prev').addEventListener('click', function () { goTo(current - 1); });
-      root.querySelector('.impact-control.next').addEventListener('click', function () { goTo(current + 1); });
-      dots.forEach(function (dot, i) { dot.addEventListener('click', function () { goTo(i); }); });
-      root.addEventListener('keydown', function (event) { if (event.key === 'ArrowLeft') goTo(current - 1); if (event.key === 'ArrowRight') goTo(current + 1); });
-    }());
     function kctImpactUrl() { return window.location.origin + window.location.pathname + '#kct-social-impact'; }
     async function shareKctImpact(event) {
       event.preventDefault();
